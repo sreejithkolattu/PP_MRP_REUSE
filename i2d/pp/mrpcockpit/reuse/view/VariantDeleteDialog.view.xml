@@ -1,0 +1,26 @@
+<!--
+
+    Copyright (C) 2009-2014 SAP SE or an SAP affiliate company. All rights reserved
+
+-->
+<core:View xmlns:core="sap.ui.core" xmlns="sap.m" 
+xmlns:html="http://www.w3.org/1999/xhtml" xmlns:form="sap.ui.layout.form" xmlns:layout="sap.ui.layout" xmlns:mvc="sap.ui.core.mvc" controllerName="i2d.pp.mrpcockpit.reuse.view.VariantDeleteDialog">
+       <Dialog contentWidth="25em" height="100%" id="DLG_VARIANT_DELETE" title="{/title}" class="sapMRPDeleteDialog">
+             <content>
+            <form:SimpleForm>
+            <form:content>
+                    <layout:VerticalLayout width="100%">
+                        <Text id="TXT_VARIANT_DELETE" text="{/text}"/>
+                        </layout:VerticalLayout>
+                    </form:content>
+            </form:SimpleForm>
+             </content>
+             
+             <beginButton>
+                    <Button id="BTN_DELETE" press="onConfirmDialog" text="{commondialogs_i18n>Delete}"/>
+             </beginButton>
+             <endButton>
+                    <Button id="BTN_CANCEL" press="onCancelDialog" text="{commondialogs_i18n>Cancel}"/>
+             </endButton>
+       </Dialog>
+</core:View>

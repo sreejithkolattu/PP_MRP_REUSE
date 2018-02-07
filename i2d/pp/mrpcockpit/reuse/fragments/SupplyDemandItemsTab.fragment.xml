@@ -1,0 +1,17 @@
+<!--
+
+    Copyright (C) 2009-2014 SAP SE or an SAP affiliate company. All rights reserved
+
+-->
+<core:FragmentDefinition xmlns:core="sap.ui.core"
+	xmlns="sap.m">
+	<IconTabFilter icon="sap-icon://BusinessSuiteInAppSymbols/icon-stock-requirements" key="supDemItemsTab" tooltip="{Common_i18n>ICONTABBAR_XTOL_LIST}">
+		<content>
+
+			<!-- ==|== Panel / Toolbar ========================================================== -->
+			<core:Fragment fragmentName="i2d.pp.mrpcockpit.reuse.fragments.SupplyDemandPanel"
+				type="XML" />
+
+		</content>
+	</IconTabFilter>
+</core:FragmentDefinition>

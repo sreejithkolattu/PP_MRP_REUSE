@@ -1,0 +1,68 @@
+<!--
+
+    Copyright (C) 2009-2014 SAP SE or an SAP affiliate company. All rights reserved
+
+-->
+<Dialog xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc"
+	xmlns="sap.m" xmlns:me="sap.me" xmlns:ui="sap.ca.ui" xmlns:form="sap.ui.layout.form"
+	xmlns:html="http://www.w3.org/1999/xhtml"
+	xmlns:l="sap.ui.layout"
+	class="sapMRPDialog" beforeOpen="beforeOpen" title="{Common_i18n>SOLUTION_DIALOG_SHORTAGE_ACCEPT_TITLE}">
+	<content>
+
+	<l:Grid
+		class="sapMRPDialogGrid"
+		defaultSpan="L12 M12 S12"
+		width="auto">
+		<l:content>
+		
+		<form:SimpleForm
+			maxContainerCols="2"
+			editable="false"
+			layout="ResponsiveGridLayout"
+			labelSpanS="5"
+			labelSpanL="5"
+			labelSpanM="5"
+			emptySpanL="0"
+			emptySpanM="0"
+			emptySpanS="0"
+			columnsL="2"
+			columnsM="2">
+			<form:content>
+			
+				<Label text="{Common_i18n>MATERIAL}"></Label>
+				<Text text="{/MaterialExternalID}"></Text>
+				
+				<Label text=""></Label>
+				<Text text=""></Text>
+				
+				<Label text="{Common_i18n>SHORT_INT}"></Label>
+				<Text text="{parts: [{  path:'/MaterialShortageStartDate' }, { path:'/MaterialShortageEndDate' }], formatter: 'i2d.pp.mrpcockpit.reuse.util.CommonFormatter.dateTo' }" />
+
+				<Label text=""></Label>
+				<Text text=""></Text>
+				
+				<Label text="{Common_i18n>SHORT_QUAN}"></Label>
+				<l:HorizontalLayout>
+					<Text text="{parts:[{path : '/MaterialShortageQuantity'}, {path : '/UnitOfMeasureTechnicalName'}, {path : '/TargetQuantityUnitDcmls'}], formatter:'sap.ca.ui.model.format.QuantityFormat.FormatQuantityStandard'}" />
+					<Text text="" width="0.5rem" />
+					<Text text="{/UnitOfMeasureTechnicalName}" />
+				</l:HorizontalLayout>
+				
+			</form:content>
+		</form:SimpleForm>
+		
+	</l:content>
+	</l:Grid>
+	
+	</content>
+
+	<beginButton>
+		<Button text="{Common_i18n>OK}" enabled="true" press="onOk"></Button>
+	</beginButton>
+
+	<endButton>
+		<Button text="{Common_i18n>CANCEL}" enabled="true" press="onCancel"></Button>
+	</endButton>
+
+</Dialog>

@@ -1,0 +1,51 @@
+/*  ==|== Scroll Bar ==========================================================
+ * Progressive enhancement (Scroll Bar in Chrome)
+ * @ https://wiki.wdf.sap.corp/wiki/display/visualcore/Scrollbar
+ *
+ * author: SAP AG
+ * version: 23.11.2013
+ * ============================================================
+ */
+
+/* Webkit */
+
+::-webkit-scrollbar {
+	background-color: @sapUiExtraLightBG; 	/* lighten(@sapUiLightBorder,10)  */
+	width: 0.75rem;
+	-webkit-border-radius: 0px;
+}
+
+::-webkit-scrollbar-button {
+	background-color: transparent;
+	height: 0px;
+	width: 0px;
+}
+
+::-webkit-scrollbar-track {
+	background-color: transparent;
+}
+
+::-webkit-scrollbar-track-piece {
+	background-color: transparent;
+}
+
+::-webkit-scrollbar-track-piece:hover {
+	background-color: lighten(@sapUiLightBorder,10); /* lighten(@sapUiLightBorder,10)  */
+}
+
+::-webkit-scrollbar-thumb {
+	-webkit-border-radius: 0px;
+	background-color: @sapUiExtraLightBorder; 	/* @sapUiExtraLightBorder */
+}
+
+::-webkit-scrollbar-thumb:hover {
+	background-color: @sapUiLightBorder;	/* @sapUiLightBorder */
+}
+
+::-webkit-scrollbar-corner {
+	background-color: transparent;
+}
+
+::-webkit-resizer {
+	background-color: transparent;
+}

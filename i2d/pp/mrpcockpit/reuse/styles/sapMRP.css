@@ -1,0 +1,27 @@
+/*  ==|== SAP MRP CSS ==========================================================
+ *
+ * General CSS styles which are valid for all MRP applications
+ *
+ * author: SAP AG
+ * version: 23.11.2013
+ * ============================================================
+ */
+
+
+/*  ==|== Vertical Layout ========================================================== */
+
+.sapMRPVlt .sapUiVltCell {line-height: 1.5rem}
+
+/*  ==|== Horizontal Layout ========================================================== */
+.sapMRPHlt  .sapUiHLayoutChildWrapper {padding-right: 0.5rem;}
+.sapMRPHlt  .sapUiHLayoutChildWrapper:last-of-type {padding-right: 0;}
+
+/*  ==|== ObjectIdentifierText for breaking LAMA texts Long Material Numbers ============== */
+.sapMRPObjectIdentifier .sapMObjectIdentifierText {word-break: break-all !important;}
+
+
+/*  ==|== We need a bold state by sap.m.Text element ============== */
+.sapMRPTextBold{ 
+	font-weight: bold;
+ } 
+

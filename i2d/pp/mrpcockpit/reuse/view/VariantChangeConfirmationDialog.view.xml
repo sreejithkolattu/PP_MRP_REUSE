@@ -1,0 +1,27 @@
+<!--
+
+    Copyright (C) 2009-2014 SAP SE or an SAP affiliate company. All rights reserved
+
+-->
+<core:View xmlns:core="sap.ui.core" xmlns="sap.m" 
+xmlns:html="http://www.w3.org/1999/xhtml" xmlns:layout="sap.ui.layout" xmlns:mvc="sap.ui.core.mvc"
+xmlns:form="sap.ui.layout.form" controllerName="i2d.pp.mrpcockpit.reuse.view.VariantChangeConfirmationDialog">
+ <!-- Dialog  -->
+     <Dialog contentWidth="25em" height="100%" id="DLG_CHANGE_VARIANT_CONFIRMATION" title="{commondialogs_i18n>CreateVariant}" class="sapMRPChangeVariantConfirmationDialog">
+        <content> 
+          <form:SimpleForm>
+            <form:content>
+                    <layout:VerticalLayout width="100%">
+                           <Text id="TXT_CHANGE_VARIANT_DESCRIPTION" text="{/text}"/>
+                    </layout:VerticalLayout>
+             </form:content>
+            </form:SimpleForm>
+          </content>  
+             <beginButton>
+                    <Button id="BTN_YES" press="onConfirmDialog" text="{commondialogs_i18n>Yes}"/>
+             </beginButton>
+             <endButton>
+                    <Button id="BTN_NO" press="onCancelDialog" text="{commondialogs_i18n>No}"/>
+             </endButton>
+       </Dialog>
+</core:View>

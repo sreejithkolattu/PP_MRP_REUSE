@@ -1,0 +1,720 @@
+<?xml version="1.0" ?>
+<library  version="2.0" name="i2d.pp.mrpcockpit.reuse">
+  <module name="i2d/pp/mrpcockpit/reuse/controls/Chart.js" size="107709" compressedSize="48708">
+    <requires>
+      <module name="i2d/pp/mrpcockpit/reuse/controls/ChartValue.js"/>
+      <module name="sap/ui/thirdparty/d3.js"/>
+      <module name="sap/m/MessageToast.js"/>
+      <module name="jquery.sap.global.js"/>
+    </requires>
+  </module>
+  <module name="i2d/pp/mrpcockpit/reuse/controls/ChartValue.js" size="404" compressedSize="309">
+    <requires>
+      <module name="jquery.sap.global.js"/>
+    </requires>
+  </module>
+  <module name="i2d/pp/mrpcockpit/reuse/controls/ObjectIdentifier.js" size="2931" compressedSize="1519">
+    <description>"use strict";</description>
+    <requires>
+      <module name="jquery.sap.global.js"/>
+    </requires>
+  </module>
+  <module name="i2d/pp/mrpcockpit/reuse/controls/ObjectStatusBar.js" size="2025" compressedSize="984">
+    <description>"use strict";</description>
+    <requires>
+      <module name="jquery.sap.global.js"/>
+    </requires>
+  </module>
+  <module name="i2d/pp/mrpcockpit/reuse/controls/SolutionCard.js" size="23689" compressedSize="13317">
+    <requires>
+      <module name="i2d/pp/mrpcockpit/reuse/util/CommonConstants.js"/>
+      <module name="jquery.sap.global.js"/>
+    </requires>
+  </module>
+  <module name="i2d/pp/mrpcockpit/reuse/controls/SolutionCardContainer.js" size="26259" compressedSize="9683">
+    <requires>
+      <module name="i2d/pp/mrpcockpit/reuse/controls/SolutionCard.js"/>
+      <module name="jquery.sap.global.js"/>
+    </requires>
+  </module>
+  <module name="i2d/pp/mrpcockpit/reuse/controls/Stock.js" size="2703" compressedSize="1746">
+    <requires>
+      <module name="sap/ca/ui/model/format/NumberFormat.js"/>
+      <module name="jquery.sap.global.js"/>
+    </requires>
+  </module>
+  <module name="i2d/pp/mrpcockpit/reuse/controls/VisualStatusForecast.js" size="3269" compressedSize="1672">
+    <requires>
+      <module name="jquery.sap.global.js"/>
+    </requires>
+  </module>
+  <module name="i2d/pp/mrpcockpit/reuse/fragments/ChangeRequestList.fragment.xml" size="2956">
+    <requires>
+      <module name="sap/ui/core/Fragment.js"/>
+      <module name="sap/m/Popover.js"/>
+      <module name="sap/m/Table.js"/>
+      <module name="sap/m/Column.js"/>
+      <module name="sap/m/Label.js"/>
+      <module name="sap/m/ColumnListItem.js"/>
+      <module name="sap/ui/layout/VerticalLayout.js"/>
+      <module name="sap/m/ObjectNumber.js"/>
+      <module name="sap/m/Text.js"/>
+      <module name="sap/m/ObjectStatus.js"/>
+    </requires>
+  </module>
+  <module name="i2d/pp/mrpcockpit/reuse/fragments/ContactInformationQuickView.fragment.xml" size="18181">
+    <requires>
+      <module name="sap/ui/core/Fragment.js"/>
+      <module name="sap/ui/layout/VerticalLayout.js"/>
+      <module name="sap/ui/layout/form/SimpleForm.js"/>
+      <module name="sap/m/Label.js"/>
+      <module name="sap/m/Text.js"/>
+      <module name="sap/m/Link.js"/>
+    </requires>
+  </module>
+  <module name="i2d/pp/mrpcockpit/reuse/fragments/DialogInfo.fragment.xml" size="1923">
+    <requires>
+      <module name="sap/ui/core/Fragment.js"/>
+      <module name="sap/m/Label.js"/>
+      <module name="sap/m/Text.js"/>
+      <module name="sap/m/Link.js"/>
+    </requires>
+  </module>
+  <module name="i2d/pp/mrpcockpit/reuse/fragments/DialogInfoPlan.fragment.xml" size="11357">
+    <requires>
+      <module name="sap/ui/core/Fragment.js"/>
+      <module name="sap/m/Label.js"/>
+      <module name="sap/m/Text.js"/>
+      <module name="sap/m/Link.js"/>
+    </requires>
+  </module>
+  <module name="i2d/pp/mrpcockpit/reuse/fragments/DialogOrderChange.controller.js" size="8761" compressedSize="5322">
+    <requires>
+      <module name="i2d/pp/mrpcockpit/reuse/util/CollaborationHelper.js"/>
+      <module name="i2d/pp/mrpcockpit/reuse/util/CommonConstants.js"/>
+      <module name="i2d/pp/mrpcockpit/reuse/fragments/DialogRoot.js"/>
+      <module name="sap/ca/ui/utils/busydialog.js"/>
+      <module name="sap/ca/ui/message/message.js"/>
+      <module name="sap/ca/ui/model/type/Number.js"/>
+      <module name="sap/ca/ui/model/format/QuantityFormat.js"/>
+      <module name="jquery.sap.global.js"/>
+    </requires>
+  </module>
+  <module name="i2d/pp/mrpcockpit/reuse/fragments/DialogOrderChange.fragment.xml" size="4774">
+    <requires>
+      <module name="sap/ui/core/Fragment.js"/>
+      <module name="sap/m/Dialog.js"/>
+      <module name="sap/ui/layout/Grid.js"/>
+      <module name="sap/ui/layout/form/SimpleForm.js"/>
+      <module name="i2d/pp/mrpcockpit/reuse/fragments/DialogInfo.fragment.xml"/>
+      <module name="sap/m/Label.js"/>
+      <module name="sap/m/Input.js"/>
+      <module name="sap/ui/layout/GridData.js"/>
+      <module name="sap/m/DatePicker.js"/>
+      <module name="sap/ui/layout/VerticalLayout.js"/>
+      <module name="sap/m/RadioButton.js"/>
+      <module name="sap/m/TextArea.js"/>
+      <module name="sap/m/Button.js"/>
+    </requires>
+  </module>
+  <module name="i2d/pp/mrpcockpit/reuse/fragments/DialogOrderCreate.controller.js" size="5810" compressedSize="3420">
+    <requires>
+      <module name="i2d/pp/mrpcockpit/reuse/util/CollaborationHelper.js"/>
+      <module name="i2d/pp/mrpcockpit/reuse/util/CommonConstants.js"/>
+      <module name="i2d/pp/mrpcockpit/reuse/fragments/DialogRoot.js"/>
+      <module name="sap/ca/ui/utils/busydialog.js"/>
+      <module name="sap/ca/ui/message/message.js"/>
+      <module name="sap/ca/ui/model/type/Number.js"/>
+      <module name="sap/ca/ui/model/format/QuantityFormat.js"/>
+      <module name="jquery.sap.global.js"/>
+    </requires>
+  </module>
+  <module name="i2d/pp/mrpcockpit/reuse/fragments/DialogOrderCreate.fragment.xml" size="2786">
+    <requires>
+      <module name="sap/ui/core/Fragment.js"/>
+      <module name="sap/m/Dialog.js"/>
+      <module name="sap/ui/layout/Grid.js"/>
+      <module name="sap/ui/layout/form/SimpleForm.js"/>
+      <module name="i2d/pp/mrpcockpit/reuse/fragments/DialogInfo.fragment.xml"/>
+      <module name="sap/m/Label.js"/>
+      <module name="sap/m/DatePicker.js"/>
+      <module name="sap/m/Input.js"/>
+      <module name="sap/ui/layout/GridData.js"/>
+      <module name="sap/m/RadioButton.js"/>
+      <module name="sap/m/Button.js"/>
+    </requires>
+  </module>
+  <module name="i2d/pp/mrpcockpit/reuse/fragments/DialogOrderReqChange.controller.js" size="8198" compressedSize="5255">
+    <requires>
+      <module name="i2d/pp/mrpcockpit/reuse/util/CollaborationHelper.js"/>
+      <module name="i2d/pp/mrpcockpit/reuse/util/CommonConstants.js"/>
+      <module name="i2d/pp/mrpcockpit/reuse/fragments/DialogRoot.js"/>
+      <module name="sap/ca/ui/utils/busydialog.js"/>
+      <module name="sap/ca/ui/message/message.js"/>
+      <module name="sap/ca/ui/model/type/Number.js"/>
+      <module name="sap/ca/ui/model/format/QuantityFormat.js"/>
+      <module name="jquery.sap.global.js"/>
+    </requires>
+  </module>
+  <module name="i2d/pp/mrpcockpit/reuse/fragments/DialogOrderReqChange.fragment.xml" size="4188">
+    <requires>
+      <module name="sap/ui/core/Fragment.js"/>
+      <module name="sap/m/Dialog.js"/>
+      <module name="sap/ui/layout/Grid.js"/>
+      <module name="sap/ui/layout/form/SimpleForm.js"/>
+      <module name="i2d/pp/mrpcockpit/reuse/fragments/DialogInfo.fragment.xml"/>
+      <module name="sap/m/Label.js"/>
+      <module name="sap/m/Input.js"/>
+      <module name="sap/ui/layout/GridData.js"/>
+      <module name="sap/m/DatePicker.js"/>
+      <module name="sap/ui/layout/VerticalLayout.js"/>
+      <module name="sap/m/RadioButton.js"/>
+      <module name="sap/m/Button.js"/>
+    </requires>
+  </module>
+  <module name="i2d/pp/mrpcockpit/reuse/fragments/DialogPlanOrderChange.controller.js" size="7134" compressedSize="3877">
+    <requires>
+      <module name="i2d/pp/mrpcockpit/reuse/util/CollaborationHelper.js"/>
+      <module name="i2d/pp/mrpcockpit/reuse/util/CommonConstants.js"/>
+      <module name="i2d/pp/mrpcockpit/reuse/fragments/DialogRoot.js"/>
+      <module name="sap/ca/ui/utils/busydialog.js"/>
+      <module name="sap/ca/ui/message/message.js"/>
+      <module name="sap/ca/ui/model/type/Number.js"/>
+      <module name="sap/ca/ui/model/format/QuantityFormat.js"/>
+      <module name="jquery.sap.global.js"/>
+    </requires>
+  </module>
+  <module name="i2d/pp/mrpcockpit/reuse/fragments/DialogPlanOrderChange.fragment.xml" size="5581">
+    <requires>
+      <module name="sap/ui/core/Fragment.js"/>
+      <module name="sap/m/Dialog.js"/>
+      <module name="sap/ui/layout/Grid.js"/>
+      <module name="sap/ui/layout/form/SimpleForm.js"/>
+      <module name="i2d/pp/mrpcockpit/reuse/fragments/DialogInfoPlan.fragment.xml"/>
+      <module name="sap/m/Label.js"/>
+      <module name="sap/m/Input.js"/>
+      <module name="sap/ui/layout/GridData.js"/>
+      <module name="sap/m/DatePicker.js"/>
+      <module name="sap/ui/layout/HorizontalLayout.js"/>
+      <module name="sap/m/Text.js"/>
+      <module name="sap/ui/layout/VerticalLayout.js"/>
+      <module name="sap/m/RadioButton.js"/>
+      <module name="sap/m/Button.js"/>
+    </requires>
+  </module>
+  <module name="i2d/pp/mrpcockpit/reuse/fragments/DialogRoot.js" size="16977" compressedSize="6308">
+    <requires>
+      <module name="i2d/pp/mrpcockpit/reuse/util/Helper.js"/>
+      <module name="i2d/pp/mrpcockpit/reuse/util/CommonConstants.js"/>
+      <module name="sap/ca/ui/utils/busydialog.js"/>
+      <module name="sap/ca/ui/message/message.js"/>
+      <module name="sap/ca/ui/model/type/Number.js"/>
+      <module name="sap/ca/ui/model/format/QuantityFormat.js"/>
+      <module name="sap/ca/scfld/md/controller/BaseDetailController.js"/>
+      <module name="sap/ui/core/format/NumberFormat.js"/>
+      <module name="sap/ui/core/Configuration.js"/>
+      <module name="jquery.sap.global.js"/>
+    </requires>
+  </module>
+  <module name="i2d/pp/mrpcockpit/reuse/fragments/DialogShortageAccept.controller.js" size="2139" compressedSize="1167">
+    <requires>
+      <module name="i2d/pp/mrpcockpit/reuse/util/CollaborationHelper.js"/>
+      <module name="i2d/pp/mrpcockpit/reuse/util/CommonConstants.js"/>
+      <module name="i2d/pp/mrpcockpit/reuse/fragments/DialogRoot.js"/>
+      <module name="sap/ca/ui/utils/busydialog.js"/>
+      <module name="sap/ca/ui/message/message.js"/>
+      <module name="sap/ca/ui/model/format/QuantityFormat.js"/>
+      <module name="jquery.sap.global.js"/>
+    </requires>
+  </module>
+  <module name="i2d/pp/mrpcockpit/reuse/fragments/DialogShortageAccept.fragment.xml" size="1855">
+    <requires>
+      <module name="sap/ui/core/Fragment.js"/>
+      <module name="sap/m/Dialog.js"/>
+      <module name="sap/ui/layout/Grid.js"/>
+      <module name="sap/ui/layout/form/SimpleForm.js"/>
+      <module name="sap/m/Label.js"/>
+      <module name="sap/m/Text.js"/>
+      <module name="sap/ui/layout/HorizontalLayout.js"/>
+      <module name="sap/m/Button.js"/>
+    </requires>
+  </module>
+  <module name="i2d/pp/mrpcockpit/reuse/fragments/FilterFacetFilter.fragment.xml" size="425">
+    <requires>
+      <module name="sap/ui/core/Fragment.js"/>
+      <module name="sap/m/FacetFilter.js"/>
+      <module name="sap/ui/layout/GridData.js"/>
+    </requires>
+  </module>
+  <module name="i2d/pp/mrpcockpit/reuse/fragments/FilterShortageDefinition.fragment.xml" size="622">
+    <requires>
+      <module name="sap/ui/core/Fragment.js"/>
+      <module name="sap/ui/layout/VerticalLayout.js"/>
+      <module name="sap/m/Label.js"/>
+      <module name="sap/m/Select.js"/>
+      <module name="sap/ui/core/Item.js"/>
+      <module name="sap/ui/layout/GridData.js"/>
+    </requires>
+  </module>
+  <module name="i2d/pp/mrpcockpit/reuse/fragments/FilterTimeHorizon.fragment.xml" size="1530">
+    <requires>
+      <module name="sap/ui/core/Fragment.js"/>
+      <module name="sap/ui/layout/VerticalLayout.js"/>
+      <module name="sap/m/Label.js"/>
+      <module name="sap/m/Select.js"/>
+      <module name="sap/ui/core/Item.js"/>
+      <module name="sap/ui/layout/GridData.js"/>
+    </requires>
+  </module>
+  <module name="i2d/pp/mrpcockpit/reuse/fragments/InfoTab.fragment.xml" size="6436">
+    <requires>
+      <module name="sap/ui/core/Fragment.js"/>
+      <module name="sap/m/IconTabFilter.js"/>
+      <module name="sap/ui/layout/Grid.js"/>
+      <module name="sap/ui/layout/form/SimpleForm.js"/>
+      <module name="sap/m/Label.js"/>
+      <module name="sap/m/Text.js"/>
+    </requires>
+  </module>
+  <module name="i2d/pp/mrpcockpit/reuse/fragments/MaterialShortageQuickView.fragment.xml" size="5850">
+    <requires>
+      <module name="sap/ui/core/Fragment.js"/>
+      <module name="sap/m/Popover.js"/>
+      <module name="sap/ui/layout/Grid.js"/>
+      <module name="sap/ui/layout/form/SimpleForm.js"/>
+      <module name="i2d/pp/mrpcockpit/reuse/controls/VisualStatusForecast.js"/>
+      <module name="sap/m/Label.js"/>
+      <module name="sap/m/Text.js"/>
+      <module name="sap/m/Button.js"/>
+      <module name="sap/m/Bar.js"/>
+    </requires>
+  </module>
+  <module name="i2d/pp/mrpcockpit/reuse/fragments/ObjectHeader.fragment.xml" size="469">
+    <requires>
+      <module name="sap/ui/core/Fragment.js"/>
+      <module name="sap/m/ObjectHeader.js"/>
+      <module name="sap/ui/layout/GridData.js"/>
+    </requires>
+  </module>
+  <module name="i2d/pp/mrpcockpit/reuse/fragments/PlannedOrderQuickView.fragment.xml" size="22037">
+    <requires>
+      <module name="sap/ui/core/Fragment.js"/>
+      <module name="sap/m/Popover.js"/>
+      <module name="sap/ui/layout/Grid.js"/>
+      <module name="i2d/pp/mrpcockpit/reuse/fragments/ContactInformationQuickView.fragment.xml"/>
+      <module name="sap/ui/layout/VerticalLayout.js"/>
+      <module name="sap/ui/layout/form/SimpleForm.js"/>
+      <module name="sap/m/Label.js"/>
+      <module name="sap/m/Text.js"/>
+      <module name="sap/m/Button.js"/>
+      <module name="sap/m/Toolbar.js"/>
+      <module name="sap/m/ToolbarSpacer.js"/>
+    </requires>
+  </module>
+  <module name="i2d/pp/mrpcockpit/reuse/fragments/ProductionOrderQuickView.fragment.xml" size="8712">
+    <requires>
+      <module name="sap/ui/core/Fragment.js"/>
+      <module name="sap/m/Popover.js"/>
+      <module name="sap/ui/layout/Grid.js"/>
+      <module name="sap/ui/layout/VerticalLayout.js"/>
+      <module name="sap/ui/layout/form/SimpleForm.js"/>
+      <module name="sap/m/Label.js"/>
+      <module name="sap/m/Text.js"/>
+      <module name="sap/m/Button.js"/>
+      <module name="sap/m/Toolbar.js"/>
+      <module name="sap/m/ToolbarSpacer.js"/>
+    </requires>
+  </module>
+  <module name="i2d/pp/mrpcockpit/reuse/fragments/PurchaseOrderQuickView.fragment.xml" size="17293">
+    <requires>
+      <module name="sap/ui/core/Fragment.js"/>
+      <module name="sap/m/Popover.js"/>
+      <module name="sap/ui/layout/Grid.js"/>
+      <module name="sap/ui/layout/form/SimpleForm.js"/>
+      <module name="sap/m/Label.js"/>
+      <module name="sap/m/Text.js"/>
+      <module name="sap/m/Link.js"/>
+      <module name="sap/ui/layout/HorizontalLayout.js"/>
+      <module name="sap/m/ObjectStatus.js"/>
+      <module name="sap/ui/layout/VerticalLayout.js"/>
+      <module name="sap/m/Button.js"/>
+      <module name="sap/m/Toolbar.js"/>
+      <module name="sap/m/ToolbarSpacer.js"/>
+    </requires>
+  </module>
+  <module name="i2d/pp/mrpcockpit/reuse/fragments/SalesOrderQuickView.fragment.xml" size="9084">
+    <requires>
+      <module name="sap/ui/core/Fragment.js"/>
+      <module name="sap/m/Popover.js"/>
+      <module name="sap/ui/layout/Grid.js"/>
+      <module name="sap/ui/layout/form/SimpleForm.js"/>
+      <module name="sap/m/Label.js"/>
+      <module name="sap/m/Text.js"/>
+      <module name="sap/m/Link.js"/>
+      <module name="sap/m/Button.js"/>
+      <module name="sap/m/Toolbar.js"/>
+      <module name="sap/m/ToolbarSpacer.js"/>
+    </requires>
+  </module>
+  <module name="i2d/pp/mrpcockpit/reuse/fragments/SolutionViewPage.fragment.xml" size="4421">
+    <requires>
+      <module name="sap/ui/core/Fragment.js"/>
+      <module name="sap/m/Page.js"/>
+      <module name="sap/m/ScrollContainer.js"/>
+      <module name="sap/m/List.js"/>
+      <module name="sap/m/CustomListItem.js"/>
+      <module name="sap/m/ObjectHeader.js"/>
+      <module name="sap/m/ObjectAttribute.js"/>
+      <module name="sap/m/Panel.js"/>
+      <module name="sap/m/Toolbar.js"/>
+      <module name="sap/m/Label.js"/>
+      <module name="sap/m/ToolbarSpacer.js"/>
+      <module name="sap/m/SegmentedButton.js"/>
+      <module name="sap/m/Button.js"/>
+      <module name="sap/m/Table.js"/>
+      <module name="sap/m/Text.js"/>
+      <module name="sap/m/Column.js"/>
+      <module name="i2d/pp/mrpcockpit/reuse/controls/Chart.js"/>
+      <module name="i2d/pp/mrpcockpit/reuse/controls/SolutionCardContainer.js"/>
+    </requires>
+  </module>
+  <module name="i2d/pp/mrpcockpit/reuse/fragments/SupplyDemandItemsTab.fragment.xml" size="484">
+    <requires>
+      <module name="sap/ui/core/Fragment.js"/>
+      <module name="sap/m/IconTabFilter.js"/>
+      <module name="i2d/pp/mrpcockpit/reuse/fragments/SupplyDemandPanel.fragment.xml"/>
+    </requires>
+  </module>
+  <module name="i2d/pp/mrpcockpit/reuse/fragments/SupplyDemandPanel.fragment.xml" size="12816">
+    <requires>
+      <module name="sap/ui/core/Fragment.js"/>
+      <module name="sap/m/Panel.js"/>
+      <module name="sap/m/Toolbar.js"/>
+      <module name="sap/m/ObjectHeader.js"/>
+      <module name="sap/m/ObjectAttribute.js"/>
+      <module name="sap/m/ToolbarSpacer.js"/>
+      <module name="sap/m/SegmentedButton.js"/>
+      <module name="sap/m/Button.js"/>
+      <module name="sap/m/Table.js"/>
+      <module name="sap/ui/core/ExtensionPoint.js"/>
+      <module name="sap/m/Column.js"/>
+      <module name="sap/m/Label.js"/>
+      <module name="sap/m/ColumnListItem.js"/>
+      <module name="sap/ui/core/CustomData.js"/>
+      <module name="sap/ui/layout/HorizontalLayout.js"/>
+      <module name="sap/ui/core/Icon.js"/>
+      <module name="sap/m/ObjectIdentifier.js"/>
+      <module name="sap/m/ObjectStatus.js"/>
+      <module name="sap/m/Text.js"/>
+      <module name="sap/m/ObjectNumber.js"/>
+      <module name="sap/m/ScrollContainer.js"/>
+      <module name="i2d/pp/mrpcockpit/reuse/controls/Chart.js"/>
+    </requires>
+  </module>
+  <module name="i2d/pp/mrpcockpit/reuse/i18n/i18n.properties" size="48005">
+  </module>
+  <module name="i2d/pp/mrpcockpit/reuse/i18n/i18n_ar.properties" size="89985">
+  </module>
+  <module name="i2d/pp/mrpcockpit/reuse/i18n/i18n_cs.properties" size="57776">
+  </module>
+  <module name="i2d/pp/mrpcockpit/reuse/i18n/i18n_de.properties" size="51291">
+  </module>
+  <module name="i2d/pp/mrpcockpit/reuse/i18n/i18n_en.properties" size="48914">
+  </module>
+  <module name="i2d/pp/mrpcockpit/reuse/i18n/i18n_en_US_sappsd.properties" size="127685">
+  </module>
+  <module name="i2d/pp/mrpcockpit/reuse/i18n/i18n_en_US_saptrc.properties" size="60031">
+  </module>
+  <module name="i2d/pp/mrpcockpit/reuse/i18n/i18n_es.properties" size="52841">
+  </module>
+  <module name="i2d/pp/mrpcockpit/reuse/i18n/i18n_fr.properties" size="54256">
+  </module>
+  <module name="i2d/pp/mrpcockpit/reuse/i18n/i18n_hu.properties" size="57550">
+  </module>
+  <module name="i2d/pp/mrpcockpit/reuse/i18n/i18n_it.properties" size="51637">
+  </module>
+  <module name="i2d/pp/mrpcockpit/reuse/i18n/i18n_iw.properties" size="80975">
+  </module>
+  <module name="i2d/pp/mrpcockpit/reuse/i18n/i18n_ja.properties" size="65573">
+  </module>
+  <module name="i2d/pp/mrpcockpit/reuse/i18n/i18n_no.properties" size="50192">
+  </module>
+  <module name="i2d/pp/mrpcockpit/reuse/i18n/i18n_pl.properties" size="53504">
+  </module>
+  <module name="i2d/pp/mrpcockpit/reuse/i18n/i18n_pt.properties" size="52910">
+  </module>
+  <module name="i2d/pp/mrpcockpit/reuse/i18n/i18n_ru.properties" size="106205">
+  </module>
+  <module name="i2d/pp/mrpcockpit/reuse/i18n/i18n_tr.properties" size="55066">
+  </module>
+  <module name="i2d/pp/mrpcockpit/reuse/i18n/i18n_zh_CN.properties" size="56305">
+  </module>
+  <module name="i2d/pp/mrpcockpit/reuse/library.js" size="1034" compressedSize="310">
+    <description>Initialization Code and shared classes of library i2d.pp.mrpcockpit.reuse (1.5.7)</description>
+    <requires>
+      <module name="sap/ui/core/Core.js"/>
+      <module name="sap/ui/core/library.js"/>
+      <module name="jquery.sap.global.js"/>
+    </requires>
+  </module>
+  <module name="i2d/pp/mrpcockpit/reuse/library.properties" size="95">
+  </module>
+  <module name="i2d/pp/mrpcockpit/reuse/util/CalculationEngine.js" size="41304" compressedSize="13814">
+    <requires>
+      <module name="sap/ca/ui/message/message.js"/>
+      <module name="i2d/pp/mrpcockpit/reuse/util/CommonConstants.js"/>
+      <module name="jquery.sap.global.js"/>
+    </requires>
+  </module>
+  <module name="i2d/pp/mrpcockpit/reuse/util/CollaborationHelper.js" size="62225" compressedSize="26016">
+    <requires>
+      <module name="sap/ca/ui/message/message.js"/>
+      <module name="i2d/pp/mrpcockpit/reuse/util/CommonConstants.js"/>
+      <module name="i2d/pp/mrpcockpit/reuse/util/Wave3CollaborationHelper.js"/>
+      <module name="jquery.sap.global.js"/>
+    </requires>
+  </module>
+  <module name="i2d/pp/mrpcockpit/reuse/util/CommonConstants.js" size="18470" compressedSize="15025">
+    <description>CommonConstants.js - App independent Constants  @author D054795  @version 24.10.2013  =============================================================================  (c) Copyright 2011-2013 by SAP AG, Dornierstr. 3, 88677 Markdorf, Germany All rights reserved. =============================================================================  This material is a CONFIDENTIAL, unpublished work of authorship created between 2011 and 2013 and subsequently updated. It is a TRADE SECRET which is property of SAP AG, if not explicitly agreed to otherwise.  All use, disclosure, and / or reproduction not specifically authorized by SAP AG in writing is prohibited.</description>
+    <requires>
+      <module name="jquery.sap.global.js"/>
+    </requires>
+  </module>
+  <module name="i2d/pp/mrpcockpit/reuse/util/CommonFormatter.js" size="53462" compressedSize="26910">
+    <requires>
+      <module name="sap/ca/ui/model/format/DateFormat.js"/>
+      <module name="sap/ca/ui/model/format/NumberFormat.js"/>
+      <module name="sap/ca/ui/model/format/QuantityFormat.js"/>
+      <module name="jquery.sap.global.js"/>
+    </requires>
+  </module>
+  <module name="i2d/pp/mrpcockpit/reuse/util/Helper.js" size="20665" compressedSize="6522">
+    <requires>
+      <module name="sap/ca/ui/utils/Lessifier.js"/>
+      <module name="jquery.sap.global.js"/>
+    </requires>
+  </module>
+  <module name="i2d/pp/mrpcockpit/reuse/util/InteroperabilityHelper.js" size="8568" compressedSize="2978">
+    <requires>
+      <module name="jquery.sap.global.js"/>
+    </requires>
+  </module>
+  <module name="i2d/pp/mrpcockpit/reuse/util/Lessifier.js" size="1096" compressedSize="1011">
+    <requires>
+      <module name="sap/ca/ui/utils/Lessifier.js"/>
+      <module name="jquery.sap.global.js"/>
+    </requires>
+  </module>
+  <module name="i2d/pp/mrpcockpit/reuse/util/QUnitHelper.js" size="926" compressedSize="440">
+    <requires>
+      <module name="jquery.sap.global.js"/>
+    </requires>
+  </module>
+  <module name="i2d/pp/mrpcockpit/reuse/util/QuickViewHelper.js" size="37519" compressedSize="17587">
+    <requires>
+      <module name="i2d/pp/mrpcockpit/reuse/util/CommonConstants.js"/>
+      <module name="jquery.sap.global.js"/>
+    </requires>
+  </module>
+  <module name="i2d/pp/mrpcockpit/reuse/util/StateMachine.js" size="11211" compressedSize="9520">
+    <requires>
+      <module name="jquery.sap.global.js"/>
+    </requires>
+  </module>
+  <module name="i2d/pp/mrpcockpit/reuse/util/Wave3CollaborationHelper.js" size="43940" compressedSize="18687">
+    <requires>
+      <module name="sap/ca/ui/message/message.js"/>
+      <module name="i2d/pp/mrpcockpit/reuse/util/CommonConstants.js"/>
+      <module name="jquery.sap.global.js"/>
+    </requires>
+  </module>
+  <module name="i2d/pp/mrpcockpit/reuse/util/Wave3Helper.js" size="16310" compressedSize="8240">
+    <requires>
+      <module name="jquery.sap.global.js"/>
+    </requires>
+  </module>
+  <module name="i2d/pp/mrpcockpit/reuse/view/AoRAddDialog.js" size="5178" compressedSize="1598" raw="true">
+  </module>
+  <module name="i2d/pp/mrpcockpit/reuse/view/AoRAddDialog.view.xml" size="851">
+    <requires>
+      <module name="sap/ui/core/mvc/XMLView.js"/>
+      <module name="i2d/pp/mrpcockpit/reuse/view/AoRAddDialog.controller.js"/>
+      <module name="sap/m/SelectDialog.js"/>
+      <module name="sap/m/StandardListItem.js"/>
+    </requires>
+  </module>
+  <module name="i2d/pp/mrpcockpit/reuse/view/AoRHandler.js" size="11473" compressedSize="5716">
+    <requires>
+      <module name="i2d/pp/mrpcockpit/reuse/view/AoRAddDialog.js"/>
+      <module name="i2d/pp/mrpcockpit/reuse/view/AoRMainDialog.js"/>
+      <module name="i2d/pp/mrpcockpit/reuse/view/AoRWelcomeDialog.js"/>
+      <module name="jquery.sap.global.js"/>
+    </requires>
+  </module>
+  <module name="i2d/pp/mrpcockpit/reuse/view/AoRMainDialog.js" size="2791" compressedSize="1294" raw="true">
+  </module>
+  <module name="i2d/pp/mrpcockpit/reuse/view/AoRMainDialog.view.xml" size="1116">
+    <requires>
+      <module name="sap/ui/core/mvc/XMLView.js"/>
+      <module name="i2d/pp/mrpcockpit/reuse/view/AoRMainDialog.controller.js"/>
+      <module name="sap/ui/layout/VerticalLayout.js"/>
+      <module name="sap/m/List.js"/>
+      <module name="sap/m/InputListItem.js"/>
+      <module name="sap/ui/core/Icon.js"/>
+      <module name="sap/m/StandardListItem.js"/>
+    </requires>
+  </module>
+  <module name="i2d/pp/mrpcockpit/reuse/view/AoRWelcomeDialog.js" size="2295" compressedSize="869">
+    <requires>
+      <module name="sap/ushell/services/CrossApplicationNavigation.js"/>
+      <module name="jquery.sap.global.js"/>
+    </requires>
+  </module>
+  <module name="i2d/pp/mrpcockpit/reuse/view/AoRWelcomeDialog.view.xml" size="1093">
+    <requires>
+      <module name="sap/ui/core/mvc/XMLView.js"/>
+      <module name="i2d/pp/mrpcockpit/reuse/view/AoRWelcomeDialog.controller.js"/>
+      <module name="sap/m/Dialog.js"/>
+      <module name="sap/ui/layout/form/SimpleForm.js"/>
+      <module name="sap/ui/layout/VerticalLayout.js"/>
+      <module name="sap/m/Text.js"/>
+      <module name="sap/m/Button.js"/>
+    </requires>
+  </module>
+  <module name="i2d/pp/mrpcockpit/reuse/view/DisplayVariant.js" size="15691" compressedSize="11304">
+    <requires>
+      <module name="jquery.sap.global.js"/>
+    </requires>
+  </module>
+  <module name="i2d/pp/mrpcockpit/reuse/view/FacetFilter.js" size="8836" compressedSize="4879">
+    <requires>
+      <module name="i2d/pp/mrpcockpit/reuse/util/Helper.js"/>
+      <module name="jquery.sap.global.js"/>
+    </requires>
+  </module>
+  <module name="i2d/pp/mrpcockpit/reuse/view/S1parent.js" size="40948" compressedSize="22047">
+    <requires>
+      <module name="sap/ca/scfld/md/controller/BaseFullscreenController.js"/>
+      <module name="sap/m/TablePersoController.js"/>
+      <module name="sap/m/MessageBox.js"/>
+      <module name="i2d/pp/mrpcockpit/reuse/view/AoRHandler.js"/>
+      <module name="i2d/pp/mrpcockpit/reuse/view/VariantHandler.js"/>
+      <module name="i2d/pp/mrpcockpit/reuse/util/StateMachine.js"/>
+      <module name="i2d/pp/mrpcockpit/reuse/view/ViewStateHandler.js"/>
+      <module name="i2d/pp/mrpcockpit/reuse/view/DisplayVariant.js"/>
+      <module name="i2d/pp/mrpcockpit/reuse/view/FacetFilter.js"/>
+      <module name="i2d/pp/mrpcockpit/reuse/view/TableSorting.js"/>
+      <module name="i2d/pp/mrpcockpit/reuse/util/InteroperabilityHelper.js"/>
+      <module name="i2d/pp/mrpcockpit/reuse/util/CommonConstants.js"/>
+      <module name="jquery.sap.global.js"/>
+    </requires>
+  </module>
+  <module name="i2d/pp/mrpcockpit/reuse/view/S2parent.js" size="31977" compressedSize="13059">
+    <requires>
+      <module name="sap/ca/scfld/md/controller/ScfldMasterController.js"/>
+      <module name="i2d/pp/mrpcockpit/reuse/util/CommonConstants.js"/>
+      <module name="i2d/pp/mrpcockpit/reuse/util/Helper.js"/>
+      <module name="i2d/pp/mrpcockpit/reuse/view/AoRHandler.js"/>
+      <module name="i2d/pp/mrpcockpit/reuse/view/VariantHandler.js"/>
+      <module name="i2d/pp/mrpcockpit/reuse/util/InteroperabilityHelper.js"/>
+      <module name="i2d/pp/mrpcockpit/reuse/view/ViewStateHandler.js"/>
+      <module name="jquery.sap.global.js"/>
+    </requires>
+  </module>
+  <module name="i2d/pp/mrpcockpit/reuse/view/S3parent.js" size="50859" compressedSize="22376">
+    <requires>
+      <module name="sap/ca/scfld/md/controller/BaseDetailController.js"/>
+      <module name="i2d/pp/mrpcockpit/reuse/util/CalculationEngine.js"/>
+      <module name="sap/m/MessageBox.js"/>
+      <module name="i2d/pp/mrpcockpit/reuse/util/Helper.js"/>
+      <module name="i2d/pp/mrpcockpit/reuse/util/CollaborationHelper.js"/>
+      <module name="i2d/pp/mrpcockpit/reuse/util/Wave3CollaborationHelper.js"/>
+      <module name="i2d/pp/mrpcockpit/reuse/util/QuickViewHelper.js"/>
+      <module name="i2d/pp/mrpcockpit/reuse/util/Wave3Helper.js"/>
+      <module name="jquery.sap.global.js"/>
+    </requires>
+  </module>
+  <module name="i2d/pp/mrpcockpit/reuse/view/S4parent.js" size="76903" compressedSize="31378">
+    <requires>
+      <module name="sap/ca/scfld/md/controller/BaseDetailController.js"/>
+      <module name="i2d/pp/mrpcockpit/reuse/controls/SolutionCardContainer.js"/>
+      <module name="i2d/pp/mrpcockpit/reuse/controls/Chart.js"/>
+      <module name="sap/ca/ui/message/message.js"/>
+      <module name="sap/ca/ui/model/type/Date.js"/>
+      <module name="i2d/pp/mrpcockpit/reuse/util/CommonConstants.js"/>
+      <module name="i2d/pp/mrpcockpit/reuse/util/Helper.js"/>
+      <module name="i2d/pp/mrpcockpit/reuse/util/CalculationEngine.js"/>
+      <module name="i2d/pp/mrpcockpit/reuse/util/CollaborationHelper.js"/>
+      <module name="i2d/pp/mrpcockpit/reuse/util/Wave3CollaborationHelper.js"/>
+      <module name="i2d/pp/mrpcockpit/reuse/util/Wave3Helper.js"/>
+      <module name="jquery.sap.global.js"/>
+    </requires>
+  </module>
+  <module name="i2d/pp/mrpcockpit/reuse/view/TableSorting.js" size="4660" compressedSize="2116">
+    <requires>
+      <module name="jquery.sap.global.js"/>
+    </requires>
+  </module>
+  <module name="i2d/pp/mrpcockpit/reuse/view/VariantChangeConfirmationDialog.js" size="2008" compressedSize="764">
+    <requires>
+      <module name="sap/ushell/services/CrossApplicationNavigation.js"/>
+      <module name="jquery.sap.global.js"/>
+    </requires>
+  </module>
+  <module name="i2d/pp/mrpcockpit/reuse/view/VariantChangeConfirmationDialog.view.xml" size="1128">
+    <requires>
+      <module name="sap/ui/core/mvc/XMLView.js"/>
+      <module name="i2d/pp/mrpcockpit/reuse/view/VariantChangeConfirmationDialog.controller.js"/>
+      <module name="sap/m/Dialog.js"/>
+      <module name="sap/ui/layout/form/SimpleForm.js"/>
+      <module name="sap/ui/layout/VerticalLayout.js"/>
+      <module name="sap/m/Text.js"/>
+      <module name="sap/m/Button.js"/>
+    </requires>
+  </module>
+  <module name="i2d/pp/mrpcockpit/reuse/view/VariantDeleteDialog.js" size="2039" compressedSize="699" raw="true">
+  </module>
+  <module name="i2d/pp/mrpcockpit/reuse/view/VariantDeleteDialog.view.xml" size="1073">
+    <requires>
+      <module name="sap/ui/core/mvc/XMLView.js"/>
+      <module name="i2d/pp/mrpcockpit/reuse/view/VariantDeleteDialog.controller.js"/>
+      <module name="sap/m/Dialog.js"/>
+      <module name="sap/ui/layout/form/SimpleForm.js"/>
+      <module name="sap/ui/layout/VerticalLayout.js"/>
+      <module name="sap/m/Text.js"/>
+      <module name="sap/m/Button.js"/>
+    </requires>
+  </module>
+  <module name="i2d/pp/mrpcockpit/reuse/view/VariantHandler.js" size="42845" compressedSize="18943">
+    <requires>
+      <module name="i2d/pp/mrpcockpit/reuse/view/VariantSaveDialog.js"/>
+      <module name="i2d/pp/mrpcockpit/reuse/view/VariantDeleteDialog.js"/>
+      <module name="i2d/pp/mrpcockpit/reuse/view/VariantChangeConfirmationDialog.js"/>
+      <module name="jquery.sap.global.js"/>
+    </requires>
+  </module>
+  <module name="i2d/pp/mrpcockpit/reuse/view/VariantSaveDialog.js" size="5283" compressedSize="3155">
+    <requires>
+      <module name="sap/ushell/services/CrossApplicationNavigation.js"/>
+      <module name="jquery.sap.global.js"/>
+    </requires>
+  </module>
+  <module name="i2d/pp/mrpcockpit/reuse/view/VariantSaveDialog.view.xml" size="1625">
+    <requires>
+      <module name="sap/ui/core/mvc/XMLView.js"/>
+      <module name="i2d/pp/mrpcockpit/reuse/view/VariantSaveDialog.controller.js"/>
+      <module name="sap/m/Dialog.js"/>
+      <module name="sap/ui/layout/form/SimpleForm.js"/>
+      <module name="sap/ui/layout/VerticalLayout.js"/>
+      <module name="sap/m/Text.js"/>
+      <module name="sap/m/Input.js"/>
+      <module name="sap/m/CheckBox.js"/>
+      <module name="sap/m/Button.js"/>
+    </requires>
+  </module>
+  <module name="i2d/pp/mrpcockpit/reuse/view/ViewStateHandler.js" size="7512" compressedSize="3057">
+    <requires>
+      <module name="jquery.sap.global.js"/>
+    </requires>
+  </module>
+</library>

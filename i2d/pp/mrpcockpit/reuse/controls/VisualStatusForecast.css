@@ -1,0 +1,95 @@
+/* ==|== Visual Forecast ==========================================================
+ *
+ *  Custom Control for Stock Availability graphic inside the list table (210) 
+ *  @see /controls/VisualStatusForecast.js
+ *
+ * author: Vladimir Shapiro (D046669), Joachim Fess (D038322)
+ * version: 04.10.2013
+ * ============================================================
+ */
+
+.sapUiVisualStatusForecast {
+	font-size: 0; /* http://stackoverflow.com/questions/1097006/removing-whitespace-between-html-elements-when-using-line-breaks */
+	border-left: 0.125rem solid @sapUiExtraLightBorder;
+	border-right: 0.125rem solid @sapUiExtraLightBorder;
+	display: inline-block;
+	height: 24px;
+	vertical-align: middle;
+	cursor: pointer;
+}
+
+.sapUiVisualStatusForecast span {
+	display: inline-block;
+	width: 0.5rem;
+	height: 1.25rem;
+}
+
+.sapUiVisualStatusForecast span.positive {
+	background-color: @sapUiChartGood;
+	border: 1px solid @sapUiLightestBorder;
+	border-top: 0.125rem solid @sapUiExtraLightBorder;
+	border-bottom: 0.125rem solid @sapUiExtraLightBorder;
+
+}
+
+.sapUiVisualStatusForecast span.warning {
+	background-color: @sapUiAccent1; /* @sapUiYellow */
+	border: 1px solid @sapUiLightestBorder;
+	border-top: 0.125rem solid @sapUiExtraLightBorder;
+	border-bottom: 0.125rem solid @sapUiExtraLightBorder;
+}
+
+.sapUiVisualStatusForecast span.negative {
+	background-color: @sapUiChartBad;
+	border: 1px solid @sapUiLightestBorder;
+	border-top: 0.125rem solid @sapUiExtraLightBorder;
+	border-bottom: 0.125rem solid @sapUiExtraLightBorder;
+}
+
+.sapUiVisualStatusForecast span.positive_we {	
+	/* background-image: url(../../../../../sap/ui/core/themes/sap_bluecrystal/img/bg_white_transparent.png); */
+	background-color: @sapUiChartGood;
+	border: 1px solid @sapUiLightestBorder;
+	border-top: 0.125rem solid @sapUiExtraLightBorder;
+	border-bottom: 0.125rem solid @sapUiExtraLightBorder;
+	border-radius: 3px;
+}
+
+.sapUiVisualStatusForecast span.warning_we {
+	/* background-image: url(../../../../../sap/ui/core/themes/sap_bluecrystal/img/bg_white_transparent.png); */
+	background-color: @sapUiAccent1; /* @sapUiYellow */ 
+	border: 1px solid @sapUiLightestBorder;
+	border-top: 0.125rem solid @sapUiExtraLightBorder;
+	border-bottom: 0.125rem solid @sapUiExtraLightBorder;
+}
+
+.sapUiVisualStatusForecast span.negative_we {
+	/* background-image: url(../../../../../sap/ui/core/themes/sap_bluecrystal/img/bg_white_transparent.png); */
+	background-color: @sapUiChartBad;
+	border: 1px solid @sapUiLightestBorder;
+	border-top: 0.125rem solid @sapUiExtraLightBorder;
+	border-bottom: 0.125rem solid @sapUiExtraLightBorder;
+}
+
+.sapUiVisualStatusForecast span.negative_acc {
+	background-color: @sapUiChartNeutral;
+	border: 1px solid @sapUiLightestBorder;
+	border-top: 0.125rem solid @sapUiExtraLightBorder;
+	border-bottom: 0.125rem solid @sapUiExtraLightBorder;
+}
+
+.sapUiVisualStatusForecast span.negative_we_acc {
+	/* background-image: url(../../../../../sap/ui/core/themes/sap_bluecrystal/img/bg_white_transparent.png); */
+	background-color: @sapUiChartNeutral;
+	border: 1px solid @sapUiLightestBorder;
+	border-top: 0.125rem solid @sapUiExtraLightBorder;
+	border-bottom: 0.125rem solid @sapUiExtraLightBorder;
+}
+
+
+.sapUiVisualStatusForecast span.positive_we,
+.sapUiVisualStatusForecast span.warning_we,
+.sapUiVisualStatusForecast span.negative_we,
+.sapUiVisualStatusForecast span.negative_we_acc {
+	background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAUAAAAFCAYAAACNbyblAAAAIklEQVR42mWMsQkAAAzC8v/T7RQEFRwMKhehadDBwgLn8/t041SsEdd4QgAAAABJRU5ErkJggg==);	
+}

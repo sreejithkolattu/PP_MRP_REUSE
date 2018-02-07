@@ -1,0 +1,16 @@
+<!--
+
+    Copyright (C) 2009-2014 SAP SE or an SAP affiliate company. All rights reserved
+
+-->
+
+<!-- ==|== Object Header ========================================================== -->
+
+					<ObjectHeader xmlns="sap.m" xmlns:l="sap.ui.layout" id="ObjectHeader" showTitleSelector="true"
+						titleActive="false" title="{i18n>ObjectHeaderTitle}" number="--"
+						numberUnit="{i18n>NumberUnit}" numberState="Error"
+						titleSelectorPress="onVariantSelectorPress">
+						<layoutData>
+							<l:GridData span="L12 M12 S12" />
+						</layoutData>
+					</ObjectHeader>

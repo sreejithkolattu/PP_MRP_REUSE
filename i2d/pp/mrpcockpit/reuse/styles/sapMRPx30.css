@@ -1,0 +1,293 @@
+/*  ==|== SAP MRP x30 ==========================================================
+ *
+ * Summary of CSS styles for MRP details screens (x30)
+ *
+ * author: SAP AG
+ * version: 23.11.2013
+ * ============================================================
+ */
+
+/*  ==|== Master View ========================================================== */
+.sapMRPMasterPageCrIcon>span>span {
+	color: @sapUiAccent8 !important;
+}
+
+/*  ==|== Detail View ========================================================== */
+.sapMRPDetailPage .sapMPageHeader .sapMText {
+	font-size: 1rem !important;
+}
+
+/*  ==|== Tab Header ========================================================== */
+.sapMRPDetailPage .sapMITBContent .sapMOH {
+	padding-left: 1rem;
+	margin-left: 0rem;
+}
+
+/*  ==|== Panel Toolbar ========================================================== */
+
+
+/* Two-lined Table toolbar */
+.sapMRPDetailPage .sapMRPMTB.sapMTB {
+	height: 5rem;
+	padding-left: 0;
+}
+
+.sapMRPDetailPage .sapMRPMTB .sapMObjectAttributeDiv .sapMText {
+	font-size: 0.875rem;
+	color: @sapUiElement;
+}
+
+.sapMRPDetailPage .sapMRPMTB .sapMOHAttr {
+	width: auto;
+}
+
+.sapMRPCondensedPage .sapMTB .sapMLabel {
+	font-weight: bold;
+}
+
+/* remove panel defaults */
+.sapMRPDetailPage .sapMPanelContent,.sapMRPCondensedPage .sapMPanelContent
+	{
+	padding: 0 !important;
+	border-bottom: none !important;
+}
+
+/*  ==|== Navigation Pane ========================================================== */
+.sapMRPDetailPage .sapMNav,.sapMRPCondensedPage .sapMNav {
+	background-color: @sapUiLightestBG;
+}
+
+.sapMRPCondensedPage .sapMPanel {
+	width: auto !important;
+	margin: 0 1rem;
+}
+
+.sapMRPCondensedPage .sapMNav {
+	width: auto !important;
+	margin: 0 1rem;
+}
+
+/*  ==|== Table ========================================================== */
+.sapMRPDetailPage .sapMListTblCell {
+	vertical-align: middle;
+	/* middle vertical alignment as we always have one-liners (no rowspan/grouping */
+}
+
+.sapMRPSDItemSelected {
+	background-color: @sapUiNeutralBG !important;
+}
+
+/* no data cell */
+.sapMRPDetailPage .sapMListTblCell.sapMListTblCellNoData,.sapMRPCondensedPage .sapMListTblCell.sapMListTblCellNoData
+	{
+	padding-top: 2rem !important;
+	padding-bottom: 2rem !important;
+}
+
+/*  ==|== Dialogs ========================================================== */
+.sapUiFormResLayout>div { /* reducing spacing in the dialog a bit */
+	padding: 0.875rem 1rem !important;
+}
+
+/* standard dialog size */
+.sapMRPDialog section {
+	max-width: 475px;
+	/* width: 575px; */
+}
+
+/* prevent the large empty areas within the form */
+.sapMRPDialogGrid>div {
+	margin-bottom: 0rem !important;
+}
+
+.sapMRPDialog hr {
+	border: none;
+	margin: 0;
+	height: 1px;
+	background-color: @sapUiLightBorder;
+}
+
+.sapMRPDetailPage hr {
+	border: none;
+	margin: 0;
+	height: 1px;
+	background-color: @sapUiLightBorder;
+}
+
+/*  ==|== Colors: No Data ========================================================== */
+.sapMRPDetailPage .sapMListTblCell.sapMListTblCellNoData 
+.sapMRPCondensedPage .sapMListTblCell.sapMListTblCellNoData {
+	color: @sapUiExtraLightText;
+}
+
+/*  ==|== Colors: Status Icons ========================================================== */
+
+.sapMRPDetailPage  .sapMListTbl .sapUiIcon,
+.sapMRPCondensedPage  .sapMListTbl .sapUiIcon
+{ /* color of the normal icon */
+	 color: @sapUiElement; 
+}
+
+.sapMRPDetailPage .sapMObjStatusError .sapUiIcon,
+.sapMRPCondensedPage .sapMObjStatusError .sapUiIcon { /* color of the demand icon */
+	 color: @sapUiChartCritical; 
+}
+
+.sapMRPDetailPage .sapMObjStatusSuccess .sapUiIcon,
+.sapMRPCondensedPage .sapMObjStatusSuccess .sapUiIcon { /* color of the supply icon */
+	 color: @sapUiChart1; 
+}
+
+
+
+/*  ==|== Colors: CR Status Icons ========================================================== */
+
+.sapMRPIconNormal {
+	/* color of the change request icon in status 'requested'*/
+	color: @sapUiElement !important;
+}
+
+.sapMRPIconGreen {
+	/* color of the change request icon in status 'answered' and vendor response 'accepted'*/
+	color: @sapUiPositive !important;
+}
+
+.sapMRPIconRed {
+	/* color of the change request icon in status 'answered' and vendor response 'rejected'*/
+	color: @sapUiNegative !important;
+}
+
+.sapMRPIconOrange {
+	/* color of the change request icon in status 'answered' and vendor response 'new proposal'*/
+	color: @sapUiCritical !important;
+}
+
+
+/*  ==|== Colors: Condensed View ========================================================== */
+.sapMRPCondensedPage .sapMListTblCnt { /* table container */
+	border-bottom: 1px solid @sapUiExtraLightBorder;
+}
+
+/*
+.sapMRPShortage {
+	background-color: @sapUiErrorBG !important; 
+}
+*/
+.sapMRPShortage td:first-child {
+	box-shadow: inset 0.25rem 0 0 @sapUiNegativeElement;
+}
+
+.sapMRPShortage .sapMRPAvailableQuantity,
+.sapMRPShortage .sapMRPShortageNav {
+	color: @sapUiNegativeElement;
+}
+
+/*
+.sapMRPShortageSolved {
+	background-color: @sapUiSuccessBG !important; 
+}
+*/
+
+.sapMRPShortageSolved td:first-child {
+		box-shadow: inset 0.25rem 0 0 @sapUiSuccessBorder;
+}
+
+/*
+.sapMRPShortageAccepted {
+	background-color: @sapUiExtraLightBG !important;
+}
+*/
+
+.sapMRPShortageAccepted td:first-child {
+		box-shadow: inset 0.25rem 0 0 @sapUiElement;
+}
+
+/*
+.sapMRPShortageSafetyStock {
+	background-color: @sapUiWarningBG !important;
+}
+*/
+
+.sapMRPShortageSafetyStock td:first-child {
+		box-shadow: inset 0.25rem 0 0 @sapUiWarningBorder;
+}
+
+.sapMRPElementChanged {
+	background-color: @sapUiNeutralBG !important;
+}
+
+.sapMRPElementChanged td:first-child {
+		box-shadow: inset 0.25rem 0 0 @sapUiNeutralElement;
+}
+
+/*  ==|== AOR: Delete Dialog Icon ========================================================== */
+.sapMRPAORDialog .sapMLIBSelectD .sapUiIcon {
+	font-size: 1.25rem !important;
+}
+
+/*  ==|== Form Title Paddings ========================================================== */
+.sapMRPDetailPage  .sapUiFormResGrid>.sapUiFormTitle,
+.sapMRPPopover .sapUiFormResGrid>.sapUiFormTitle {
+	margin-top: 0.5rem;
+	padding-left: 0;
+}
+
+.sapMRPDetailPage .sapMITBFilterIcon {
+	cursor: pointer !important; /* 0003680379 2013 */
+}
+
+/*  ==|== Flower Loading Dialog ========================================================== */
+.sapUshellLoadingDialog .sapUshellLoadingDialogAppData { /*
+	width: 600px !important;
+	left: -300px  !important;
+*/
+	
+}
+
+/*  ==|== Welcome Dialog ========================================================== */
+.sapMRPWelcomeDialog .sapMText {
+	line-height: 1.25rem !important;
+}
+
+/*  ==|== Change Request App ========================================================== */
+.sapMRPCRVendorResponseForm {
+	margin-top: 1rem;
+}
+
+.sapMRPCRVendorResponseForm label {
+	line-height: 2.5rem;
+	padding: 0 1rem;
+}
+
+.sapMRPCRVendorResponseForm label:after {
+	content: ":";
+}
+
+.sapMRPCRVendorResponseForm .sapMSegBBtn {
+	min-width: 5rem;
+}
+
+.sapMRPCRContent {
+	margin-bottom: 1rem;
+}
+
+/* Object Status Description */
+.sapMRPStatusDescription.sapMObjStatus {
+	margin-top: 0.5rem;
+	font-size: .875em;
+}
+
+/*  ==|== Support the visualization of the Long Material Number ======================== */
+.sapMRPLAMA *{
+       text-overflow: clip !important;
+       white-space: normal !important;
+       word-break: break-all !important;
+}
+
+/*  ==|== Support the visualization of the Long Material Number in the direct call dialog */
+.sapMRPDirCallDialog .sapMSLITitle{
+       text-overflow: clip !important;
+       white-space: normal !important;
+       word-break: break-all !important;
+}
+

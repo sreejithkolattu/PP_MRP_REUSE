@@ -1,0 +1,25 @@
+/*  ==|== SAP MRP Status ==========================================================
+ *
+ * CSS styles for converting sap.m.RatingIndicator into MRP Status Indicator
+ *
+ * author: SAP AG
+ * version: 08.05.2013
+ * ============================================================
+ */
+ 
+ .sapMRPStatusIndicator .sapMRIDisabled .sapMRIIconSel {
+	background: none !important;
+	color: @sapUiNeutralElement !important;
+	-webkit-text-stroke: 0 !important;
+	-webkit-text-fill-color: @sapUiNeutralElement !important;				
+}
+
+.sapMRPStatusIndicator .sapMRIDisabled .sapMRIIconUnsel {
+	color: @sapUiNeutralElement !important;
+	-webkit-text-stroke: 0 !important;  
+}
+
+.sapMRPStatusIndicator .sapMRPLabel {
+	color: @sapUiExtraLightText !important;
+	font-size: 0.875em !important;
+}

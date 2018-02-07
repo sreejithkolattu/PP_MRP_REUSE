@@ -1,0 +1,169 @@
+<!--
+
+    Copyright (C) 2009-2014 SAP SE or an SAP affiliate company. All rights reserved
+
+-->
+<core:FragmentDefinition xmlns="sap.m"
+	xmlns:core="sap.ui.core" xmlns:l="sap.ui.layout" xmlns:f="sap.ui.layout.form">
+	<Popover class="sapUiPopupWithPadding sapMRPPopover" placement="Auto"
+		initialFocus="closeButtonSO" contentWidth="480px" contentHeight="640px"
+		title="{parts:[{path: 'MRPElementCategory'}, {path: 'MRPElementCategoryShortName'}, {path: 'MRPElementExternalID'}, {path: 'MRPElementItemExternalID'}], 
+			formatter:'i2d.pp.mrpcockpit.reuse.util.CommonFormatter.categoryLongName'}">
+		<content>
+			<l:Grid defaultSpan="L12 M12 S12" vSpacing="0" hSpacing="0">
+				<l:content>
+
+					<!-- Customer Info -->
+					<f:SimpleForm title="{Common_i18n>CUSTOMER_INFO}"
+						editable="false" layout="ResponsiveGridLayout" labelSpanL="4"
+						labelSpanM="4" labelSpanS="4" emptySpanL="0" emptySpanM="0"
+						columnsL="2" columnsM="2" breakpointM="463px">
+						<f:content>
+
+							<!-- Customer -->
+							<Label text="{Common_i18n>CUSTOMER}"
+								visible="{path: 'CustomerName', formatter: 'i2d.pp.mrpcockpit.reuse.util.CommonFormatter.hasValue' }" />
+							<Text
+								text="{parts:[{path: 'CustomerName'}, {path: 'Customer'}], formatter:'i2d.pp.mrpcockpit.reuse.util.CommonFormatter.getTextPairWithParenthesis'}" />
+
+							<!-- Contact Person -->
+							<Label text="{Common_i18n>CONTACT}"
+								visible="{path: 'ContactPersonName', formatter: 'i2d.pp.mrpcockpit.reuse.util.CommonFormatter.hasValue' }" />
+							<Text text="{ContactPersonName}"
+								visible="{path: 'ContactPersonName', formatter: 'i2d.pp.mrpcockpit.reuse.util.CommonFormatter.hasValue' }" />
+
+							<!-- Contact Phone -->
+							<Label text="{Common_i18n>PHONE}"
+								visible="{path: 'ContactPersonPhoneNumber', formatter: 'i2d.pp.mrpcockpit.reuse.util.CommonFormatter.hasValue' }" />
+							<Link text="{ContactPersonPhoneNumber}"
+								href="{path: 'ContactPersonPhoneNumber', formatter:'i2d.pp.mrpcockpit.reuse.util.CommonFormatter.tel'}"
+								visible="{path: 'ContactPersonPhoneNumber', formatter: 'i2d.pp.mrpcockpit.reuse.util.CommonFormatter.hasValue' }" />
+
+							<!-- Contact Mail -->
+							<Label text="{Common_i18n>EMAIL}"
+								visible="{path: 'ContactPersonEmailAddress', formatter: 'i2d.pp.mrpcockpit.reuse.util.CommonFormatter.hasValue' }" />
+							<Link text="{ContactPersonEmailAddress}"
+								href="{path: 'ContactPersonEmailAddress', formatter:'i2d.pp.mrpcockpit.reuse.util.CommonFormatter.email'}"
+								visible="{path: 'ContactPersonEmailAddress', formatter: 'i2d.pp.mrpcockpit.reuse.util.CommonFormatter.hasValue' }" />
+
+						</f:content>
+					</f:SimpleForm>
+
+					<!-- Sales Order Item -->
+					<f:SimpleForm title="{Common_i18n>SALES_ORDER_ITEM}"
+						editable="false" layout="ResponsiveGridLayout" labelSpanL="4"
+						labelSpanM="4" labelSpanS="6" emptySpanL="0" emptySpanM="0"
+						columnsL="2" columnsM="2" breakpointM="463px">
+						<f:content>
+
+							<!-- Requested Delivery Date -->
+							<Label text="{Common_i18n>REQ_DELIVERY_DATE}"
+								visible="{path: 'RequestedMRPElementPlndDeliveryDate', formatter: 'i2d.pp.mrpcockpit.reuse.util.CommonFormatter.hasValue' }" />
+							<Text
+								text="{path: 'RequestedMRPElementPlndDeliveryDate', type:'sap.ca.ui.model.type.Date', formatOptions: {style:'short'}}"
+								visible="{path: 'RequestedMRPElementPlndDeliveryDate', formatter: 'i2d.pp.mrpcockpit.reuse.util.CommonFormatter.hasValue' }" />
+
+							<!-- Loading Date -->
+							<Label text="{Common_i18n>LOADING_DATE}"
+								visible="{path: 'LoadingDate', formatter: 'i2d.pp.mrpcockpit.reuse.util.CommonFormatter.hasValue' }" />
+							<Text
+								text="{path: 'LoadingDate', type:'sap.ca.ui.model.type.Date', formatOptions: {style:'short'}}"
+								visible="{path: 'LoadingDate', formatter: 'i2d.pp.mrpcockpit.reuse.util.CommonFormatter.hasValue' }" />
+
+							<!-- Ordered Quantity -->
+							<Label text="{Common_i18n>ORDERED_QUANTITY}"
+								visible="{path: 'OrderedQuantity', formatter:'i2d.pp.mrpcockpit.reuse.util.CommonFormatter.hasValue'}" />
+							<Text
+								text="{parts:[{path: 'OrderedQuantity'}, {path: 'TargetQuantityUnitDcmls'}, {path: 'UnitOfMeasureTechnicalName'}], formatter:'i2d.pp.mrpcockpit.reuse.util.CommonFormatter.formatQuantity'}"
+								visible="{path: 'OrderedQuantity', formatter:'i2d.pp.mrpcockpit.reuse.util.CommonFormatter.hasValue'}" />
+
+							<!-- Open Quantity -->
+							<Label text="{Common_i18n>OPEN_QUANTITY}"
+								visible="{path: 'OpenQuantity', formatter:'i2d.pp.mrpcockpit.reuse.util.CommonFormatter.hasValue'}" />
+							<Text
+								text="{parts:[{path: 'OpenQuantity'}, {path: 'TargetQuantityUnitDcmls'}, {path: 'UnitOfMeasureTechnicalName'}], formatter:'i2d.pp.mrpcockpit.reuse.util.CommonFormatter.formatQuantity'}"
+								visible="{path: 'OpenQuantity', formatter:'i2d.pp.mrpcockpit.reuse.util.CommonFormatter.hasValue'}" />
+
+							<!-- Confirmed Quantity -->
+							<Label text="{Common_i18n>CONFIRMED_QUANTITY}"
+								visible="{path: 'ConfirmedQuantity', formatter: 'i2d.pp.mrpcockpit.reuse.util.CommonFormatter.hasValue' }" />
+							<Text
+								text="{parts:[{path: 'ConfirmedQuantity'}, {path: 'TargetQuantityUnitDcmls'}, {path: 'UnitOfMeasureTechnicalName'}], formatter:'i2d.pp.mrpcockpit.reuse.util.CommonFormatter.formatQuantity'}"
+								visible="{path: 'ConfirmedQuantity', formatter: 'i2d.pp.mrpcockpit.reuse.util.CommonFormatter.hasValue' }" />
+
+							<!-- Fixed Date Quantity -->
+							<Label text="{Common_i18n>FIXED_DATE_QUANTITY}" />
+							<Text
+								text="{path: 'FixedDateQuantity', formatter:'i2d.pp.mrpcockpit.reuse.util.CommonFormatter.formatBooleanValue'}" />
+
+							<!-- Complete Delivery -->
+							<Label text="{Common_i18n>COMPLETE_DEVIVERY}" />
+							<Text
+								text="{path: 'CompleteDeliveryIsDefined', formatter:'i2d.pp.mrpcockpit.reuse.util.CommonFormatter.formatBooleanValue'}" />
+
+							<!-- Part Delivery Item Level -->
+							<Label text="{Common_i18n>PART_DELIVERY_ITEM_LEVEL}"
+								visible="{path: 'PartialDeliveryControlName', formatter: 'i2d.pp.mrpcockpit.reuse.util.CommonFormatter.hasValue' }" />
+							<Text
+								text="{parts:[{path: 'PartialDeliveryControlName'},{path: 'MaxNumbrOfPartialDelivery'}], formatter:'i2d.pp.mrpcockpit.reuse.util.CommonFormatter.getPartialDelivery'}"
+								visible="{path: 'PartialDeliveryControlName', formatter: 'i2d.pp.mrpcockpit.reuse.util.CommonFormatter.hasValue' }" />
+
+							<!-- Delivery Priority -->
+							<Label text="{Common_i18n>DELIVERY_PRIO}"
+								visible="{path: 'DeliveryPriorityDesc', formatter: 'i2d.pp.mrpcockpit.reuse.util.CommonFormatter.hasValue' }" />
+							<Text text="{DeliveryPriorityDesc}"
+								visible="{path: 'DeliveryPriorityDesc', formatter: 'i2d.pp.mrpcockpit.reuse.util.CommonFormatter.hasValue' }" />
+
+							<!-- Delivery Block -->
+							<Label text="{Common_i18n>DELIVERY_BLOCK}"
+								visible="{path: 'DeliveryBlockReasonName', formatter: 'i2d.pp.mrpcockpit.reuse.util.CommonFormatter.hasValue' }" />
+							<Text text="{DeliveryBlockReasonName}"
+								visible="{path: 'DeliveryBlockReasonName', formatter: 'i2d.pp.mrpcockpit.reuse.util.CommonFormatter.hasValue' }" />
+
+						</f:content>
+					</f:SimpleForm>
+
+					<!-- Customer Processing Data -->
+					<f:SimpleForm title="{Common_i18n>CUSTOMER_PROC_DATA}"
+						editable="false" layout="ResponsiveGridLayout" labelSpanL="4"
+						labelSpanM="4" labelSpanS="6" emptySpanL="0" emptySpanM="0"
+						columnsL="2" columnsM="2" breakpointM="463px">
+						<f:content>
+
+							<!-- Customer Material -->
+							<Label text="{Common_i18n>CUSTOMER_MATERIAL}"
+								visible="{path: 'CustomerMaterial', formatter: 'i2d.pp.mrpcockpit.reuse.util.CommonFormatter.hasValue' }" />
+							<Text text="{CustomerMaterial}"
+								visible="{path: 'CustomerName', formatter: 'i2d.pp.mrpcockpit.reuse.util.CommonFormatter.hasValue' }" />
+
+							<!-- Minimum Delivery -->
+							<Label text="{Common_i18n>MIN_QUANTITY}"
+								visible="{path: 'MinDeliveryQuantity', formatter: 'i2d.pp.mrpcockpit.reuse.util.CommonFormatter.hasValue' }" />
+							<Text
+								text="{parts:[{path: 'MinDeliveryQuantity'}, {path: 'TargetQuantityUnitDcmls'}, {path: 'UnitOfMeasureTechnicalName'}], formatter:'i2d.pp.mrpcockpit.reuse.util.CommonFormatter.formatQuantity'}"
+								visible="{path: 'MinDeliveryQuantity', formatter: 'i2d.pp.mrpcockpit.reuse.util.CommonFormatter.hasValue' }" />
+
+						</f:content>
+					</f:SimpleForm>
+
+				</l:content>
+			</l:Grid>
+		</content>
+		<endButton>
+			<Button icon="sap-icon://decline" press="handleCloseButton"
+				id="closeButtonSO" />
+		</endButton>
+		<footer>
+			<Toolbar>
+				<content>
+					<ToolbarSpacer />
+					<Button text="{Common_i18n>FACTSHEET}" tooltip="{Common_i18n>FACTSHEET_SALES_ORD_TOOLTIP}"
+						press="navToFactsheet" />
+					<Button text="{Common_i18n>VA03}" tooltip="{Common_i18n>VA03_TOOLTIP}"
+						press="navToSODestination"
+						visible="{path: 'MRPElementCategory', formatter:'i2d.pp.mrpcockpit.reuse.util.CommonFormatter.visibleOnlyOnDesktop'}" />
+				</content>
+			</Toolbar>
+		</footer>
+	</Popover>
+</core:FragmentDefinition>

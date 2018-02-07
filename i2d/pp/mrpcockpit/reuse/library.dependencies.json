@@ -1,0 +1,597 @@
+{
+  "modules" : [
+    {
+      "name" : "i2d/pp/mrpcockpit/reuse/controls/Chart.js",
+      "size" : 107709,
+      "compressedSize" : 48708,
+      "required" : ["i2d/pp/mrpcockpit/reuse/controls/ChartValue.js", "sap/ui/thirdparty/d3.js", "sap/m/MessageToast.js", "jquery.sap.global.js"],
+      "includes" : []
+    },
+    {
+      "name" : "i2d/pp/mrpcockpit/reuse/controls/ChartValue.js",
+      "size" : 404,
+      "compressedSize" : 309,
+      "required" : ["jquery.sap.global.js"],
+      "includes" : []
+    },
+    {
+      "name" : "i2d/pp/mrpcockpit/reuse/controls/ObjectIdentifier.js",
+      "description" : "\"use strict\";",
+      "size" : 2931,
+      "compressedSize" : 1519,
+      "required" : ["jquery.sap.global.js"],
+      "includes" : []
+    },
+    {
+      "name" : "i2d/pp/mrpcockpit/reuse/controls/ObjectStatusBar.js",
+      "description" : "\"use strict\";",
+      "size" : 2025,
+      "compressedSize" : 984,
+      "required" : ["jquery.sap.global.js"],
+      "includes" : []
+    },
+    {
+      "name" : "i2d/pp/mrpcockpit/reuse/controls/SolutionCard.js",
+      "size" : 23689,
+      "compressedSize" : 13317,
+      "required" : ["i2d/pp/mrpcockpit/reuse/util/CommonConstants.js", "jquery.sap.global.js"],
+      "includes" : []
+    },
+    {
+      "name" : "i2d/pp/mrpcockpit/reuse/controls/SolutionCardContainer.js",
+      "size" : 26259,
+      "compressedSize" : 9683,
+      "required" : ["i2d/pp/mrpcockpit/reuse/controls/SolutionCard.js", "jquery.sap.global.js"],
+      "includes" : []
+    },
+    {
+      "name" : "i2d/pp/mrpcockpit/reuse/controls/Stock.js",
+      "size" : 2703,
+      "compressedSize" : 1746,
+      "required" : ["sap/ca/ui/model/format/NumberFormat.js", "jquery.sap.global.js"],
+      "includes" : []
+    },
+    {
+      "name" : "i2d/pp/mrpcockpit/reuse/controls/VisualStatusForecast.js",
+      "size" : 3269,
+      "compressedSize" : 1672,
+      "required" : ["jquery.sap.global.js"],
+      "includes" : []
+    },
+    {
+      "name" : "i2d/pp/mrpcockpit/reuse/fragments/ChangeRequestList.fragment.xml",
+      "size" : 2956,
+      "required" : ["sap/ui/core/Fragment.js", "sap/m/Popover.js", "sap/m/Table.js", "sap/m/Column.js", "sap/m/Label.js", "sap/m/ColumnListItem.js", "sap/ui/layout/VerticalLayout.js", "sap/m/ObjectNumber.js", "sap/m/Text.js", "sap/m/ObjectStatus.js"],
+      "includes" : []
+    },
+    {
+      "name" : "i2d/pp/mrpcockpit/reuse/fragments/ContactInformationQuickView.fragment.xml",
+      "size" : 18181,
+      "required" : ["sap/ui/core/Fragment.js", "sap/ui/layout/VerticalLayout.js", "sap/ui/layout/form/SimpleForm.js", "sap/m/Label.js", "sap/m/Text.js", "sap/m/Link.js"],
+      "includes" : []
+    },
+    {
+      "name" : "i2d/pp/mrpcockpit/reuse/fragments/DialogInfo.fragment.xml",
+      "size" : 1923,
+      "required" : ["sap/ui/core/Fragment.js", "sap/m/Label.js", "sap/m/Text.js", "sap/m/Link.js"],
+      "includes" : []
+    },
+    {
+      "name" : "i2d/pp/mrpcockpit/reuse/fragments/DialogInfoPlan.fragment.xml",
+      "size" : 11357,
+      "required" : ["sap/ui/core/Fragment.js", "sap/m/Label.js", "sap/m/Text.js", "sap/m/Link.js"],
+      "includes" : []
+    },
+    {
+      "name" : "i2d/pp/mrpcockpit/reuse/fragments/DialogOrderChange.controller.js",
+      "size" : 8761,
+      "compressedSize" : 5322,
+      "required" : ["i2d/pp/mrpcockpit/reuse/util/CollaborationHelper.js", "i2d/pp/mrpcockpit/reuse/util/CommonConstants.js", "i2d/pp/mrpcockpit/reuse/fragments/DialogRoot.js", "sap/ca/ui/utils/busydialog.js", "sap/ca/ui/message/message.js", "sap/ca/ui/model/type/Number.js", "sap/ca/ui/model/format/QuantityFormat.js", "jquery.sap.global.js"],
+      "includes" : []
+    },
+    {
+      "name" : "i2d/pp/mrpcockpit/reuse/fragments/DialogOrderChange.fragment.xml",
+      "size" : 4774,
+      "required" : ["sap/ui/core/Fragment.js", "sap/m/Dialog.js", "sap/ui/layout/Grid.js", "sap/ui/layout/form/SimpleForm.js", "i2d/pp/mrpcockpit/reuse/fragments/DialogInfo.fragment.xml", "sap/m/Label.js", "sap/m/Input.js", "sap/ui/layout/GridData.js", "sap/m/DatePicker.js", "sap/ui/layout/VerticalLayout.js", "sap/m/RadioButton.js", "sap/m/TextArea.js", "sap/m/Button.js"],
+      "includes" : []
+    },
+    {
+      "name" : "i2d/pp/mrpcockpit/reuse/fragments/DialogOrderCreate.controller.js",
+      "size" : 5810,
+      "compressedSize" : 3420,
+      "required" : ["i2d/pp/mrpcockpit/reuse/util/CollaborationHelper.js", "i2d/pp/mrpcockpit/reuse/util/CommonConstants.js", "i2d/pp/mrpcockpit/reuse/fragments/DialogRoot.js", "sap/ca/ui/utils/busydialog.js", "sap/ca/ui/message/message.js", "sap/ca/ui/model/type/Number.js", "sap/ca/ui/model/format/QuantityFormat.js", "jquery.sap.global.js"],
+      "includes" : []
+    },
+    {
+      "name" : "i2d/pp/mrpcockpit/reuse/fragments/DialogOrderCreate.fragment.xml",
+      "size" : 2786,
+      "required" : ["sap/ui/core/Fragment.js", "sap/m/Dialog.js", "sap/ui/layout/Grid.js", "sap/ui/layout/form/SimpleForm.js", "i2d/pp/mrpcockpit/reuse/fragments/DialogInfo.fragment.xml", "sap/m/Label.js", "sap/m/DatePicker.js", "sap/m/Input.js", "sap/ui/layout/GridData.js", "sap/m/RadioButton.js", "sap/m/Button.js"],
+      "includes" : []
+    },
+    {
+      "name" : "i2d/pp/mrpcockpit/reuse/fragments/DialogOrderReqChange.controller.js",
+      "size" : 8198,
+      "compressedSize" : 5255,
+      "required" : ["i2d/pp/mrpcockpit/reuse/util/CollaborationHelper.js", "i2d/pp/mrpcockpit/reuse/util/CommonConstants.js", "i2d/pp/mrpcockpit/reuse/fragments/DialogRoot.js", "sap/ca/ui/utils/busydialog.js", "sap/ca/ui/message/message.js", "sap/ca/ui/model/type/Number.js", "sap/ca/ui/model/format/QuantityFormat.js", "jquery.sap.global.js"],
+      "includes" : []
+    },
+    {
+      "name" : "i2d/pp/mrpcockpit/reuse/fragments/DialogOrderReqChange.fragment.xml",
+      "size" : 4188,
+      "required" : ["sap/ui/core/Fragment.js", "sap/m/Dialog.js", "sap/ui/layout/Grid.js", "sap/ui/layout/form/SimpleForm.js", "i2d/pp/mrpcockpit/reuse/fragments/DialogInfo.fragment.xml", "sap/m/Label.js", "sap/m/Input.js", "sap/ui/layout/GridData.js", "sap/m/DatePicker.js", "sap/ui/layout/VerticalLayout.js", "sap/m/RadioButton.js", "sap/m/Button.js"],
+      "includes" : []
+    },
+    {
+      "name" : "i2d/pp/mrpcockpit/reuse/fragments/DialogPlanOrderChange.controller.js",
+      "size" : 7134,
+      "compressedSize" : 3877,
+      "required" : ["i2d/pp/mrpcockpit/reuse/util/CollaborationHelper.js", "i2d/pp/mrpcockpit/reuse/util/CommonConstants.js", "i2d/pp/mrpcockpit/reuse/fragments/DialogRoot.js", "sap/ca/ui/utils/busydialog.js", "sap/ca/ui/message/message.js", "sap/ca/ui/model/type/Number.js", "sap/ca/ui/model/format/QuantityFormat.js", "jquery.sap.global.js"],
+      "includes" : []
+    },
+    {
+      "name" : "i2d/pp/mrpcockpit/reuse/fragments/DialogPlanOrderChange.fragment.xml",
+      "size" : 5581,
+      "required" : ["sap/ui/core/Fragment.js", "sap/m/Dialog.js", "sap/ui/layout/Grid.js", "sap/ui/layout/form/SimpleForm.js", "i2d/pp/mrpcockpit/reuse/fragments/DialogInfoPlan.fragment.xml", "sap/m/Label.js", "sap/m/Input.js", "sap/ui/layout/GridData.js", "sap/m/DatePicker.js", "sap/ui/layout/HorizontalLayout.js", "sap/m/Text.js", "sap/ui/layout/VerticalLayout.js", "sap/m/RadioButton.js", "sap/m/Button.js"],
+      "includes" : []
+    },
+    {
+      "name" : "i2d/pp/mrpcockpit/reuse/fragments/DialogRoot.js",
+      "size" : 16977,
+      "compressedSize" : 6308,
+      "required" : ["i2d/pp/mrpcockpit/reuse/util/Helper.js", "i2d/pp/mrpcockpit/reuse/util/CommonConstants.js", "sap/ca/ui/utils/busydialog.js", "sap/ca/ui/message/message.js", "sap/ca/ui/model/type/Number.js", "sap/ca/ui/model/format/QuantityFormat.js", "sap/ca/scfld/md/controller/BaseDetailController.js", "sap/ui/core/format/NumberFormat.js", "sap/ui/core/Configuration.js", "jquery.sap.global.js"],
+      "includes" : []
+    },
+    {
+      "name" : "i2d/pp/mrpcockpit/reuse/fragments/DialogShortageAccept.controller.js",
+      "size" : 2139,
+      "compressedSize" : 1167,
+      "required" : ["i2d/pp/mrpcockpit/reuse/util/CollaborationHelper.js", "i2d/pp/mrpcockpit/reuse/util/CommonConstants.js", "i2d/pp/mrpcockpit/reuse/fragments/DialogRoot.js", "sap/ca/ui/utils/busydialog.js", "sap/ca/ui/message/message.js", "sap/ca/ui/model/format/QuantityFormat.js", "jquery.sap.global.js"],
+      "includes" : []
+    },
+    {
+      "name" : "i2d/pp/mrpcockpit/reuse/fragments/DialogShortageAccept.fragment.xml",
+      "size" : 1855,
+      "required" : ["sap/ui/core/Fragment.js", "sap/m/Dialog.js", "sap/ui/layout/Grid.js", "sap/ui/layout/form/SimpleForm.js", "sap/m/Label.js", "sap/m/Text.js", "sap/ui/layout/HorizontalLayout.js", "sap/m/Button.js"],
+      "includes" : []
+    },
+    {
+      "name" : "i2d/pp/mrpcockpit/reuse/fragments/FilterFacetFilter.fragment.xml",
+      "size" : 425,
+      "required" : ["sap/ui/core/Fragment.js", "sap/m/FacetFilter.js", "sap/ui/layout/GridData.js"],
+      "includes" : []
+    },
+    {
+      "name" : "i2d/pp/mrpcockpit/reuse/fragments/FilterShortageDefinition.fragment.xml",
+      "size" : 622,
+      "required" : ["sap/ui/core/Fragment.js", "sap/ui/layout/VerticalLayout.js", "sap/m/Label.js", "sap/m/Select.js", "sap/ui/core/Item.js", "sap/ui/layout/GridData.js"],
+      "includes" : []
+    },
+    {
+      "name" : "i2d/pp/mrpcockpit/reuse/fragments/FilterTimeHorizon.fragment.xml",
+      "size" : 1530,
+      "required" : ["sap/ui/core/Fragment.js", "sap/ui/layout/VerticalLayout.js", "sap/m/Label.js", "sap/m/Select.js", "sap/ui/core/Item.js", "sap/ui/layout/GridData.js"],
+      "includes" : []
+    },
+    {
+      "name" : "i2d/pp/mrpcockpit/reuse/fragments/InfoTab.fragment.xml",
+      "size" : 6436,
+      "required" : ["sap/ui/core/Fragment.js", "sap/m/IconTabFilter.js", "sap/ui/layout/Grid.js", "sap/ui/layout/form/SimpleForm.js", "sap/m/Label.js", "sap/m/Text.js"],
+      "includes" : []
+    },
+    {
+      "name" : "i2d/pp/mrpcockpit/reuse/fragments/MaterialShortageQuickView.fragment.xml",
+      "size" : 5850,
+      "required" : ["sap/ui/core/Fragment.js", "sap/m/Popover.js", "sap/ui/layout/Grid.js", "sap/ui/layout/form/SimpleForm.js", "i2d/pp/mrpcockpit/reuse/controls/VisualStatusForecast.js", "sap/m/Label.js", "sap/m/Text.js", "sap/m/Button.js", "sap/m/Bar.js"],
+      "includes" : []
+    },
+    {
+      "name" : "i2d/pp/mrpcockpit/reuse/fragments/ObjectHeader.fragment.xml",
+      "size" : 469,
+      "required" : ["sap/ui/core/Fragment.js", "sap/m/ObjectHeader.js", "sap/ui/layout/GridData.js"],
+      "includes" : []
+    },
+    {
+      "name" : "i2d/pp/mrpcockpit/reuse/fragments/PlannedOrderQuickView.fragment.xml",
+      "size" : 22037,
+      "required" : ["sap/ui/core/Fragment.js", "sap/m/Popover.js", "sap/ui/layout/Grid.js", "i2d/pp/mrpcockpit/reuse/fragments/ContactInformationQuickView.fragment.xml", "sap/ui/layout/VerticalLayout.js", "sap/ui/layout/form/SimpleForm.js", "sap/m/Label.js", "sap/m/Text.js", "sap/m/Button.js", "sap/m/Toolbar.js", "sap/m/ToolbarSpacer.js"],
+      "includes" : []
+    },
+    {
+      "name" : "i2d/pp/mrpcockpit/reuse/fragments/ProductionOrderQuickView.fragment.xml",
+      "size" : 8712,
+      "required" : ["sap/ui/core/Fragment.js", "sap/m/Popover.js", "sap/ui/layout/Grid.js", "sap/ui/layout/VerticalLayout.js", "sap/ui/layout/form/SimpleForm.js", "sap/m/Label.js", "sap/m/Text.js", "sap/m/Button.js", "sap/m/Toolbar.js", "sap/m/ToolbarSpacer.js"],
+      "includes" : []
+    },
+    {
+      "name" : "i2d/pp/mrpcockpit/reuse/fragments/PurchaseOrderQuickView.fragment.xml",
+      "size" : 17293,
+      "required" : ["sap/ui/core/Fragment.js", "sap/m/Popover.js", "sap/ui/layout/Grid.js", "sap/ui/layout/form/SimpleForm.js", "sap/m/Label.js", "sap/m/Text.js", "sap/m/Link.js", "sap/ui/layout/HorizontalLayout.js", "sap/m/ObjectStatus.js", "sap/ui/layout/VerticalLayout.js", "sap/m/Button.js", "sap/m/Toolbar.js", "sap/m/ToolbarSpacer.js"],
+      "includes" : []
+    },
+    {
+      "name" : "i2d/pp/mrpcockpit/reuse/fragments/SalesOrderQuickView.fragment.xml",
+      "size" : 9084,
+      "required" : ["sap/ui/core/Fragment.js", "sap/m/Popover.js", "sap/ui/layout/Grid.js", "sap/ui/layout/form/SimpleForm.js", "sap/m/Label.js", "sap/m/Text.js", "sap/m/Link.js", "sap/m/Button.js", "sap/m/Toolbar.js", "sap/m/ToolbarSpacer.js"],
+      "includes" : []
+    },
+    {
+      "name" : "i2d/pp/mrpcockpit/reuse/fragments/SolutionViewPage.fragment.xml",
+      "size" : 4421,
+      "required" : ["sap/ui/core/Fragment.js", "sap/m/Page.js", "sap/m/ScrollContainer.js", "sap/m/List.js", "sap/m/CustomListItem.js", "sap/m/ObjectHeader.js", "sap/m/ObjectAttribute.js", "sap/m/Panel.js", "sap/m/Toolbar.js", "sap/m/Label.js", "sap/m/ToolbarSpacer.js", "sap/m/SegmentedButton.js", "sap/m/Button.js", "sap/m/Table.js", "sap/m/Text.js", "sap/m/Column.js", "i2d/pp/mrpcockpit/reuse/controls/Chart.js", "i2d/pp/mrpcockpit/reuse/controls/SolutionCardContainer.js"],
+      "includes" : []
+    },
+    {
+      "name" : "i2d/pp/mrpcockpit/reuse/fragments/SupplyDemandItemsTab.fragment.xml",
+      "size" : 484,
+      "required" : ["sap/ui/core/Fragment.js", "sap/m/IconTabFilter.js", "i2d/pp/mrpcockpit/reuse/fragments/SupplyDemandPanel.fragment.xml"],
+      "includes" : []
+    },
+    {
+      "name" : "i2d/pp/mrpcockpit/reuse/fragments/SupplyDemandPanel.fragment.xml",
+      "size" : 12816,
+      "required" : ["sap/ui/core/Fragment.js", "sap/m/Panel.js", "sap/m/Toolbar.js", "sap/m/ObjectHeader.js", "sap/m/ObjectAttribute.js", "sap/m/ToolbarSpacer.js", "sap/m/SegmentedButton.js", "sap/m/Button.js", "sap/m/Table.js", "sap/ui/core/ExtensionPoint.js", "sap/m/Column.js", "sap/m/Label.js", "sap/m/ColumnListItem.js", "sap/ui/core/CustomData.js", "sap/ui/layout/HorizontalLayout.js", "sap/ui/core/Icon.js", "sap/m/ObjectIdentifier.js", "sap/m/ObjectStatus.js", "sap/m/Text.js", "sap/m/ObjectNumber.js", "sap/m/ScrollContainer.js", "i2d/pp/mrpcockpit/reuse/controls/Chart.js"],
+      "includes" : []
+    },
+    {
+      "name" : "i2d/pp/mrpcockpit/reuse/i18n/i18n.properties",
+      "size" : 48005,
+      "required" : [],
+      "includes" : []
+    },
+    {
+      "name" : "i2d/pp/mrpcockpit/reuse/i18n/i18n_ar.properties",
+      "size" : 89985,
+      "required" : [],
+      "includes" : []
+    },
+    {
+      "name" : "i2d/pp/mrpcockpit/reuse/i18n/i18n_cs.properties",
+      "size" : 57776,
+      "required" : [],
+      "includes" : []
+    },
+    {
+      "name" : "i2d/pp/mrpcockpit/reuse/i18n/i18n_de.properties",
+      "size" : 51291,
+      "required" : [],
+      "includes" : []
+    },
+    {
+      "name" : "i2d/pp/mrpcockpit/reuse/i18n/i18n_en.properties",
+      "size" : 48914,
+      "required" : [],
+      "includes" : []
+    },
+    {
+      "name" : "i2d/pp/mrpcockpit/reuse/i18n/i18n_en_US_sappsd.properties",
+      "size" : 127685,
+      "required" : [],
+      "includes" : []
+    },
+    {
+      "name" : "i2d/pp/mrpcockpit/reuse/i18n/i18n_en_US_saptrc.properties",
+      "size" : 60031,
+      "required" : [],
+      "includes" : []
+    },
+    {
+      "name" : "i2d/pp/mrpcockpit/reuse/i18n/i18n_es.properties",
+      "size" : 52841,
+      "required" : [],
+      "includes" : []
+    },
+    {
+      "name" : "i2d/pp/mrpcockpit/reuse/i18n/i18n_fr.properties",
+      "size" : 54256,
+      "required" : [],
+      "includes" : []
+    },
+    {
+      "name" : "i2d/pp/mrpcockpit/reuse/i18n/i18n_hu.properties",
+      "size" : 57550,
+      "required" : [],
+      "includes" : []
+    },
+    {
+      "name" : "i2d/pp/mrpcockpit/reuse/i18n/i18n_it.properties",
+      "size" : 51637,
+      "required" : [],
+      "includes" : []
+    },
+    {
+      "name" : "i2d/pp/mrpcockpit/reuse/i18n/i18n_iw.properties",
+      "size" : 80975,
+      "required" : [],
+      "includes" : []
+    },
+    {
+      "name" : "i2d/pp/mrpcockpit/reuse/i18n/i18n_ja.properties",
+      "size" : 65573,
+      "required" : [],
+      "includes" : []
+    },
+    {
+      "name" : "i2d/pp/mrpcockpit/reuse/i18n/i18n_no.properties",
+      "size" : 50192,
+      "required" : [],
+      "includes" : []
+    },
+    {
+      "name" : "i2d/pp/mrpcockpit/reuse/i18n/i18n_pl.properties",
+      "size" : 53504,
+      "required" : [],
+      "includes" : []
+    },
+    {
+      "name" : "i2d/pp/mrpcockpit/reuse/i18n/i18n_pt.properties",
+      "size" : 52910,
+      "required" : [],
+      "includes" : []
+    },
+    {
+      "name" : "i2d/pp/mrpcockpit/reuse/i18n/i18n_ru.properties",
+      "size" : 106205,
+      "required" : [],
+      "includes" : []
+    },
+    {
+      "name" : "i2d/pp/mrpcockpit/reuse/i18n/i18n_tr.properties",
+      "size" : 55066,
+      "required" : [],
+      "includes" : []
+    },
+    {
+      "name" : "i2d/pp/mrpcockpit/reuse/i18n/i18n_zh_CN.properties",
+      "size" : 56305,
+      "required" : [],
+      "includes" : []
+    },
+    {
+      "name" : "i2d/pp/mrpcockpit/reuse/library.js",
+      "description" : "Initialization Code and shared classes of library i2d.pp.mrpcockpit.reuse (1.5.7)",
+      "size" : 1034,
+      "compressedSize" : 310,
+      "required" : ["sap/ui/core/Core.js", "sap/ui/core/library.js", "jquery.sap.global.js"],
+      "includes" : []
+    },
+    {
+      "name" : "i2d/pp/mrpcockpit/reuse/library.properties",
+      "size" : 95,
+      "required" : [],
+      "includes" : []
+    },
+    {
+      "name" : "i2d/pp/mrpcockpit/reuse/util/CalculationEngine.js",
+      "size" : 41304,
+      "compressedSize" : 13814,
+      "required" : ["sap/ca/ui/message/message.js", "i2d/pp/mrpcockpit/reuse/util/CommonConstants.js", "jquery.sap.global.js"],
+      "includes" : []
+    },
+    {
+      "name" : "i2d/pp/mrpcockpit/reuse/util/CollaborationHelper.js",
+      "size" : 62225,
+      "compressedSize" : 26016,
+      "required" : ["sap/ca/ui/message/message.js", "i2d/pp/mrpcockpit/reuse/util/CommonConstants.js", "i2d/pp/mrpcockpit/reuse/util/Wave3CollaborationHelper.js", "jquery.sap.global.js"],
+      "includes" : []
+    },
+    {
+      "name" : "i2d/pp/mrpcockpit/reuse/util/CommonConstants.js",
+      "description" : "CommonConstants.js - App independent Constants  @author D054795  @version 24.10.2013  =============================================================================  (c) Copyright 2011-2013 by SAP AG, Dornierstr. 3, 88677 Markdorf, Germany All rights reserved. =============================================================================  This material is a CONFIDENTIAL, unpublished work of authorship created between 2011 and 2013 and subsequently updated. It is a TRADE SECRET which is property of SAP AG, if not explicitly agreed to otherwise.  All use, disclosure, and / or reproduction not specifically authorized by SAP AG in writing is prohibited.",
+      "size" : 18470,
+      "compressedSize" : 15025,
+      "required" : ["jquery.sap.global.js"],
+      "includes" : []
+    },
+    {
+      "name" : "i2d/pp/mrpcockpit/reuse/util/CommonFormatter.js",
+      "size" : 53462,
+      "compressedSize" : 26910,
+      "required" : ["sap/ca/ui/model/format/DateFormat.js", "sap/ca/ui/model/format/NumberFormat.js", "sap/ca/ui/model/format/QuantityFormat.js", "jquery.sap.global.js"],
+      "includes" : []
+    },
+    {
+      "name" : "i2d/pp/mrpcockpit/reuse/util/Helper.js",
+      "size" : 20665,
+      "compressedSize" : 6522,
+      "required" : ["sap/ca/ui/utils/Lessifier.js", "jquery.sap.global.js"],
+      "includes" : []
+    },
+    {
+      "name" : "i2d/pp/mrpcockpit/reuse/util/InteroperabilityHelper.js",
+      "size" : 8568,
+      "compressedSize" : 2978,
+      "required" : ["jquery.sap.global.js"],
+      "includes" : []
+    },
+    {
+      "name" : "i2d/pp/mrpcockpit/reuse/util/Lessifier.js",
+      "size" : 1096,
+      "compressedSize" : 1011,
+      "required" : ["sap/ca/ui/utils/Lessifier.js", "jquery.sap.global.js"],
+      "includes" : []
+    },
+    {
+      "name" : "i2d/pp/mrpcockpit/reuse/util/QUnitHelper.js",
+      "size" : 926,
+      "compressedSize" : 440,
+      "required" : ["jquery.sap.global.js"],
+      "includes" : []
+    },
+    {
+      "name" : "i2d/pp/mrpcockpit/reuse/util/QuickViewHelper.js",
+      "size" : 37519,
+      "compressedSize" : 17587,
+      "required" : ["i2d/pp/mrpcockpit/reuse/util/CommonConstants.js", "jquery.sap.global.js"],
+      "includes" : []
+    },
+    {
+      "name" : "i2d/pp/mrpcockpit/reuse/util/StateMachine.js",
+      "size" : 11211,
+      "compressedSize" : 9520,
+      "required" : ["jquery.sap.global.js"],
+      "includes" : []
+    },
+    {
+      "name" : "i2d/pp/mrpcockpit/reuse/util/Wave3CollaborationHelper.js",
+      "size" : 43940,
+      "compressedSize" : 18687,
+      "required" : ["sap/ca/ui/message/message.js", "i2d/pp/mrpcockpit/reuse/util/CommonConstants.js", "jquery.sap.global.js"],
+      "includes" : []
+    },
+    {
+      "name" : "i2d/pp/mrpcockpit/reuse/util/Wave3Helper.js",
+      "size" : 16310,
+      "compressedSize" : 8240,
+      "required" : ["jquery.sap.global.js"],
+      "includes" : []
+    },
+    {
+      "name" : "i2d/pp/mrpcockpit/reuse/view/AoRAddDialog.js",
+      "size" : 5178,
+      "compressedSize" : 1598,
+      "required" : [],
+      "includes" : []
+    },
+    {
+      "name" : "i2d/pp/mrpcockpit/reuse/view/AoRAddDialog.view.xml",
+      "size" : 851,
+      "required" : ["sap/ui/core/mvc/XMLView.js", "i2d/pp/mrpcockpit/reuse/view/AoRAddDialog.controller.js", "sap/m/SelectDialog.js", "sap/m/StandardListItem.js"],
+      "includes" : []
+    },
+    {
+      "name" : "i2d/pp/mrpcockpit/reuse/view/AoRHandler.js",
+      "size" : 11473,
+      "compressedSize" : 5716,
+      "required" : ["i2d/pp/mrpcockpit/reuse/view/AoRAddDialog.js", "i2d/pp/mrpcockpit/reuse/view/AoRMainDialog.js", "i2d/pp/mrpcockpit/reuse/view/AoRWelcomeDialog.js", "jquery.sap.global.js"],
+      "includes" : []
+    },
+    {
+      "name" : "i2d/pp/mrpcockpit/reuse/view/AoRMainDialog.js",
+      "size" : 2791,
+      "compressedSize" : 1294,
+      "required" : [],
+      "includes" : []
+    },
+    {
+      "name" : "i2d/pp/mrpcockpit/reuse/view/AoRMainDialog.view.xml",
+      "size" : 1116,
+      "required" : ["sap/ui/core/mvc/XMLView.js", "i2d/pp/mrpcockpit/reuse/view/AoRMainDialog.controller.js", "sap/ui/layout/VerticalLayout.js", "sap/m/List.js", "sap/m/InputListItem.js", "sap/ui/core/Icon.js", "sap/m/StandardListItem.js"],
+      "includes" : []
+    },
+    {
+      "name" : "i2d/pp/mrpcockpit/reuse/view/AoRWelcomeDialog.js",
+      "size" : 2295,
+      "compressedSize" : 869,
+      "required" : ["sap/ushell/services/CrossApplicationNavigation.js", "jquery.sap.global.js"],
+      "includes" : []
+    },
+    {
+      "name" : "i2d/pp/mrpcockpit/reuse/view/AoRWelcomeDialog.view.xml",
+      "size" : 1093,
+      "required" : ["sap/ui/core/mvc/XMLView.js", "i2d/pp/mrpcockpit/reuse/view/AoRWelcomeDialog.controller.js", "sap/m/Dialog.js", "sap/ui/layout/form/SimpleForm.js", "sap/ui/layout/VerticalLayout.js", "sap/m/Text.js", "sap/m/Button.js"],
+      "includes" : []
+    },
+    {
+      "name" : "i2d/pp/mrpcockpit/reuse/view/DisplayVariant.js",
+      "size" : 15691,
+      "compressedSize" : 11304,
+      "required" : ["jquery.sap.global.js"],
+      "includes" : []
+    },
+    {
+      "name" : "i2d/pp/mrpcockpit/reuse/view/FacetFilter.js",
+      "size" : 8836,
+      "compressedSize" : 4879,
+      "required" : ["i2d/pp/mrpcockpit/reuse/util/Helper.js", "jquery.sap.global.js"],
+      "includes" : []
+    },
+    {
+      "name" : "i2d/pp/mrpcockpit/reuse/view/S1parent.js",
+      "size" : 40948,
+      "compressedSize" : 22047,
+      "required" : ["sap/ca/scfld/md/controller/BaseFullscreenController.js", "sap/m/TablePersoController.js", "sap/m/MessageBox.js", "i2d/pp/mrpcockpit/reuse/view/AoRHandler.js", "i2d/pp/mrpcockpit/reuse/view/VariantHandler.js", "i2d/pp/mrpcockpit/reuse/util/StateMachine.js", "i2d/pp/mrpcockpit/reuse/view/ViewStateHandler.js", "i2d/pp/mrpcockpit/reuse/view/DisplayVariant.js", "i2d/pp/mrpcockpit/reuse/view/FacetFilter.js", "i2d/pp/mrpcockpit/reuse/view/TableSorting.js", "i2d/pp/mrpcockpit/reuse/util/InteroperabilityHelper.js", "i2d/pp/mrpcockpit/reuse/util/CommonConstants.js", "jquery.sap.global.js"],
+      "includes" : []
+    },
+    {
+      "name" : "i2d/pp/mrpcockpit/reuse/view/S2parent.js",
+      "size" : 31977,
+      "compressedSize" : 13059,
+      "required" : ["sap/ca/scfld/md/controller/ScfldMasterController.js", "i2d/pp/mrpcockpit/reuse/util/CommonConstants.js", "i2d/pp/mrpcockpit/reuse/util/Helper.js", "i2d/pp/mrpcockpit/reuse/view/AoRHandler.js", "i2d/pp/mrpcockpit/reuse/view/VariantHandler.js", "i2d/pp/mrpcockpit/reuse/util/InteroperabilityHelper.js", "i2d/pp/mrpcockpit/reuse/view/ViewStateHandler.js", "jquery.sap.global.js"],
+      "includes" : []
+    },
+    {
+      "name" : "i2d/pp/mrpcockpit/reuse/view/S3parent.js",
+      "size" : 50859,
+      "compressedSize" : 22376,
+      "required" : ["sap/ca/scfld/md/controller/BaseDetailController.js", "i2d/pp/mrpcockpit/reuse/util/CalculationEngine.js", "sap/m/MessageBox.js", "i2d/pp/mrpcockpit/reuse/util/Helper.js", "i2d/pp/mrpcockpit/reuse/util/CollaborationHelper.js", "i2d/pp/mrpcockpit/reuse/util/Wave3CollaborationHelper.js", "i2d/pp/mrpcockpit/reuse/util/QuickViewHelper.js", "i2d/pp/mrpcockpit/reuse/util/Wave3Helper.js", "jquery.sap.global.js"],
+      "includes" : []
+    },
+    {
+      "name" : "i2d/pp/mrpcockpit/reuse/view/S4parent.js",
+      "size" : 76903,
+      "compressedSize" : 31378,
+      "required" : ["sap/ca/scfld/md/controller/BaseDetailController.js", "i2d/pp/mrpcockpit/reuse/controls/SolutionCardContainer.js", "i2d/pp/mrpcockpit/reuse/controls/Chart.js", "sap/ca/ui/message/message.js", "sap/ca/ui/model/type/Date.js", "i2d/pp/mrpcockpit/reuse/util/CommonConstants.js", "i2d/pp/mrpcockpit/reuse/util/Helper.js", "i2d/pp/mrpcockpit/reuse/util/CalculationEngine.js", "i2d/pp/mrpcockpit/reuse/util/CollaborationHelper.js", "i2d/pp/mrpcockpit/reuse/util/Wave3CollaborationHelper.js", "i2d/pp/mrpcockpit/reuse/util/Wave3Helper.js", "jquery.sap.global.js"],
+      "includes" : []
+    },
+    {
+      "name" : "i2d/pp/mrpcockpit/reuse/view/TableSorting.js",
+      "size" : 4660,
+      "compressedSize" : 2116,
+      "required" : ["jquery.sap.global.js"],
+      "includes" : []
+    },
+    {
+      "name" : "i2d/pp/mrpcockpit/reuse/view/VariantChangeConfirmationDialog.js",
+      "size" : 2008,
+      "compressedSize" : 764,
+      "required" : ["sap/ushell/services/CrossApplicationNavigation.js", "jquery.sap.global.js"],
+      "includes" : []
+    },
+    {
+      "name" : "i2d/pp/mrpcockpit/reuse/view/VariantChangeConfirmationDialog.view.xml",
+      "size" : 1128,
+      "required" : ["sap/ui/core/mvc/XMLView.js", "i2d/pp/mrpcockpit/reuse/view/VariantChangeConfirmationDialog.controller.js", "sap/m/Dialog.js", "sap/ui/layout/form/SimpleForm.js", "sap/ui/layout/VerticalLayout.js", "sap/m/Text.js", "sap/m/Button.js"],
+      "includes" : []
+    },
+    {
+      "name" : "i2d/pp/mrpcockpit/reuse/view/VariantDeleteDialog.js",
+      "size" : 2039,
+      "compressedSize" : 699,
+      "required" : [],
+      "includes" : []
+    },
+    {
+      "name" : "i2d/pp/mrpcockpit/reuse/view/VariantDeleteDialog.view.xml",
+      "size" : 1073,
+      "required" : ["sap/ui/core/mvc/XMLView.js", "i2d/pp/mrpcockpit/reuse/view/VariantDeleteDialog.controller.js", "sap/m/Dialog.js", "sap/ui/layout/form/SimpleForm.js", "sap/ui/layout/VerticalLayout.js", "sap/m/Text.js", "sap/m/Button.js"],
+      "includes" : []
+    },
+    {
+      "name" : "i2d/pp/mrpcockpit/reuse/view/VariantHandler.js",
+      "size" : 42845,
+      "compressedSize" : 18943,
+      "required" : ["i2d/pp/mrpcockpit/reuse/view/VariantSaveDialog.js", "i2d/pp/mrpcockpit/reuse/view/VariantDeleteDialog.js", "i2d/pp/mrpcockpit/reuse/view/VariantChangeConfirmationDialog.js", "jquery.sap.global.js"],
+      "includes" : []
+    },
+    {
+      "name" : "i2d/pp/mrpcockpit/reuse/view/VariantSaveDialog.js",
+      "size" : 5283,
+      "compressedSize" : 3155,
+      "required" : ["sap/ushell/services/CrossApplicationNavigation.js", "jquery.sap.global.js"],
+      "includes" : []
+    },
+    {
+      "name" : "i2d/pp/mrpcockpit/reuse/view/VariantSaveDialog.view.xml",
+      "size" : 1625,
+      "required" : ["sap/ui/core/mvc/XMLView.js", "i2d/pp/mrpcockpit/reuse/view/VariantSaveDialog.controller.js", "sap/m/Dialog.js", "sap/ui/layout/form/SimpleForm.js", "sap/ui/layout/VerticalLayout.js", "sap/m/Text.js", "sap/m/Input.js", "sap/m/CheckBox.js", "sap/m/Button.js"],
+      "includes" : []
+    },
+    {
+      "name" : "i2d/pp/mrpcockpit/reuse/view/ViewStateHandler.js",
+      "size" : 7512,
+      "compressedSize" : 3057,
+      "required" : ["jquery.sap.global.js"],
+      "includes" : []
+    }
+  ]
+}

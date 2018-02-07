@@ -1,0 +1,237 @@
+<!--
+
+    Copyright (C) 2009-2014 SAP SE or an SAP affiliate company. All rights reserved
+
+-->
+<core:FragmentDefinition xmlns:core="sap.ui.core" xmlns:l="sap.ui.layout"
+	xmlns:app="http://schemas.sap.com/sapui5/extension/sap.ui.core.CustomData/1" xmlns="sap.m" xmlns:mrp="i2d.pp.mrpcockpit.reuse.controls">
+	<Panel id="panel">
+		<headerToolbar>
+			<Toolbar id="panelToolbar"  class= "sapMRPMTB">
+
+				<ObjectHeader condensed="true" >
+					<attributes>
+						<ObjectAttribute text="{MaterialShortageDefinitionName}" tooltip="{Common_i18n>SHORTAGE_DEFINITION_TOOLTIP}"></ObjectAttribute>
+					</attributes>
+				</ObjectHeader>
+
+				<ToolbarSpacer></ToolbarSpacer>
+				<SegmentedButton select="onToolbarIconSelect" selectedButton="btnTable">
+					<Button id="btnTable" icon="sap-icon://table-view" tooltip="{Common_i18n>xtolBtnTableView}" />
+					<Button id="btnChart" icon="sap-icon://bar-chart" tooltip="{Common_i18n>xtolBtnChartView}" />
+				</SegmentedButton>
+			</Toolbar>
+		</headerToolbar>
+		<content>
+			<!-- ==|== Table ========================================================== -->
+			<Table id="SDItems" select="_handleSelect" updateStarted="onItemsUpdateStarted"				
+				updateFinished="onItemsUpdateFinished" showSeparators="Inner" growing="true" growingThreshold="200" growingScrollToLoad="true">
+				<columns>
+					<!-- ==== Extension Point ==== -->
+					<core:ExtensionPoint name="extSupplyDemandPanelAddColumnHeader1" />
+
+					<!-- ==== Date ==== -->
+					<Column id="SupDetailListDate" width="15%" mergeDuplicates="true" mergeFunctionName="data#hideStockDate">
+						<header>
+							<Label text="{Common_i18n>DETAIL_LIST_DATE}" tooltip="{Common_i18n>DETAIL_LIST_DATE_TOOLTIP}"></Label>
+						</header>
+					</Column>
+
+					<!-- ==== Extension Point ==== -->
+					<core:ExtensionPoint name="extSupplyDemandPanelAddColumnHeader2" />
+
+					<!-- ==== Status ==== -->
+					<Column id="SupStatus" width="1rem" hAlign="Right">
+						<header>
+							<Label text=""></Label>
+						</header>
+					</Column>
+
+					<!-- ==== Extension Point ==== -->
+					<core:ExtensionPoint name="extSupplyDemandPanelAddColumnHeader3" />
+
+					<!-- ==== Dispo Element ==== -->
+ 					<!-- Do not define width for the largest column and let it shrink if we add custom columns -->
+					<Column id="SupDetailListMrpE" minScreenWidth="Large" demandPopin="true">
+						<header>
+							<Label text="{Common_i18n>DETAIL_LIST_MRP_E}" tooltip="{Common_i18n>DETAIL_LIST_MRP_E_TOOLTIP}"></Label>
+						</header>
+					</Column>
+
+					<!-- ==== Extension Point ==== -->
+					<core:ExtensionPoint name="extSupplyDemandPanelAddColumnHeader4" />
+
+					<!-- ==== Quantity ==== -->
+					<Column id="SupDetailListQuan" width="15%" hAlign="Left" minScreenWidth="Large" demandPopin="true">
+						<header>
+							<Label text="{Common_i18n>DETAIL_LIST_QUAN}" tooltip="{Common_i18n>DETAIL_LIST_QUAN_TOOLTIP}"></Label>
+						</header>
+					</Column>
+
+					<!-- ==== Extension Point ==== -->
+					<core:ExtensionPoint name="extSupplyDemandPanelAddColumnHeader5" />
+
+					<!-- ==== Current Stock  ==== -->
+					<Column id="SupDetailStock" width="15%" hAlign="Right" mergeDuplicates="true" mergeFunctionName="data#hideQuantity">
+					<!--mergeFunctionName="data#hideQuantity"> -->
+					<!-- mergeFunctionName="getMergingKey">  -->
+						<header>
+							<Label text="{Common_i18n>DETAIL_STOCK}" tooltip="{Common_i18n>DETAIL_STOCK_TOOLTIP}"></Label>
+						</header>
+					</Column>
+
+					<!-- ==== Action (New Design) ==== -->
+					<Column id="ReqItemNavButton" width="1.5rem" hAlign="Right" mergeDuplicates="true" mergeFunctionName="data#hideNavigation"></Column>
+					
+				</columns>
+				<items>
+					<ColumnListItem id="sdlistItem">
+						<cells>
+
+							<!-- ==== Extension Point ==== -->
+							<core:ExtensionPoint name="extSupplyDemandPanelAddColumnData1" />
+
+							<!-- ==== Date ==== -->
+							<Label text="{path: 'MRPElementAvailyOrRqmtDate', type:'sap.ca.ui.model.type.Date', formatOptions: {style:'short'}}"
+								visible="{path:'MRPElementCategory', formatter:'i2d.pp.mrpcockpit.reuse.util.CommonFormatter.isSupplyDemandItem'}">
+								<customData>
+									<core:CustomData key="hideStockDate"
+										value="{parts: [{path:'MRPElementCategory'},{path:'MRPElementAvailyOrRqmtDate'}], formatter:'i2d.pp.mrpcockpit.reuse.util.CommonFormatter.hideStockDate'}" />
+								</customData>
+							</Label>
+
+							<!-- ==== Extension Point ==== -->
+							<core:ExtensionPoint name="extSupplyDemandPanelAddColumnData2" />
+
+							<!-- ==== Status ==== -->
+							<l:HorizontalLayout class="sapMRPStatus">
+								<core:Icon
+									tooltip="{parts: [{path:'MRPElementQuantityIsFirm'},
+												{path:'MRPElementIsReleased'},
+												{path:'MRPElementIsPartiallyDelivered'}],
+												formatter:'i2d.pp.mrpcockpit.reuse.util.CommonFormatter.flagIconTooltip'}"
+									src="{parts: [{path:'MRPElementQuantityIsFirm'},
+												{path:'MRPElementIsReleased'},
+												{path:'MRPElementIsPartiallyDelivered'}],
+												formatter:'i2d.pp.mrpcockpit.reuse.util.CommonFormatter.flagIconSrc'}"
+									visible="{parts: [{path:'MRPElementQuantityIsFirm'},
+												{path:'MRPElementIsReleased'},
+												{path:'MRPElementIsPartiallyDelivered'}],
+												formatter:'i2d.pp.mrpcockpit.reuse.util.CommonFormatter.flagIconVisible'}">
+								</core:Icon>
+								<core:Icon id="sapMrpCrIcon"
+									visible="{parts: [{path:'SolutionRequestStatus'}, {path:'MRPElementCategory'}, {path:'MRPElementOpenQuantity'}], formatter:'i2d.pp.mrpcockpit.reuse.util.CommonFormatter.getChangeRequestVisibility'}"
+									src="sap-icon://BusinessSuiteInAppSymbols/icon-change-request"									
+									tooltip="{parts: [{path:'SolutionRequestStatus'}, {path:'VendorResponse'}], formatter:'i2d.pp.mrpcockpit.reuse.util.CommonFormatter.getChangeRequestTooltip'}">
+								</core:Icon>
+							</l:HorizontalLayout>
+
+							<!-- ==== Extension Point ==== -->
+							<core:ExtensionPoint name="extSupplyDemandPanelAddColumnData3" />
+
+							<!-- ==== Dispo Element ==== -->
+							<l:HorizontalLayout>
+							<!-- the following two controls are alternatives to each other, only one of them is displayed in each case -->
+								<!-- ==== Stock Line ==== -->
+								<ObjectIdentifier
+									visible="{path: 'MRPElementCategory', formatter:'i2d.pp.mrpcockpit.reuse.util.CommonFormatter.isStockItem'}"
+									id="stockElement"
+									title="{parts:[{path: 'MRPElementCategory'}, 
+											{path: 'MRPElementCategoryShortName'}, {path: 'MRPElement'}, {path: 'MRPElementItem'}, 
+											{path: 'MRPElementDocumentType'}, {path: 'SourceMRPElementCategory'}, {path: 
+											'SourceMRPElement'}, {path: 'SourceMRPElementItem'}], formatter:'i2d.pp.mrpcockpit.reuse.util.CommonFormatter.categoryLongName'}"
+							 		text="{parts: [{path: 'MRPElementCategory'},{path: 'MRPElementBusinessPartnerName'}, {path: 'MRPElementBusinessPartnerType'}, 
+											{path: 'MRPElementBusinessPartnerID'}, {path: 'MRPElementDocumentType'}, {path: 'Assembly'}, {path: 'MaterialSafetyStockQty'}, {path: 'TargetQuantityUnitDcmls'}, {path: 'MaterialBaseUnitText'}], formatter: 'i2d.pp.mrpcockpit.reuse.util.CommonFormatter.getBusinessPartnerName'}"										
+								>
+								</ObjectIdentifier>
+								
+								<!-- ==== Supply Demand Items with Link to Quick Views ==== -->
+                          <!-- 	  ObjectIdentifier control currently (UI5 version 1.26.1) does not support tooltip (comes with 1.26.2) -->
+								<ObjectIdentifier id="SDemItem"
+									visible="{path: 'MRPElementCategory', formatter:'i2d.pp.mrpcockpit.reuse.util.CommonFormatter.isSupplyDemandItem'}"
+									title="{parts:[{path: 'MRPElementCategory'}, 
+											{path: 'MRPElementCategoryShortName'}, {path: 'MRPElement'}, {path: 'MRPElementItem'}, 
+											{path: 'MRPElementDocumentType'}, {path: 'SourceMRPElementCategory'}, {path: 
+											'SourceMRPElement'}, {path: 'SourceMRPElementItem'}], formatter:'i2d.pp.mrpcockpit.reuse.util.CommonFormatter.categoryLongName'}"
+									text="{parts: [{path: 'MRPElementCategory'},{path: 'MRPElementBusinessPartnerName'}, {path: 'MRPElementBusinessPartnerType'}, 
+											{path: 'MRPElementBusinessPartnerID'}, {path: 'MRPElementDocumentType'}, {path: 'Assembly'}, {path: 'MaterialSafetyStockQty'}, {path: 'TargetQuantityUnitDcmls'}, {path: 'MaterialBaseUnitText'}], formatter: 'i2d.pp.mrpcockpit.reuse.util.CommonFormatter.getBusinessPartnerName'}"
+									titleActive="{parts: [{path: 'MRPElementCategory'},{path: 'ServiceVersions>/iServiceSchemaVersion'}, {path: 'SourceMRPElementCategory'}], formatter:'i2d.pp.mrpcockpit.reuse.util.QuickViewHelper.isHyperlinkActive'}"
+									titlePress="handlePressDispoElementQuickView">																										
+								</ObjectIdentifier>
+
+
+
+							</l:HorizontalLayout>
+
+							<!-- </l:HorizontalLayout>  -->
+ 							<!-- ==== Extension Point ==== -->
+							<core:ExtensionPoint name="extSupplyDemandPanelAddColumnData4" />
+
+							<!-- ==== Quantity ==== -->
+							<l:HorizontalLayout class="sapMRPStockQty">
+								
+								<ObjectStatus
+									icon="{parts:[{path: 'MRPElementOpenQuantity'}, {path: 'MRPElementCategory'}], formatter:'i2d.pp.mrpcockpit.reuse.util.CommonFormatter.sditemicon'}"
+									state="{parts:[{path: 'MRPElementOpenQuantity'}, {path: 'MRPElementCategory'}], formatter:'i2d.pp.mrpcockpit.reuse.util.CommonFormatter.sdIconState'}"
+									tooltip="{parts:[{path: 'MRPElementOpenQuantity'}, {path: 'MRPElementCategory'}], formatter:'i2d.pp.mrpcockpit.reuse.util.CommonFormatter.sditemtooltip'}">
+								</ObjectStatus>
+								<Text text="" width="0.5rem"></Text>
+								<ObjectNumber
+									number="{parts:[{path: 'MRPElementOpenQuantity'}, {path: 'TargetQuantityUnitDcmls'}], formatter:'i2d.pp.mrpcockpit.reuse.util.CommonFormatter.quantity'}"
+									numberUnit="{MaterialBaseUnitText}" emphasized="false">
+								</ObjectNumber>
+							</l:HorizontalLayout>
+
+							<!-- ==== Extension Point ==== -->
+							<core:ExtensionPoint name="extSupplyDemandPanelAddColumnData5" />
+
+							<!-- ==== Stock Button (Old Design) ==== -->
+<!-- 
+							<mrp:Stock name="Button"
+								number="{parts: [{path: 'MRPAvailableQuantity'}, {path: 'TargetQuantityUnitDcmls'}], formatter: 'i2d.pp.mrpcockpit.reuse.util.CommonFormatter.numberFormat'}"
+								numberUnit="{path: 'MaterialBaseUnitText'}"
+								mergingKey="{parts: [{path: 'MRPElementCategory'}, {path: 'MRPElementAvailyOrRqmtDate'}, {path: 'MRPAvailableQuantity'}], formatter: 'i2d.pp.mrpcockpit.reuse.util.CommonFormatter.availableQuantityMergingKey'}"
+								renderAsButton="{parts: [{path: 'MRPAvailability'}, {path: 'MRPElementCategory'}, {path: 'DecisionSupport'}, {path: 'ServiceVersions>/iServiceSchemaVersion'}], formatter: 'i2d.pp.mrpcockpit.reuse.util.CommonFormatter.allowSolutionNavigation'}"
+								mrpavailability="{path: 'MRPAvailability'}" press="selectShortage"
+								tooltip="{Common_i18n>XTOL_BTN_SOLVE_SHORTAGE}" />
+ -->							
+							
+							<!-- ==== Object Number (New Design / Remove Stock Button Above) ==== -->		
+							<ObjectNumber
+								number="{parts: [{path: 'MRPAvailableQuantity'}, {path: 'TargetQuantityUnitDcmls'}], formatter: 'i2d.pp.mrpcockpit.reuse.util.CommonFormatter.numberFormat'}" 
+								numberUnit="{path: 'MaterialBaseUnitText'}"
+								class="sapMRPAvailableQuantity">
+									<customData>
+									<core:CustomData key="hideQuantity"
+									value="{parts: [{path:'MRPElementCategory'},{path:'MRPElementAvailyOrRqmtDate'}, {path:'MRPAvailableQuantity'}], 
+										formatter:'i2d.pp.mrpcockpit.reuse.util.CommonFormatter.availableQuantityMergingKey'}" /> 
+									</customData>
+							</ObjectNumber>
+							
+							<!-- ==== Action (New Design) ==== -->
+							<Button 
+								icon="sap-icon://navigation-right-arrow" 
+								type="Transparent"
+								press="selectShortage" 
+								visible="{parts: [{path: 'MRPAvailability'}, {path: 'MRPElementCategory'}, {path: 'DecisionSupport'}, {path: 'ServiceVersions>/iServiceSchemaVersion'}], formatter: 'i2d.pp.mrpcockpit.reuse.util.CommonFormatter.allowSolutionNavigation'}" 
+								tooltip="{Common_i18n>XTOL_BTN_SOLVE_SHORTAGE}"> 
+								<customData> 
+									<core:CustomData 
+										key="hideNavigation" 
+										value="{parts: [{path:'MRPElementCategory'},{path:'MRPElementAvailyOrRqmtDate'}, {path:'MRPAvailableQuantity'}], formatter:'i2d.pp.mrpcockpit.reuse.util.CommonFormatter.availableQuantityMergingKey'}" /> 
+								</customData> 
+							</Button>
+							
+						</cells>
+					</ColumnListItem>
+				</items>
+			</Table>
+			<!-- ==|== Chart ========================================================== -->
+			<ScrollContainer id="chartContainer" height="100%" width="100%" horizontal="false" vertical="false"
+				visible="false">
+				<mrp:Chart id="chart">
+				</mrp:Chart>
+			</ScrollContainer>
+		</content>
+	</Panel>
+</core:FragmentDefinition>

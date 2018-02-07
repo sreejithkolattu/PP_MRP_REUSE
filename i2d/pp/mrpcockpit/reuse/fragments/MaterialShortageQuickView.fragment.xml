@@ -1,0 +1,125 @@
+<!--
+
+    Copyright (C) 2009-2014 SAP SE or an SAP affiliate company. All rights reserved
+
+-->
+<core:FragmentDefinition 
+  xmlns="sap.m"
+  xmlns:core="sap.ui.core"
+  xmlns:l="sap.ui.layout"
+  xmlns:f="sap.ui.layout.form"
+  xmlns:mrp="i2d.pp.mrpcockpit.reuse.controls">
+  <Popover
+    title="{MaterialExternalID}"
+    class="sapUiPopupWithPadding sapMRPPopover"
+    placement="Auto" 
+    initialFocus="closeButton"
+    contentWidth="480px"
+	contentHeight="640px">
+ 
+	<content>
+		<l:Grid defaultSpan="L12 M12 S12" vSpacing="0" hSpacing="0" width="auto">
+			<l:content>
+				<!-- Customer Info -->
+				<f:SimpleForm title="{MaterialName}" editable="false" layout="ResponsiveGridLayout"
+				  labelSpanL="1" labelSpanM="1" emptySpanL="0" emptySpanM="0" columnsL="1" columnsM="1" >
+				  <f:content>
+				  
+				  </f:content>
+				</f:SimpleForm>
+				
+				
+				<f:SimpleForm title="{path: 'Common_i18n>StockAvailability', formatter:'i2d.pp.mrpcockpit.reuse.util.CommonFormatter.lapseOfStockAvailability'}"  
+					editable="false" layout="ResponsiveGridLayout"
+					labelSpanL="1" labelSpanM="1" emptySpanL="0" emptySpanM="0" columnsL="1" columnsM="1">
+ 					<f:content>
+						<mrp:VisualStatusForecast
+							internStatus="{AvailabilityChart}"
+							daysNo="21"
+							tooltip="{path: 'AvailabilityChart', formatter:'i2d.pp.mrpcockpit.reuse.util.CommonFormatter.textStockAvailability'}" />
+					</f:content>
+ 				</f:SimpleForm>
+
+				
+				<f:SimpleForm title="{Common_i18n>ShortageData}" editable="false" layout="ResponsiveGridLayout"
+					labelSpanL="1" labelSpanM="1" emptySpanL="0" emptySpanM="0" columnsL="1" columnsM="1">
+					<f:content>
+						
+ 					  <Label text="{Common_i18n>MaterialShortageStartDate}" tooltip="{Common_i18n>MaterialShortageStartDate}" />
+    				  <Text text="{path: 'MaterialShortageStartDate', formatter: 'i2d.pp.mrpcockpit.reuse.util.CommonFormatter.formatDateShort'}" /> 
+				      
+				      <Label text="{Common_i18n>MaterialShortageEndDate}" tooltip="{Common_i18n>MaterialShortageEndDate}" />
+				      <Text text="{path: 'MaterialShortageEndDate', formatter: 'i2d.pp.mrpcockpit.reuse.util.CommonFormatter.formatDateShort'}" /> 
+					
+					  <Label text="{Common_i18n>DaysOfSupplyDuration}" tooltip="{Common_i18n>DaysOfSupplyDuration}" />
+					  <Text text="{path: 'DaysOfSupplyDuration' , formatter: 'i2d.pp.mrpcockpit.reuse.util.CommonFormatter.formatDelayInt'}" /> 
+	
+					  <Label text="{Common_i18n>MaterialShortageQuantity}" tooltip="{Common_i18n>MaterialShortageQuantity}" />
+					  <Text text="{parts:[{path: 'MaterialShortageQuantity'}, {path: 'TargetQuantityUnitDcmls'}, {path: 'UnitOfMeasureTechnicalName'}], formatter:'i2d.pp.mrpcockpit.reuse.util.CommonFormatter.formatQuantity'}" /> 
+											
+					</f:content>
+				</f:SimpleForm>
+				
+				
+				<f:SimpleForm title="{Common_i18n>MaterialData}" editable="false" layout="ResponsiveGridLayout"  
+					labelSpanL="1" labelSpanM="1" emptySpanL="0" emptySpanM="0" columnsL="1" columnsM="1">
+					<f:content>
+						
+ 						<Label text="{parts:[{path: 'Common_i18n>PLANT'}, {path: 'Common_i18n>MRPAREA'}], formatter: 'i2d.pp.mrpcockpit.reuse.util.CommonFormatter.getTextPairWithSlash'}"
+ 							tooltip="{parts:[{path: 'Common_i18n>PLANT'}, {path: 'Common_i18n>MRPAREA'}], formatter: 'i2d.pp.mrpcockpit.reuse.util.CommonFormatter.getTextPairWithSlash'}" />
+					    <Text text="{parts:[{path: 'MRPPlant'}, {path: 'MRPArea'}], formatter: 'i2d.pp.mrpcockpit.reuse.util.CommonFormatter.getTextPairWithSlash'}" /> 
+
+						<Label text="{Common_i18n>xfldMaterialABCClassification}" tooltip="{Common_i18n>xfldMaterialABCClassification}" />
+						<Text text="{MaterialABCClassification}" /> 
+						
+						<Label text="{Common_i18n>xfldMRPAvailableStockQuantity}" tooltip="{Common_i18n>xfldMRPAvailableStockQuantity}" />
+						<Text text="{parts:[{path: 'MRPAvailableStockQuantity'}, {path: 'TargetQuantityUnitDcmls'}, {path: 'UnitOfMeasureTechnicalName'}], formatter:'i2d.pp.mrpcockpit.reuse.util.CommonFormatter.formatQuantity'}" /> 
+
+						
+						<Label text="{Common_i18n>xfldMaterialSafetyStockQty}" tooltip="{Common_i18n>xfldMaterialSafetyStockQty}" /> 
+						<Text  text="{parts:[{path: 'MaterialSafetyStockQty'}, {path: 'TargetQuantityUnitDcmls'}, {path: 'UnitOfMeasureTechnicalName'}], formatter:'i2d.pp.mrpcockpit.reuse.util.CommonFormatter.formatQuantity'}" />
+
+						
+						<Label text="{Common_i18n>ManualPlanningHorizon}" tooltip="{Common_i18n>ManualPlanningHorizon}" /> 
+						<Text text="{path: 'ManualPlanningHorizonEndDate', formatter: 'i2d.pp.mrpcockpit.reuse.util.CommonFormatter.formatDateShort'}" /> 
+						
+ 						<Label text="{Common_i18n>TotalReplenishmentLeadDuration}" tooltip="{Common_i18n>TotalReplenishmentLeadDuration}" />
+						<Text text="{path: 'TotalReplenishmentLeadDuration' , formatter: 'i2d.pp.mrpcockpit.reuse.util.CommonFormatter.formatDelayInt'}" />
+						
+					</f:content>
+				</f:SimpleForm>
+				
+				
+				<f:SimpleForm title="{Common_i18n>ProcurementData}" editable="false" layout="ResponsiveGridLayout"
+					labelSpanL="1" labelSpanM="1" emptySpanL="0" emptySpanM="0" columnsL="1" columnsM="1">
+					<f:content>
+		
+						  <Label text="{Common_i18n>VENDOR}" tooltip="{Common_i18n>VENDOR}" />
+					      <Text text="{VendorName}" /> 
+						  
+						  <Label text="{Common_i18n>MaterialProcurementCategory}" tooltip="{Common_i18n>MaterialProcurementCategory}" />
+					      <Text text="{MaterialProcurementCategory}" /> 
+
+						
+					</f:content>
+				</f:SimpleForm>
+			</l:content>
+		</l:Grid>
+	  </content>
+ 	
+ 	<endButton>
+		<Button icon="sap-icon://sys-cancel" press="handleQuickViewCloseButton" id="closeButton"/>
+	</endButton>
+ 	
+ 	<footer>
+	  <Bar>
+		<contentRight>
+<!-- 			<Button text="{Common_i18n>FACTSHEET}" tooltip="{Common_i18n>FACTSHEET_PURCH_ORD_TOOLTIP}" icon="sap-icon://task" press="navToPurchOrdFactSheet" /> -->
+			
+		</contentRight>
+ 	  </Bar>
+	</footer>
+  
+  </Popover>
+ 
+</core:FragmentDefinition>

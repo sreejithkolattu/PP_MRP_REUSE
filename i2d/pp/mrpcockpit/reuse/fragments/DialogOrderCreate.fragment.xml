@@ -1,0 +1,118 @@
+<!--
+
+    Copyright (C) 2009-2014 SAP SE or an SAP affiliate company. All rights reserved
+
+-->
+<Dialog xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc"
+	xmlns="sap.m" xmlns:form="sap.ui.layout.form"
+	xmlns:l="sap.ui.layout"
+	xmlns:html="http://www.w3.org/1999/xhtml"
+	initialFocus="inputQtyCreate"
+	class="sapMRPDialog" beforeOpen="beforeOpen">
+	<content>
+
+	<l:Grid
+		class="sapMRPDialogGrid"
+		defaultSpan="L12 M12 S12"
+		width="auto">
+		<l:content>
+		<form:SimpleForm
+			maxContainerCols="2"
+			editable="false"
+			layout="ResponsiveGridLayout"
+			labelSpanS="5"
+			labelSpanL="5"
+			labelSpanM="5"
+			emptySpanL="0"
+			emptySpanM="0"
+			emptySpanS="0"
+			columnsL="2"
+			columnsM="2">
+			<form:content>
+
+				<!-- ==|== Dialog Information ========================================================== -->
+				<core:Fragment fragmentName="i2d.pp.mrpcockpit.reuse.fragments.DialogInfo"
+					type="XML" />
+
+			</form:content>
+		</form:SimpleForm>
+
+		<html:hr></html:hr>
+
+		<form:SimpleForm 
+			maxContainerCols="2"
+			editable="true"
+			layout="ResponsiveGridLayout"
+			labelSpanS="5"
+			labelSpanL="5"
+			labelSpanM="5"
+			emptySpanL="0"
+			emptySpanM="0"
+			emptySpanS="0"
+			columnsL="2"
+			columnsM="2">
+			<form:content>
+
+				<Label text="{Common_i18n>DEL_DAT}"></Label>
+				<DatePicker
+					value="{ path:'/MRPElementChgAvailyOrRqmtDate', type:'sap.ui.model.type.Date', formatOptions: { style: 'short'} }"
+					change="_onChangeDatePicker" />
+
+				<Label text="{Common_i18n>QUANTITY}"></Label>
+				<Input value="{path:'/MRPElementChangedTotalQuantity', type:'sap.ca.ui.model.type.Number'}"
+					liveChange="_onLiveChangeInput"
+					id="inputQtyCreate">
+					<layoutData>
+						<l:GridData span="L3 M3 S3" />
+					</layoutData>
+				</Input>
+				<Input value="{/OrderUnitOfMeasureTechnicalName}" editable="false">
+					<layoutData>
+						<l:GridData span="L3 M3 S3" />
+					</layoutData>
+				</Input>
+
+			</form:content>
+		</form:SimpleForm>
+
+		<html:hr></html:hr>
+
+		<form:SimpleForm 
+			maxContainerCols="2"
+			editable="true"
+			layout="ResponsiveGridLayout"
+			labelSpanS="5"
+			labelSpanL="5"
+			labelSpanM="5"
+			emptySpanL="0"
+			emptySpanM="0"
+			emptySpanS="0"
+			columnsL="2"
+			columnsM="2">
+			<form:content>
+
+				<Label text="{Common_i18n>CREATE_ORD}"></Label>
+				<RadioButton text="" selected="{/DialogConfigCtrlOptionCreateOrd}"
+					select="onSelectOptionCreateOrd" groupName="Sol"></RadioButton>
+
+				<Label text="{Common_i18n>CREATE_REQ}"></Label>
+				<RadioButton text="" selected="{/DialogConfigCtrlOptionCreateReq}"
+					groupName="Sol"></RadioButton>
+
+			</form:content>
+		</form:SimpleForm>
+
+	</l:content>
+	</l:Grid>
+	
+	</content>
+
+	<beginButton>
+		<Button text="{Common_i18n>OK}" enabled="true" press="onOk"></Button>
+	</beginButton>
+
+	<endButton>
+		<Button text="{Common_i18n>CANCEL}" enabled="true" press="onCancel"></Button>
+	</endButton>
+
+</Dialog>

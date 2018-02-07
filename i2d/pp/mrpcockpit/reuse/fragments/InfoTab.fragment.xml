@@ -1,0 +1,115 @@
+<!--
+
+    Copyright (C) 2009-2014 SAP SE or an SAP affiliate company. All rights reserved
+
+-->
+<IconTabFilter icon="sap-icon://product" xmlns:core="sap.ui.core"
+	xmlns="sap.m" xmlns:l="sap.ui.layout" xmlns:f="sap.ui.layout.form" id="infoTabContainer"
+	tooltip="{Common_i18n>ICONTABBAR_XTOL_INFO}">
+	<content>
+		<l:Grid defaultSpan="L12 M12 S12" width="auto">
+			<l:content>
+
+				<!--basic data -->
+				<f:SimpleForm title="{Common_i18n>xtitBasicData}"
+					maxContainerCols="2" editable="false" layout="ResponsiveGridLayout"
+					labelSpanL="4" labelSpanM="4" emptySpanL="1" emptySpanM="1"
+					columnsL="1" columnsM="1">
+					<f:content>
+						<Label text="{Common_i18n>xfldMateralPlantName}" tooltip="{Common_i18n>xfldMateralPlantName}" />
+						<Text text="{parts:[{path: 'MRPPlant'}, {path: 'MRPPlantName'}], formatter: 'i2d.pp.mrpcockpit.reuse.util.CommonFormatter.getTextPairWithParenthesis' }" />
+						<Label text="{Common_i18n>xfldMRPAreaText}" tooltip="{Common_i18n>xfldMRPAreaText}" />
+						<Text text="{parts:[{path: 'MRPArea'}, {path: 'MRPAreaText'}], formatter: 'i2d.pp.mrpcockpit.reuse.util.CommonFormatter.getTextPairWithDash' }" />
+					</f:content>
+				</f:SimpleForm>
+
+				<!--classification -->
+				<f:SimpleForm title="{Common_i18n>xtitClassification}"
+					maxContainerCols="2" editable="false" layout="ResponsiveGridLayout"
+					labelSpanL="4" labelSpanM="4" emptySpanL="1" emptySpanM="1"
+					columnsL="1" columnsM="1">
+					<f:content>
+						<Label text="{Common_i18n>xfldMateralTypeName}" tooltip="{Common_i18n>xfldMateralTypeName}" />
+						<Text text="{parts:[{path: 'MaterialType'}, {path: 'MaterialTypeName'}], formatter: 'i2d.pp.mrpcockpit.reuse.util.CommonFormatter.getTextPairWithDash' }" />
+						<Label text="{Common_i18n>xfldMaterialABCClassification}"
+							tooltip="{Common_i18n>xfldMaterialABCClassification}" />
+						<Text text="{MaterialABCClassification}" />
+						<Label text="{Common_i18n>xfldMaterialGroupName}" tooltip="{Common_i18n>xfldMaterialGroupName}" />
+						<Text text="{parts:[{path: 'MaterialGroup'}, {path: 'MaterialGroupName'}], formatter: 'i2d.pp.mrpcockpit.reuse.util.CommonFormatter.getTextPairWithDash' }" />
+					</f:content>
+				</f:SimpleForm>
+
+				<!--responsibility -->
+				<f:SimpleForm title="{Common_i18n>xtitResponsibilities}"
+					maxContainerCols="2" editable="false" layout="ResponsiveGridLayout"
+					labelSpanL="4" labelSpanM="4" emptySpanL="1" emptySpanM="1"
+					columnsL="1" columnsM="1">
+					<f:content>
+						<Label text="{Common_i18n>xfldMRPControllerName}" tooltip="{Common_i18n>xfldMRPControllerName}" />
+						<Text text="{parts:[{path: 'MRPController'}, {path: 'MRPControllerName'}], formatter: 'i2d.pp.mrpcockpit.reuse.util.CommonFormatter.getTextPairWithDash' }" />
+						<Label text="{Common_i18n>xfldPurchasingGroupName}" tooltip="{Common_i18n>xfldPurchasingGroupName}" />
+						<Text text="{parts:[{path: 'PurchasingGroup'}, {path: 'PurchasingGroupName'}], formatter: 'i2d.pp.mrpcockpit.reuse.util.CommonFormatter.getTextPairWithDash' }" />
+					</f:content>
+				</f:SimpleForm>
+
+				<!--procurement -->
+				<f:SimpleForm title="{Common_i18n>xtitProcurement}"
+					maxContainerCols="2" editable="false" layout="ResponsiveGridLayout"
+					labelSpanL="4" labelSpanM="4" emptySpanL="1" emptySpanM="1"
+					columnsL="1" columnsM="1">
+					<f:content>
+						<Label text="{Common_i18n>xfldMaterialProcurementCatName}"
+							tooltip="{Common_i18n>xfldMaterialProcurementCatName}" />
+						<Text text="{parts:[{path: 'MaterialProcurementCategory'}, {path: 'MaterialProcurementCatName'}], formatter: 'i2d.pp.mrpcockpit.reuse.util.CommonFormatter.getTextPairWithDash' }" />
+						<Label text="{Common_i18n>xfldTotalReplenishmentLeadDuration}"
+							tooltip="{Common_i18n>xfldTotalReplenishmentLeadDuration}" />
+						<Text text="{TotalReplenishmentLeadDuration}" />
+					</f:content>
+				</f:SimpleForm>
+
+				<!--inventory -->
+				<f:SimpleForm title="{Common_i18n>xtitInventory}"
+					maxContainerCols="2" editable="false" layout="ResponsiveGridLayout"
+					labelSpanL="4" labelSpanM="4" emptySpanL="1" emptySpanM="1"
+					columnsL="1" columnsM="1">
+					<f:content>
+						<Label text="{Common_i18n>xfldMRPAvailableStockQuantity}"
+							tooltip="{Common_i18n>xfldMRPAvailableStockQuantity}" />
+						<Text
+							text="{parts: [{path: 'MRPAvailableStockQuantity'}, {path: 'TargetQuantityUnitDcmls'}], formatter: 'i2d.pp.mrpcockpit.reuse.util.CommonFormatter.numberFormat'}" />
+						<Label text="{Common_i18n>xfldMaterialSafetyStockQty}"
+							tooltip="{Common_i18n>xfldMaterialSafetyStockQty}" />
+						<Text
+							text="{parts: [{path: 'MaterialSafetyStockQty'}, {path: 'TargetQuantityUnitDcmls'}], formatter: 'i2d.pp.mrpcockpit.reuse.util.CommonFormatter.numberFormat'}" />
+						<Label text="{Common_i18n>xfldMaterialBaseUnitText}"
+							tooltip="{Common_i18n>xfldMaterialBaseUnitText}" />
+						<Text text="{UnitOfMeasureTechnicalName}" />
+					</f:content>
+				</f:SimpleForm>
+
+				<!--settings -->
+				<f:SimpleForm title="{Common_i18n>xtitMRPSettings}"
+					maxContainerCols="2" editable="false" layout="ResponsiveGridLayout"
+					labelSpanL="4" labelSpanM="4" emptySpanL="1" emptySpanM="1"
+					columnsL="1" columnsM="1">
+					<f:content>
+						<Label text="{Common_i18n>xfldMRPTypeName}" tooltip="{Common_i18n>xfldMRPTypeName}" />
+						<Text text="{parts:[{path: 'MRPType'}, {path: 'MRPTypeName'}], formatter: 'i2d.pp.mrpcockpit.reuse.util.CommonFormatter.getTextPairWithDash' }" />
+						<Label text="{Common_i18n>xfldMRPGroupName}" tooltip="{Common_i18n>xfldMRPGroupName}" />
+						<Text text="{parts:[{path: 'MRPGroup'}, {path: 'MRPGroupName'}], formatter: 'i2d.pp.mrpcockpit.reuse.util.CommonFormatter.getTextPairWithDash' }" />
+						<Label text="{Common_i18n>xfldPlanningTimeFenceInDays}"
+							tooltip="{Common_i18n>xfldPlanningTimeFenceInDays}" />
+						<Text
+							text="{path:'PlanningTimeFenceInDays', formatter:'i2d.pp.mrpcockpit.reuse.util.CommonFormatter.numberWithNoLeadingZeros'}" />
+						<Label text="{Common_i18n>xfldMaterialGoodsReceiptDuration}"
+							tooltip="{Common_i18n>xfldMaterialGoodsReceiptDuration}" />
+						<Text text="{MaterialGoodsReceiptDuration}" />
+						<Label text="{Common_i18n>xfldMRPSafetyDuration}" tooltip="{Common_i18n>xfldMRPSafetyDuration}" />
+						<Text
+							text="{path:'MRPSafetyDuration', formatter:'i2d.pp.mrpcockpit.reuse.util.CommonFormatter.numberWithNoLeadingZeros'}" />
+					</f:content>
+				</f:SimpleForm>
+			</l:content>
+		</l:Grid>
+	</content>
+</IconTabFilter>

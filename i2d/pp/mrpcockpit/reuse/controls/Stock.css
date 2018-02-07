@@ -1,0 +1,59 @@
+/*  ==|== Stock.css ==========================================================
+ *
+ * Styling for SAP MRP Control - Stock Shortage
+ * @see /resources/controls/Stock.js
+ *
+ * author: SAP AG
+ * version: 23.11.2013
+ * ============================================================
+ */
+.sapMRPStockBtn {
+	min-width: 7.25rem;
+}
+
+/* shortage (negative) */
+.sapMRPStockShortageBtn>.sapMBtnInner {
+	background-color: @sapUiNegative !important;
+	background-image: none !important;
+	border-color: darken(@sapUiNegative, 5) !important;
+	color: @sapUiInvertedElement !important;
+	text-shadow: none !important;
+}
+
+.sapMRPStockShortageBtn .sapMBtnIcon>span {
+	color: @sapUiInvertedElement !important;
+}
+
+/* safety stock (yellow) */
+.sapMRPStockSafetyStockBtn>.sapMBtnInner {
+	background-color: @sapUiWarningBorder !important;
+	background-image: none !important;
+	border-color: darken(@sapUiWarningBorder, 5) !important;
+	color: @sapUiExtraDarkText !important;
+	text-shadow: none !important;
+}
+
+.sapMRPStockSafetyStockBtn .sapMBtnIcon>span  {
+	color: @sapUiExtraDarkText !important;
+}
+
+/* accepted (normal button) */
+.sapMRPStockAcceptedBtn>.sapMBtnInner {
+	
+}
+
+.sapMRPStockHiddenBtn {
+	display: none;
+}
+
+.sapMRPStockSafetyStockNumber.sapMObjectNumber {
+	color: @sapUiWarningBorder !important;
+}
+
+.sapMRPStockShortageNumber.sapMObjectNumber {
+	color: @sapUiNegative !important;
+}
+
+.sapMRPStockAcceptedNumber.sapMObjectNumber {
+
+}

@@ -1,0 +1,21 @@
+<!--
+
+    Copyright (C) 2009-2014 SAP SE or an SAP affiliate company. All rights reserved
+
+-->
+
+<!-- ==|== Facet Filter ========================================================== -->
+
+<FacetFilter xmlns:core="sap.ui.core" xmlns="sap.m" xmlns:l="sap.ui.layout"
+	id="FacetFilter" 
+	class="sapMRPFacetFilter" 
+	showPersonalization="true"
+	showReset="true" 
+	showPopoverOKButton="true"
+	type="{sap.m.FacetFilterType.Simple}">
+	<lists>
+	</lists>
+	<layoutData>
+		<l:GridData span="L12 M12 S12" />
+	</layoutData>
+</FacetFilter>

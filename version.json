@@ -1,0 +1,8 @@
+{ "application": "i2d.pp.mrpcockpit.reuse",
+  "version": "1.5.7",
+  "buildNumber": "30",
+  "buildId": "2015-04-17_13-57-48",
+  "branch": "${env.GIT_BRANCH}",
+  "revision": "${env.GIT_COMMIT}",
+  "GitURL": "${env.GIT_URL}"
+}

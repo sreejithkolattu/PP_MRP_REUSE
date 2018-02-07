@@ -1,0 +1,182 @@
+/*  ==|== Chart.css ==========================================================
+ *
+ * Styling for SAP MRP Control - Condensed View Chart
+ * @see /resources/controls/SolutionCards.js
+ * author: SAP AG
+ * version: 29.11.2013
+ * ============================================================
+ */
+
+.sapMRPChartBackground{
+	background-color: white;
+}
+.sapMRPChart{
+	margin: 0 2rem;
+	position: relative;
+}
+.sapMRPChartBorder{
+	fill: transparent;
+	stroke: @sapUiLightBorder;
+	stroke-width: 1;
+}
+.sapMRPChartOverviewScrollLeft{
+	position: absolute;
+	left: 0px;
+	top: 0;
+	bottom: 0;
+	border-right: 0.5rem solid transparent;
+	color: @sapUiElement;
+	cursor: pointer;
+}
+.sapMRPChartOverviewScrollRight{
+	position: absolute;
+	right: 0px;
+	top: 0;
+	bottom: 0;
+	border-left: 0.5rem solid transparent;
+	color: @sapUiElement;
+	cursor: pointer;
+}
+.sapMRPChartVisArea{
+	position: absolute;
+	top: 0;
+	left: 47px;
+	bottom: 0;
+	right: 16px;
+	overflow: hidden;
+}
+.sapMRPChartArea{
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	/* width will be set in OnAfterRendering */
+}
+.sapMRPChartOverview{
+	position: absolute;
+	left: 2rem; /* align to beginning of the chart */
+	bottom: 0px;
+	right: 0px;
+	/* height will be set in OnAfterRendering */
+
+}
+.sapMRPChartOverviewSimple{
+	background-color: @sapUiLightBG; 
+}
+.sapMRPChartOverviewVisArea{
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 17px;
+	right: 17px;
+	overflow: hidden;
+}
+.sapMRPChartOverviewArea{
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	/* width will be set in OnAfterRendering */
+}
+.sapMRPChartOverviewHidden{
+	fill: @sapUiLightBG;
+	opacity: 0.5;
+	stroke: @sapUiExtraLightBorder;
+	stroke-width: 1;
+}
+.sapMRPChartOverviewWindow{
+	fill: transparent;
+	stroke: @sapUiAccent5;
+	stroke-width: 1;
+}
+.sapMRPChartOverviewWindowSimple{
+	fill: @sapUiAccent5;
+	stroke: @sapUiAccent5; 
+	stroke-width: 1;
+}
+.sapMRPChartStartDrag{
+	cursor: url(data:image/png;base64,AAACAAEAICACAAcABQAwAQAAFgAAACgAAAAgAAAAQAAAAAEAAQAAAAAAAAEAAAAAAAAAAAAAAgAAAAAAAAAAAAAA////AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAD8AAAA/AAAAfwAAAP+AAAH/gAAB/8AAA//AAAd/wAAGf+AAAH9gAADbYAAA2yAAAZsAAAGbAAAAGAAAAAAAAA//////////////////////////////////////////////////////////////////////////////////////gH///4B///8Af//+AD///AA///wAH//4AB//8AAf//AAD//5AA///gAP//4AD//8AF///AB///5A////5///8=), move;
+}
+.sapMRPChartExecDrag{
+    cursor: url(data:image/png;base64,AAACAAEAICACAAcABQAwAQAAFgAAACgAAAAgAAAAQAAAAAEAAQAAAAAAAAEAAAAAAAAAAAAAAgAAAAAAAAAAAAAA////AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAD8AAAA/AAAAfwAAAP+AAAH/gAAB/8AAAH/AAAB/wAAA/0AAANsAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA//////////////////////////////////////////////////////////////////////////////////////gH///4B///8Af//+AD///AA///wAH//+AB///wAf//4AH//+AD///yT/////////////////////////////8=), move;
+}
+.sapMRPChartLineIntraday{
+	fill:           none; 
+	stroke:         @sapUiExtraLightText;
+	stroke-width:   1.5;
+	stroke-dasharray: 1% 0.75%;
+}
+.sapMRPChartLineEndOfDay{
+	fill:           none; 
+	stroke:         @sapUiExtraLightText;
+	stroke-width:   1;
+}
+.sapMRPChartYLine{
+	fill:         none; 
+	stroke:       @sapUiDarkBorder; 
+	stroke-width: 0.5;
+}
+.sapMRPChartSupply{
+	fill:  @sapUiChart1;  
+}
+.sapMRPChartNewSupply{
+	fill: @sapUiChartGood; 
+	opacity: 0.5;
+}
+.sapMRPChartDemand{
+	fill: @sapUiChartCritical;
+}
+.sapMRPChartEvenDay{
+	fill: transparent; 
+	opacity: 0.5;
+}
+.sapMRPChartOddDay{
+	fill: @sapUiExtraLightBG;  /* color + opacity? why? */
+	opacity: 0.5;
+}
+.sapMRPChartDayDivider{
+	fill:         none; 
+	stroke:       @sapUiDarkBorder;
+	stroke-width: 0.5;
+}
+.sapMRPChartShortage{ 
+	fill: @sapUiErrorBG;
+	opacity: 0.5;
+}
+.sapMRPChartBelowSafetyStock{
+	fill: @sapUiWarningBG;
+	opacity: 0.5;
+}
+.sapMRPChartNoShortage{
+	fill: transparent; 
+	opacity: 0;
+}
+.sapMRPChartNavigation{
+	cursor: pointer;
+}
+.sapMRPChartBalance{
+	fill:         @sapUiExtraLightText;
+	stroke:       white;
+	stroke-width: 1;
+}
+.sapMRPChartDescr{
+	font-size:    0.875rem;
+	fill:         @sapUiExtraLightText;
+}
+.sapMRPChartBalanceDescr{
+	font-size:    0.875rem;
+	fill:         @sapUiExtraLightText;
+}
+.sapMRPChartXAxisDescr{
+	font-size:    0.875rem;
+	fill:         @sapUiExtraLightText;
+}
+.sapMRPChartYAxisDescr{
+	font-size:    0.875rem;
+	fill:         @sapUiExtraLightText;
+}
+.sapMRPChartAxis{
+	fill:           none; 
+	stroke:         @sapUiElement;
+	stroke-width:   1;
+}

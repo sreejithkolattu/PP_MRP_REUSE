@@ -1,0 +1,157 @@
+<!--
+
+    Copyright (C) 2009-2014 SAP SE or an SAP affiliate company. All rights reserved
+
+-->
+
+<core:FragmentDefinition xmlns:core="sap.ui.core"
+	xmlns="sap.m">
+                 
+	<!-- 041/045: Production Supervisor -->
+	<Label text="{Common_i18n>PRODUCTION_SUPERVISOR}" tooltip="{Common_i18n>PRODUCTION_SUPERVISOR}"
+		visible="{parts:[{path: '/ProductionSupervisor'}, {path: '/ProductionSupervisorDesc'}, {path: '/QuickviewCategory'}, {path: 'QuickEditConstantsModel>/PLANORD_STOCK'}, {path: 'QuickEditConstantsModel>/PLANORD_PROD'}], 
+				formatter: 'i2d.pp.mrpcockpit.reuse.util.QuickViewHelper.matchCategoryAndHasValues' }" />
+	<Text
+		text="{parts:[{path: '/ProductionSupervisor'}, {path: '/ProductionSupervisorDesc'}], formatter:'i2d.pp.mrpcockpit.reuse.util.CommonFormatter.getTextPairWithDash'}"
+		visible="{parts:[{path: '/ProductionSupervisor'}, {path: '/ProductionSupervisorDesc'}, {path: '/QuickviewCategory'}, {path: 'QuickEditConstantsModel>/PLANORD_STOCK'}, {path: 'QuickEditConstantsModel>/PLANORD_PROD'}], 
+				formatter: 'i2d.pp.mrpcockpit.reuse.util.QuickViewHelper.matchCategoryAndHasValues' }" />
+				
+	<!-- 044/046: Plant -->
+	<Label text="{Common_i18n>PLANT}" tooltip="{Common_i18n>PLANT}"
+		visible="{parts:[{path: '/BusinessPartnerPlant'}, {path: '/BusinessPartnerPlantName'}, {path: '/QuickviewCategory'}, {path: 'QuickEditConstantsModel>/PLANORD_PLANT'}, {path: 'QuickEditConstantsModel>/PLANORD_REPLANT'}], 
+				formatter: 'i2d.pp.mrpcockpit.reuse.util.QuickViewHelper.matchCategoryAndHasValues' }" />
+	<Text
+		text="{parts:[{path: '/BusinessPartnerPlant'}, {path: '/BusinessPartnerPlantName'}], formatter:'i2d.pp.mrpcockpit.reuse.util.CommonFormatter.getTextPairWithDash'}"
+		visible="{parts:[{path: '/BusinessPartnerPlant'}, {path: '/BusinessPartnerPlantName'}, {path: '/QuickviewCategory'}, {path: 'QuickEditConstantsModel>/PLANORD_PLANT'}, {path: 'QuickEditConstantsModel>/PLANORD_REPLANT'}], 
+				formatter: 'i2d.pp.mrpcockpit.reuse.util.QuickViewHelper.matchCategoryAndHasValues' }" />		
+
+	<!-- 042: Vendor / Fixed Vendor 1st line -->
+	<Label
+		text="{parts:[{path: '/VendorIsFixed'}, {path: 'Common_i18n>VENDOR_FIXED'}, {path: 'Common_i18n>VENDOR'}, 
+					  {path: 'Common_i18n>VENDOR_FIXEDSoH'}, {path: 'Common_i18n>VENDORSoH'}, 
+					  {path: 'Common_i18n>VENDOR_FIXEDModS'}, {path: 'Common_i18n>VENDORModS'}], 
+						formatter:'i2d.pp.mrpcockpit.reuse.util.CommonFormatter.getAlternativeText'}"
+		tooltip="{Common_i18n>VENDOR}"
+		visible="{parts:[{path: '/Vendor'}, {path: '/VendorName'}, {path: '/QuickviewCategory'}, {path: 'QuickEditConstantsModel>/PLANORD_VENDOR'}], 
+				formatter: 'i2d.pp.mrpcockpit.reuse.util.QuickViewHelper.matchCategoryAndHasValues' }" />
+	<Text
+		text="{path: '/VendorName'}"
+		visible="{parts:[{path: '/Vendor'}, {path: '/VendorName'}, {path: '/QuickviewCategory'}, {path: 'QuickEditConstantsModel>/PLANORD_VENDOR'}], 
+				formatter: 'i2d.pp.mrpcockpit.reuse.util.QuickViewHelper.matchCategoryAndHasValues' }" />
+								
+	<!-- 042: Vendor / Fixed Vendor 2nd line -->
+	<Label
+		text=""
+		visible="{parts:[{path: '/Vendor'}, {path: '/VendorName'}, {path: '/QuickviewCategory'}, {path: 'QuickEditConstantsModel>/PLANORD_VENDOR'}], 
+				formatter: 'i2d.pp.mrpcockpit.reuse.util.QuickViewHelper.matchCategoryAndHasValues' }" />
+	<Text
+		text="{path: '/Vendor'}"
+		visible="{parts:[{path: '/Vendor'}, {path: '/VendorName'}, {path: '/QuickviewCategory'}, {path: 'QuickEditConstantsModel>/PLANORD_VENDOR'}], 
+				formatter: 'i2d.pp.mrpcockpit.reuse.util.QuickViewHelper.matchCategoryAndHasValues' }" />								
+
+	<!--  042 External Contact -->
+	<Label 
+		text="{Common_i18n>CONTACT}" tooltip="{Common_i18n>CONTACT}"
+		visible="{parts:[{path: '/ContactPersonName'}, {path: '/QuickviewCategory'}, {path: 'QuickEditConstantsModel>/PLANORD_VENDOR'}], 
+				formatter: 'i2d.pp.mrpcockpit.reuse.util.QuickViewHelper.matchCategoryAndHasValue' }" />
+	<Text text="{/ContactPersonName}"
+		visible="{parts:[{path: '/ContactPersonName'}, {path: '/QuickviewCategory'}, {path: 'QuickEditConstantsModel>/PLANORD_VENDOR'}], 
+				formatter: 'i2d.pp.mrpcockpit.reuse.util.QuickViewHelper.matchCategoryAndHasValue' }" />
+	
+	<!--  042 External Phone -->
+	<Label 
+		text="{Common_i18n>PHONE}" tooltip="{Common_i18n>PHONE}"
+		visible="{parts:[{path: '/ContactPersonPhoneNumber'}, {path: '/QuickviewCategory'}, {path: 'QuickEditConstantsModel>/PLANORD_VENDOR'}], 
+				formatter: 'i2d.pp.mrpcockpit.reuse.util.QuickViewHelper.matchCategoryAndHasValue' }" />
+	<Link text="{/ContactPersonPhoneNumber}"
+		visible="{parts:[{path: '/ContactPersonPhoneNumber'}, {path: '/QuickviewCategory'}, {path: 'QuickEditConstantsModel>/PLANORD_VENDOR'}], 
+				formatter: 'i2d.pp.mrpcockpit.reuse.util.QuickViewHelper.matchCategoryAndHasValue' }"
+		href="{path : '/ContactPersonPhoneNumber', formatter : 'i2d.pp.mrpcockpit.reuse.util.CommonFormatter.tel'}" />
+	
+	<!--  042 External Email -->
+	<Label 
+		text="{Common_i18n>EMAIL}" tooltip="{Common_i18n>EMAIL}"
+		visible="{parts:[{path: '/ContactPersonEmailAddress'}, {path: '/QuickviewCategory'}, {path: 'QuickEditConstantsModel>/PLANORD_VENDOR'}], 
+				formatter: 'i2d.pp.mrpcockpit.reuse.util.QuickViewHelper.matchCategoryAndHasValue' }" />
+	<Link 
+		text="{/ContactPersonEmailAddress}"
+		visible="{parts:[{path: '/ContactPersonEmailAddress'}, {path: '/QuickviewCategory'}, {path: 'QuickEditConstantsModel>/PLANORD_VENDOR'}], 
+				formatter: 'i2d.pp.mrpcockpit.reuse.util.QuickViewHelper.matchCategoryAndHasValue' }"
+		href="{path : '/ContactPersonEmailAddress', formatter : 'i2d.pp.mrpcockpit.reuse.util.CommonFormatter.email'}" />
+
+	<!-- 043: Vendor Not yet determined -->
+	<Label
+		text="{path: 'Common_i18n>VENDOR'}" tooltip="{Common_i18n>VENDOR}"
+		visible="{parts:[{path: '/Vendor'}, {path: '/QuickviewCategory'}], 
+				formatter: 'i2d.pp.mrpcockpit.reuse.util.QuickViewHelper.matchCategoryUnsrc' }" />
+	<Text
+		text="{path: 'Common_i18n>NOT_YET_DETERMINED'}"
+		visible="{parts:[{path: '/Vendor'}, {path: '/QuickviewCategory'}], 
+				formatter: 'i2d.pp.mrpcockpit.reuse.util.QuickViewHelper.matchCategoryUnsrc' }" />	
+
+	<!-- 044/045/046: MRP Controller -->
+	<Label text="{Common_i18n>MRPController}" tooltip="{Common_i18n>MRPController}"
+		visible="{parts:[{path: '/MRPController'}, {path: '/QuickviewCategory'}, {path: 'QuickEditConstantsModel>/PLANORD_PLANT'}, {path: 'QuickEditConstantsModel>/PLANORD_PROD'}, {path: 'QuickEditConstantsModel>/PLANORD_REPLANT'}], 
+				formatter: 'i2d.pp.mrpcockpit.reuse.util.QuickViewHelper.matchCategoryAndHasValue' }" />
+	<Text text="{parts:[{path: '/MRPController'}, {path: '/MRPControllerName'}], formatter:'i2d.pp.mrpcockpit.reuse.util.CommonFormatter.getTextPairWithDash'}"
+		visible="{parts:[{path: '/MRPController'}, {path: '/QuickviewCategory'}, {path: 'QuickEditConstantsModel>/PLANORD_PLANT'}, {path: 'QuickEditConstantsModel>/PLANORD_PROD'}, {path: 'QuickEditConstantsModel>/PLANORD_REPLANT'}], 
+				formatter: 'i2d.pp.mrpcockpit.reuse.util.QuickViewHelper.matchCategoryAndHasValue' }" />
+																									
+	<!--  044/046 External Contact -->
+	<Label text="{Common_i18n>CONTACT}" tooltip="{Common_i18n>CONTACT}"
+		visible="{parts:[{path: '/ContactPersonName'}, {path: '/QuickviewCategory'}, {path: 'QuickEditConstantsModel>/PLANORD_PLANT'}, {path: 'QuickEditConstantsModel>/PLANORD_REPLANT'}], 
+				formatter: 'i2d.pp.mrpcockpit.reuse.util.QuickViewHelper.matchCategoryAndHasValue' }" />
+	<Text text="{/ContactPersonName}"
+		visible="{parts:[{path: '/ContactPersonName'}, {path: '/QuickviewCategory'}, {path: 'QuickEditConstantsModel>/PLANORD_PLANT'}, {path: 'QuickEditConstantsModel>/PLANORD_REPLANT'}], 
+				formatter: 'i2d.pp.mrpcockpit.reuse.util.QuickViewHelper.matchCategoryAndHasValue' }" />
+	
+	<!--  044/046 External Phone -->
+	<Label text="{Common_i18n>PHONE}" tooltip="{Common_i18n>PHONE}"
+		visible="{parts:[{path: '/ContactPersonPhoneNumber'}, {path: '/QuickviewCategory'}, {path: 'QuickEditConstantsModel>/PLANORD_PLANT'}, {path: 'QuickEditConstantsModel>/PLANORD_REPLANT'}], 
+				formatter: 'i2d.pp.mrpcockpit.reuse.util.QuickViewHelper.matchCategoryAndHasValue' }" />
+	<Link text="{/ContactPersonPhoneNumber}"
+		visible="{parts:[{path: '/ContactPersonPhoneNumber'}, {path: '/QuickviewCategory'}, {path: 'QuickEditConstantsModel>/PLANORD_PLANT'}, {path: 'QuickEditConstantsModel>/PLANORD_REPLANT'}], 
+				formatter: 'i2d.pp.mrpcockpit.reuse.util.QuickViewHelper.matchCategoryAndHasValue' }"
+		href="{path : '/ContactPersonPhoneNumber', formatter : 'i2d.pp.mrpcockpit.reuse.util.CommonFormatter.tel'}" />
+	
+	<!--  044/046 External Email -->
+	<Label text="{Common_i18n>EMAIL}" tooltip="{Common_i18n>EMAIL}"
+		visible="{parts:[{path: '/ContactPersonEmailAddress'}, {path: '/QuickviewCategory'}, {path: 'QuickEditConstantsModel>/PLANORD_PLANT'}, {path: 'QuickEditConstantsModel>/PLANORD_REPLANT'}], 
+				formatter: 'i2d.pp.mrpcockpit.reuse.util.QuickViewHelper.matchCategoryAndHasValue' }" />
+	<Link text="{/ContactPersonEmailAddress}"
+		visible="{parts:[{path: '/ContactPersonEmailAddress'}, {path: '/QuickviewCategory'}, {path: 'QuickEditConstantsModel>/PLANORD_PLANT'}, {path: 'QuickEditConstantsModel>/PLANORD_REPLANT'}], 
+				formatter: 'i2d.pp.mrpcockpit.reuse.util.QuickViewHelper.matchCategoryAndHasValue' }"
+		href="{path : '/ContactPersonEmailAddress', formatter : 'i2d.pp.mrpcockpit.reuse.util.CommonFormatter.email'}" />
+		
+	<!--  045 Internal Contact -->
+	<Label 
+		text="{Common_i18n>CONTACT}" tooltip="{Common_i18n>CONTACT}"
+		visible="{parts:[{path: '/IntContactPersonName'}, {path: '/QuickviewCategory'}, {path: 'QuickEditConstantsModel>/PLANORD_PROD'}], 
+				formatter: 'i2d.pp.mrpcockpit.reuse.util.QuickViewHelper.matchCategoryAndHasValue' }" />
+	<Text text="{/IntContactPersonName}"
+		visible="{parts:[{path: '/IntContactPersonName'}, {path: '/QuickviewCategory'}, {path: 'QuickEditConstantsModel>/PLANORD_PROD'}], 
+				formatter: 'i2d.pp.mrpcockpit.reuse.util.QuickViewHelper.matchCategoryAndHasValue' }" />
+	
+	<!--  045 Internal Phone -->
+	<Label 
+		text="{Common_i18n>PHONE}" tooltip="{Common_i18n>PHONE}"
+		visible="{parts:[{path: '/IntContactPersonTelephone'}, {path: '/QuickviewCategory'}, {path: 'QuickEditConstantsModel>/PLANORD_PROD'}], 
+				formatter: 'i2d.pp.mrpcockpit.reuse.util.QuickViewHelper.matchCategoryAndHasValue' }" />
+	<Link text="{/IntContactPersonTelephone}"
+		visible="{parts:[{path: '/IntContactPersonTelephone'}, {path: '/QuickviewCategory'}, {path: 'QuickEditConstantsModel>/PLANORD_PROD'}], 
+				formatter: 'i2d.pp.mrpcockpit.reuse.util.QuickViewHelper.matchCategoryAndHasValue' }"
+		href="{path : '/IntContactPersonTelephone', formatter : 'i2d.pp.mrpcockpit.reuse.util.CommonFormatter.tel'}" />
+	
+	<!--  045 Internal Email -->
+	<Label 
+		text="{Common_i18n>EMAIL}" tooltip="{Common_i18n>EMAIL}"
+		visible="{parts:[{path: '/IntContactPersonEmailAddress'}, {path: '/QuickviewCategory'}, {path: 'QuickEditConstantsModel>/PLANORD_PROD'}], 
+				formatter: 'i2d.pp.mrpcockpit.reuse.util.QuickViewHelper.matchCategoryAndHasValue' }" />
+	<Link 
+		text="{/IntContactPersonEmailAddress}"
+		visible="{parts:[{path: '/IntContactPersonEmailAddress'}, {path: '/QuickviewCategory'}, {path: 'QuickEditConstantsModel>/PLANORD_PROD'}], 
+				formatter: 'i2d.pp.mrpcockpit.reuse.util.QuickViewHelper.matchCategoryAndHasValue' }"
+		href="{path : '/IntContactPersonEmailAddress', formatter : 'i2d.pp.mrpcockpit.reuse.util.CommonFormatter.email'}" />
+		
+
+</core:FragmentDefinition>

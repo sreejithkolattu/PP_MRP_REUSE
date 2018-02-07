@@ -1,0 +1,20 @@
+/* ==|==  Object Status (JS) ==========================================================
+ *
+ *  Custom Control to extend functionality of the current sap.m.ObjectIdentifier
+ *  @see sap.m.ObjectStatus
+ *  @see ObjectStatus.css
+ * author: SAP AG
+ * version: 15.05.2014
+ * ============================================================
+ */
+
+/* left padding */
+.sapMRPObjStatusBar .sapUiHLayoutChildWrapper {
+	padding-left: 0.5rem;
+}
+
+/* overwrite disabled color */
+.sapMRPObjStatusBar  .sapMObjStatusNone>.sapMObjStatusText, 
+.sapMRPObjStatusBar  .sapMObjStatusNone>.sapMObjStatusIcon {
+	color: lighten(@sapUiStandardText, 40%);
+}

@@ -1,0 +1,30 @@
+<!--
+
+    Copyright (C) 2009-2014 SAP SE or an SAP affiliate company. All rights reserved
+
+-->
+<core:View xmlns:core="sap.ui.core" xmlns="sap.m" 
+xmlns:html="http://www.w3.org/1999/xhtml" xmlns:layout="sap.ui.layout" xmlns:mvc="sap.ui.core.mvc"
+xmlns:form="sap.ui.layout.form" controllerName="i2d.pp.mrpcockpit.reuse.view.VariantSaveDialog">
+ <!-- Dialog  -->
+     <Dialog contentWidth="25em" height="100%" id="DLG_VARIANT_SAVE" title="{/title}" class="sapMRPSaveVariantDialog" beforeOpen="beforeOpen">
+        <content> 
+          <form:SimpleForm>
+            <form:content>
+                    <layout:VerticalLayout width="100%">
+                           <Text id="TXT_VARIANT" text="{commondialogs_i18n>VariantName}"/>
+                           <Input id="TXF_VARIANT_NAME" placeholder="" value="" width="100%" maxLength="44"/>
+                           <CheckBox id="CHB_VARIANT_AS_TILE_MONITOR" text="{commondialogs_i18n>VariantCheckBoxMonitor}"  tooltip="{commondialogs_i18n>VariantCheckBoxMonitorTooltip}" width="100%"></CheckBox>
+                           <CheckBox id="CHB_VARIANT_AS_TILE_MANAGE" text="{commondialogs_i18n>VariantCheckBoxManage}"  tooltip="{commondialogs_i18n>VariantCheckBoxManageTooltip}" width="100%"></CheckBox>
+                    </layout:VerticalLayout>
+             </form:content>
+            </form:SimpleForm>
+          </content>  
+             <beginButton>
+                    <Button id="BTN_CONFIRM" press="onConfirmDialog" text="{commondialogs_i18n>Save}"/>
+             </beginButton>
+             <endButton>
+                    <Button id="BTN_CANCEL" press="onCancelDialog" text="{commondialogs_i18n>Cancel}"/>
+             </endButton>
+       </Dialog>
+</core:View>

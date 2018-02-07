@@ -1,0 +1,21 @@
+<!--
+
+    Copyright (C) 2009-2014 SAP SE or an SAP affiliate company. All rights reserved
+
+-->
+
+<!-- ==|== Shortage ========================================================== -->
+
+<l:VerticalLayout xmlns:core="sap.ui.core" xmlns="sap.m"
+	xmlns:l="sap.ui.layout" width="100%">
+	<Label text="{Common_i18n>shortage}"></Label>
+	<Select id="ShortageSelect" 
+		width="100%" tooltip="{parts:[{path: 'Common_i18n>xtolShortageDefinitionSelectSoH'}, {path: 'Common_i18n>xtolShortageDefinitionSelectModS'}], 
+									  	formatter:'i2d.pp.mrpcockpit.reuse.util.CommonFormatter.formatTextSoHVsSLog'}">
+		<core:Item>
+		</core:Item>
+	</Select>
+	<l:layoutData>
+		<l:GridData span="L3 M6 S12" />
+	</l:layoutData>
+</l:VerticalLayout>

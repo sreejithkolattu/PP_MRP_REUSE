@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<library xmlns="http://www.sap.com/sap.ui.library.xsd" >
+
+  <name>i2d.pp.mrpcockpit.reuse</name>
+  <vendor>SAP</vendor>
+<!--   <version>1.4.0-SNAPSHOT</version> -->
+  <version>1.5.7</version>
+<!--   <version>${project.version}</version> -->
+  
+  <documentation>SAP UI library: i2d.pp.mrpcockpit.reuse (by SAP, Author)</documentation>
+  
+  <dependencies>
+    <dependency>
+      <libraryName>sap.ui.core</libraryName>
+    </dependency>
+  </dependencies>
+  
+  <appData>
+    <!-- excludes for the JSDoc -->
+    <jsdoc xmlns="http://www.sap.com/ui5/buildext/jsdoc" >
+        <exclude name="i2d.pp.mrpcockpit.reuse.js." />
+    </jsdoc>
+    <!-- excludes for the JSCoverage -->
+    <jscoverage xmlns="http://www.sap.com/ui5/buildext/jscoverage" >
+        <exclude name="i2d.pp.mrpcockpit.reuse.js." />
+    </jscoverage>
+  </appData>
+  
+</library>

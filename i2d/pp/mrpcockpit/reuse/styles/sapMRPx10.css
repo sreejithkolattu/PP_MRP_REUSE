@@ -1,0 +1,144 @@
+/*  ==|== MRP x10 CSS  ==========================================================
+ *
+ * Summary of various CSS adjustments for MRP x10 Screens
+ * Main goal is to workaround obvious layouting an UX errors until they are fixed by the central library.
+ *
+ *
+ * Procedure:
+ *	a) create a CSS fix
+ *  b) communicate the problem to UI% team (oss)
+ *  c) if the problem is solved with the latest lib update - remove the fix
+ *
+ * Before delivery we should decide whether we leave without this CSS or deliver this as a consulting note. 
+ *
+ * author: SAP AG
+ * version: 05.05.2014
+ * ============================================================
+ */
+/*  ==|== Object Header ========================================================== */
+/* fixing to fit in the Grid */
+.sapMRPListPage .sapMOH {
+	margin: 1rem 0 0 0 !important;
+	padding: 1rem 0 !important;
+}
+
+
+/*  ==|== Facet Filter Block ========================================================== */
+
+/* pushing filter to bottom to align  with labels */
+
+.sapMRPFacetFilter, .sapMRPListPage .sapMFFResetDiv {
+	background-color: @sapUiLightestBG;
+	border-top: 0.0625rem solid @sapUiDarkBorder;
+	border-bottom: 0.0625rem solid @sapUiDarkBorder;
+}
+
+.sapMRPListPage .sapMFFResetDiv { top: -1px;}	
+
+
+                             
+                                                                       
+/*  ==|== Dialogs (FF) ========================================================== */
+
+/* cursor pointer for all lists in FF dialogs (OSS 3958224 2013) */
+.sapMRPListPage .sapMDialog ul li {
+	cursor: pointer !important;
+}
+
+/* For breaking up long material numbers in the facet filter */
+.sapMRPFFList .sapMFFLITitle {
+	word-break: break-all !important;
+	white-space: normal !important;
+}
+
+/* make cursor on label for checkbox (OSS 3958224 2013) */
+.sapMRPListPage .sapMCbLabel {
+	cursor: pointer !important;
+}
+
+/*  ==|== Table ========================================================== */
+.sapMRPListPage .sapMListTblCnt { /* repair table style */
+	width: auto !important;
+	margin: 0;
+}
+
+.sapMRPListPage .sapMLabel {
+	cursor: default;
+}
+
+/* less spacing on double liners */
+.sapMRPListPage .sapMListTblCell {
+	line-height: 1.2 !important;
+}
+
+/* middle alignment of cell content */
+.sapMRPListPage .sapMListTbl th,.sapMListTbl td {
+	vertical-align: middle !important;
+}
+
+/* no data cell */
+.sapMRPListPage .sapMListTblCell.sapMListTblCellNoData {
+	padding-top: 2rem !important;
+	padding-bottom: 2rem !important;
+}
+
+/* Object Identifier (Deemphasized) */
+.sapMRPListPage .sapMObjectIdentifier.sapMRPNormal .sapMObjectIdentifierTitle {
+	font-weight: normal;
+}
+
+/*  ==|== Table PopIns ========================================================== */
+
+
+.sapMRPListPage .sapMListTblSubCntRow {
+	padding-bottom: 0.5rem;	
+}
+
+.sapMRPListPage .sapMListTblSubRow .sapMObjectIdentifierTopRow {
+	float: left;
+	margin-right: 0.25rem;
+}
+
+.sapMRPListPage .sapMListTblSubRow .sapMObjectIdentifierTopRow:after {
+	content: " /"
+}
+
+.sapMRPListPage .sapMListTblSubRow .sapMObjectIdentifierTitle {
+	font-weight: normal;
+}
+
+
+/*  ==|== Colors ========================================================== */
+
+/* Object Header  */
+.sapMRPVariantSave.sapMRPVariantAction {
+	border-top: 1px solid@sapUiExtraLightBorder;
+}
+
+/*  no data cell */
+.sapMRPListPage .sapMListTblCell.sapMListTblCellNoData {
+	color: @sapUiExtraLightText;
+}
+
+/*  ==|== AOR: Delete Dialog Icon ========================================================== */
+.sapMRPAORDialog .sapMLIBSelectD .sapUiIcon {
+	font-size: 1.25rem !important;
+}
+
+/*  ==|== Flower Loading Dialog ========================================================== */
+
+/* @media: "media";
+@media (min-width: 768px) and (max-width:991px) { */
+.sapUshellLoadingDialog .sapUshellLoadingDialogAppData {
+/*	width: 600px !important;
+	left: -300px  !important;
+*/
+}
+/* } */
+
+
+/*  ==|== Welcome Dialog ========================================================== */
+.sapMRPWelcomeDialog .sapMText {
+	line-height: 1.25rem !important;
+}	
+

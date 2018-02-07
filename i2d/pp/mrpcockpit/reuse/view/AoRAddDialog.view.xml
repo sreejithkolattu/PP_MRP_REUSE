@@ -1,0 +1,18 @@
+<!--
+
+    Copyright (C) 2009-2014 SAP SE or an SAP affiliate company. All rights reserved
+
+-->
+<core:View xmlns:core="sap.ui.core" xmlns="sap.m" xmlns:ui="sap.ca.ui"
+	xmlns:html="http://www.w3.org/1999/xhtml" xmlns:layout="sap.ui.layout"
+	xmlns:mvc="sap.ui.core.mvc" controllerName="i2d.pp.mrpcockpit.reuse.view.AoRAddDialog">
+
+	<SelectDialog id="DLG_SELECT" confirm="handleConfirm" cancel="handleClose"
+		search="search" title="{/title}" multiSelect="true" growingThreshold="20"
+		items="{path: 'items>/MRPControllers'}" class="sapMRPSelectDialog">
+		<StandardListItem
+			title="{parts:[{path:'items>MRPPlantName'},{path:'items>MRPPlant'}], formatter:'i2d.pp.mrpcockpit.reuse.util.CommonFormatter.formatPlantController'}"
+			description="{parts:[{path:'items>MRPControllerName'},{path:'items>MRPControllerID'}], formatter:'i2d.pp.mrpcockpit.reuse.util.CommonFormatter.formatPlantController'}">
+		</StandardListItem>
+	</SelectDialog>
+</core:View>

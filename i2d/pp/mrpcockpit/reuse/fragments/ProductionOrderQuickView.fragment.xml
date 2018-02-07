@@ -1,0 +1,150 @@
+<!--
+
+    Copyright (C) 2009-2014 SAP SE or an SAP affiliate company. All rights reserved
+
+-->
+<core:FragmentDefinition xmlns="sap.m"
+	xmlns:core="sap.ui.core" xmlns:l="sap.ui.layout" xmlns:f="sap.ui.layout.form">
+	<Popover class="sapUiPopupWithPadding sapMRPPopover" placement="Auto"
+		initialFocus="closeButtonPRD" contentWidth="480px" contentHeight="640px"
+		title="{parts:[{path: 'MRPElementCategory'}, {path: 'MRPElementCategoryShortName'}, {path: 'MRPElementExternalID'}, {path: 'MRPElementItemExternalID'}], 
+			formatter:'i2d.pp.mrpcockpit.reuse.util.CommonFormatter.categoryLongName'}">
+
+		<content>
+			<l:Grid defaultSpan="L12 M12 S12" vSpacing="0" hSpacing="0" width="auto">
+				<l:content>
+					<!-- Contact Info -->
+					<!-- The VerticalLayout is used just to be able to hide the SimpleForm 
+						when there are no vendor info  - TITLE "VENDOR INFORMATION"  only for 042/043 -->
+				  <l:VerticalLayout width="100%"
+						visible="{path: 'ProductionSupervisor', formatter: 'i2d.pp.mrpcockpit.reuse.util.CommonFormatter.hasValue' }">					
+					<f:SimpleForm title="{Common_i18n>CONTACT_INFO}"
+						editable="false" layout="ResponsiveGridLayout" labelSpanL="4"
+						labelSpanM="4" labelSpanS="6" emptySpanL="0" emptySpanM="0"
+						columnsL="2" columnsM="2" breakpointM="463px">
+						<f:content>
+
+							<!-- Production Supervisor -->
+							<Label text="{Common_i18n>PRODUCTION_SUPERVISOR}"
+								visible="{parts:[{path: 'ProductionSupervisorDesc'}, {path: 'ProductionSupervisor'}], formatter: 'i2d.pp.mrpcockpit.reuse.util.CommonFormatter.hasValue' }" />
+							<Text
+								text="{parts:[{path: 'ProductionSupervisorDesc'}, {path: 'ProductionSupervisor'}], formatter:'i2d.pp.mrpcockpit.reuse.util.CommonFormatter.getTextPairWithParenthesis'}"
+								visible="{parts:[{path: 'ProductionSupervisorDesc'}, {path: 'ProductionSupervisor'}], formatter: 'i2d.pp.mrpcockpit.reuse.util.CommonFormatter.hasValue' }" />
+
+						</f:content>
+					</f:SimpleForm>
+				  </l:VerticalLayout>
+					
+					<!-- Production Order  before "{Common_i18n>PRODUCTION_ORDER}" -->
+				  <l:VerticalLayout width="100%">				
+					<f:SimpleForm title="{parts:[{path: 'QuickviewCategory'}, {path: 'Common_i18n>PRODUCTION_ORDER'}, {path: 'Common_i18n>PROCESS_ORDER'}], formatter:'i2d.pp.mrpcockpit.reuse.util.QuickViewHelper.getTextProductionOrProcess'}"
+						editable="false" layout="ResponsiveGridLayout" labelSpanL="4"
+						labelSpanM="4" labelSpanS="6" emptySpanL="0" emptySpanM="0"
+						columnsL="2" columnsM="2" breakpointM="463px">
+						<f:content>
+
+							<!-- System Status -->
+							<Label text="{Common_i18n>SYSTEM_STATUS}"
+								visible="{path: 'SystemStatusName', formatter: 'i2d.pp.mrpcockpit.reuse.util.CommonFormatter.hasValue' }" />
+							<Text text="{SystemStatusName}"
+								visible="{path: 'SystemStatusName', formatter: 'i2d.pp.mrpcockpit.reuse.util.CommonFormatter.hasValue' }" />
+
+							<!-- Order Start Date -->
+							<Label text="{Common_i18n>ORDER_START_DATE}"
+								visible="{path: 'OrderStartDate', formatter: 'i2d.pp.mrpcockpit.reuse.util.CommonFormatter.hasValue' }" />
+							<Text
+								text="{path: 'OrderStartDate', type:'sap.ca.ui.model.type.Date', formatOptions: {style:'short'}}"
+								visible="{path: 'OrderStartDate', formatter: 'i2d.pp.mrpcockpit.reuse.util.CommonFormatter.hasValue' }" />
+
+							<!-- Order Finish Date -->
+							<Label text="{Common_i18n>ORDER_FINISH_DATE}"
+								visible="{path: 'OrderFinishDate', formatter: 'i2d.pp.mrpcockpit.reuse.util.CommonFormatter.hasValue' }" />
+							<Text
+								text="{path: 'OrderFinishDate', type:'sap.ca.ui.model.type.Date', formatOptions: {style:'short'}}"
+								visible="{path: 'OrderFinishDate', formatter: 'i2d.pp.mrpcockpit.reuse.util.CommonFormatter.hasValue' }" />
+
+							<!-- Total Quantity -->
+							<Label text="{Common_i18n>TOTAL_QUANTITY}"
+								visible="{path: 'TotalQuantity', formatter: 'i2d.pp.mrpcockpit.reuse.util.CommonFormatter.hasValue' }" />
+							<Text
+								text="{parts:[{path: 'TotalQuantity'}, {path: 'TargetQuantityUnitDcmls'}, {path: 'UnitOfMeasureTechnicalName'}], formatter:'i2d.pp.mrpcockpit.reuse.util.CommonFormatter.formatQuantity'}"
+								visible="{path: 'TotalQuantity', formatter: 'i2d.pp.mrpcockpit.reuse.util.CommonFormatter.hasValue' }" />
+
+							<!-- Delivered Quantity -->
+							<Label text="{Common_i18n>DELIVERED_QUANTITY}"
+								visible="{path: 'DeliveredQuantity', formatter:'i2d.pp.mrpcockpit.reuse.util.CommonFormatter.hasValue'}" />
+							<Text
+								text="{parts:[{path: 'DeliveredQuantity'}, {path: 'TargetQuantityUnitDcmls'}, {path: 'UnitOfMeasureTechnicalName'}], formatter:'i2d.pp.mrpcockpit.reuse.util.CommonFormatter.formatQuantity'}"
+								visible="{path: 'DeliveredQuantity', formatter:'i2d.pp.mrpcockpit.reuse.util.CommonFormatter.hasValue'}" />
+
+							<!-- Goods Receipt Processing Time -->
+							<Label text="{Common_i18n>GR_PROCESSING_TIME}"
+								visible="{path: 'MaterialGoodsReceiptDuration', formatter: 'i2d.pp.mrpcockpit.reuse.util.CommonFormatter.hasValue' }" />
+							<Text
+								text="{path: 'MaterialGoodsReceiptDuration', formatter:'i2d.pp.mrpcockpit.reuse.util.CommonFormatter.formatDayValue'}"
+								visible="{path: 'MaterialGoodsReceiptDuration', formatter: 'i2d.pp.mrpcockpit.reuse.util.CommonFormatter.hasValue' }" />
+
+						</f:content>
+					</f:SimpleForm>
+
+					<!-- Production Details before "{Common_i18n>PRODUCTION_DETAILS}" -->
+					<f:SimpleForm title="{parts:[{path: 'QuickviewCategory'}, {path: 'Common_i18n>PRODUCTION_DETAILS'}, {path: 'Common_i18n>PROCESS_DETAILS'}], formatter:'i2d.pp.mrpcockpit.reuse.util.QuickViewHelper.getTextProductionOrProcess'}"
+						editable="false" layout="ResponsiveGridLayout" labelSpanL="4"
+						labelSpanM="4" labelSpanS="6" emptySpanL="0" emptySpanM="0"
+						columnsL="2" columnsM="2" breakpointM="463px">
+						<f:content>
+
+							<!-- Production Version -->
+							<Label text="{Common_i18n>PRODUCTION_VERSION}"
+								visible="{path: 'ProductionVersion', formatter: 'i2d.pp.mrpcockpit.reuse.util.CommonFormatter.hasValue' }" />
+							<Text text="{ProductionVersion}"
+								visible="{path: 'ProductionVersion', formatter: 'i2d.pp.mrpcockpit.reuse.util.CommonFormatter.hasValue' }" />
+
+							<!-- Production Line -->
+							<Label text="{Common_i18n>PRODUCTION_LINE}"
+								visible="{path: 'ProductionLine', formatter: 'i2d.pp.mrpcockpit.reuse.util.CommonFormatter.hasValue' }" />
+							<Text text="{ProductionLine}"
+								visible="{path: 'ProductionLine', formatter: 'i2d.pp.mrpcockpit.reuse.util.CommonFormatter.hasValue' }" />
+
+							<!-- Order Priority -->
+							<Label text="{Common_i18n>ORDER_PRIO}"
+								visible="{path: 'DeliveryPriority', formatter: 'i2d.pp.mrpcockpit.reuse.util.CommonFormatter.hasValue' }" />
+							<Text text="{DeliveryPriority}"
+								visible="{path: 'DeliveryPriority', formatter: 'i2d.pp.mrpcockpit.reuse.util.CommonFormatter.hasValue' }" />
+
+
+							<!-- Production Plant -->
+							<Label text="{Common_i18n>PRODUCTION_PLANT}"
+								visible="{parts:[{path: 'ProductionPlant'}, {path: 'ProductionPlantName'}], formatter: 'i2d.pp.mrpcockpit.reuse.util.CommonFormatter.hasValue' }" />
+							<Text
+								text="{parts:[{path: 'ProductionPlant'}, {path: 'ProductionPlantName'}], formatter:'i2d.pp.mrpcockpit.reuse.util.CommonFormatter.getTextPairWithParenthesis'}"
+								visible="{parts:[{path: 'ProductionPlant'}, {path: 'ProductionPlantName'}], formatter: 'i2d.pp.mrpcockpit.reuse.util.CommonFormatter.hasValue' }" />
+
+						</f:content>
+					</f:SimpleForm>
+				   </l:VerticalLayout>	
+
+				</l:content>
+			</l:Grid>
+		</content>
+		<endButton>
+			<Button icon="sap-icon://decline" press="handleCloseButton"
+				id="closeButtonPRD" />
+		</endButton>
+		<footer>
+			<Toolbar>
+				<content>
+					<ToolbarSpacer />
+					<Button text="{Common_i18n>FACTSHEET}" 
+					     tooltip="{parts:[{path: 'QuickviewCategory'}, {path: 'Common_i18n>FACTSHEET_PROD_ORD_TOOLTIP'}, {path: 'Common_i18n>FACTSHEET_PROC_ORD_TOOLTIP'}], formatter:'i2d.pp.mrpcockpit.reuse.util.QuickViewHelper.getTextProductionOrProcess'}"
+					     press="navToFactsheet" />
+					<Button text="{parts:[{path: 'QuickviewCategory'}, {path: 'Common_i18n>CO03'}, {path: 'Common_i18n>COR3'}], formatter:'i2d.pp.mrpcockpit.reuse.util.QuickViewHelper.getTextProductionOrProcess'}" 
+					     tooltip="{parts:[{path: 'QuickviewCategory'}, {path: 'Common_i18n>CO03_TOOLTIP'}, {path: 'Common_i18n>COR3_TOOLTIP'}], formatter:'i2d.pp.mrpcockpit.reuse.util.QuickViewHelper.getTextProductionOrProcess'}"
+					     press="navToTransaction"
+						visible="{path: 'MRPElementCategory', formatter:'i2d.pp.mrpcockpit.reuse.util.CommonFormatter.visibleOnlyOnDesktop'}" />
+				</content>
+			</Toolbar>
+		</footer>
+
+	</Popover>
+</core:FragmentDefinition>

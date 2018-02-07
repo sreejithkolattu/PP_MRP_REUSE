@@ -1,0 +1,117 @@
+<!--
+
+    Copyright (C) 2009-2014 SAP SE or an SAP affiliate company. All rights reserved
+
+-->
+<Page id="mainPage" class="sapMRPCondensedPage" title="{Common_i18n>SOL_TITLE}"
+	showNavButton="true" navButtonPress="_navBack" showFooter="true"
+	enableScrolling="false" xmlns:mrp="i2d.pp.mrpcockpit.reuse.controls"
+	xmlns="sap.m">
+	<content>
+	
+		<ScrollContainer id="oScrollContainer" vertical="true" horizontal="false">
+		<!-- The oDataBindingServant is used to trigger an Aggregation Call (BackendSprech: 
+			getEntitySet) to the Backend -->
+		<!-- As result we get one entity, which is bound to the view. -->
+		<!-- This mechanism allows us to use filter within the call and to add 
+			the result directly into the application oData model -->
+		<!-- It is not supposed to display the oDataBindingServant to the user -->
+		<List id="oDataBindingServant" visible="false">
+			<items>
+				<CustomListItem id="oDataBindingServantItem">
+				</CustomListItem>
+			</items>
+		</List>
+		<ObjectHeader title="{MaterialName}">
+			<attributes>
+				<ObjectAttribute
+					class="sapMRPLAMA"					
+					text="{parts:[{path: 'MaterialID'}, {path: 'MRPArea'}, {path: 'MRPPlant'}], formatter:'i2d.pp.mrpcockpit.reuse.util.CommonFormatter.getMaterialWithPlant'}"
+					tooltip="{parts:[{path: 'MRPArea'}, {path: 'MRPPlant'}], formatter:'i2d.pp.mrpcockpit.reuse.util.CommonFormatter.getMaterialWithPlantTooltip'}"
+					visible="{path: 'MaterialID', formatter: 'i2d.pp.mrpcockpit.reuse.util.CommonFormatter.hasValue' }">
+				</ObjectAttribute>
+			</attributes>
+		</ObjectHeader>
+	
+		<Panel width="auto" id="panel">
+			<headerToolbar>
+				<Toolbar id="panelToolbar">
+					<Label text="{Common_i18n>SOL_LIST_TITLE}"></Label>
+					<ToolbarSpacer />
+					<SegmentedButton select="onToolbarIconSelect" id="sapMrpS4ToolbarIcons">
+						<Button id="btnTable" icon="sap-icon://table-view" tooltip="{Common_i18n>xtolBtnTableView}" />
+						<Button id="btnChart" icon="sap-icon://bar-chart" tooltip="{Common_i18n>xtolBtnChartView}" />
+					</SegmentedButton>
+				</Toolbar>
+			</headerToolbar>
+
+
+			<!-- <NavContainer id="navTableChart" initialPage="pageTable" width="auto"> 
+				<pages> <Page id="pageTable" class="sapMRPSolutionsTablePage" showHeader="false"> -->
+			<content>
+				<Table id="shortages" updateStarted="onItemsUpdateStarted">
+					<infoToolbar>
+						<Toolbar
+							id="infoToolBarCR"
+							active="true"
+							visible="false"
+							press="onDisplayChangeRequests">
+							<Text text="{Common_i18n>CHANGE_REQUEST_TOOLBAR_MSG}" tooltip="{Common_i18n>CHANGE_REQUEST_TOOLBAR_XTOL}"/>
+						</Toolbar>
+					</infoToolbar>
+					<columns>
+						<!-- ==== Date ==== -->
+						<Column id="SolDetailListDate" width="15%" mergeDuplicates="true"
+							mergeFunctionName="data#hideStockDate">
+							<header>
+								<Label text="{Common_i18n>DETAIL_LIST_DATE}" tooltip="{Common_i18n>DETAIL_LIST_DATE_TOOLTIP}"></Label>
+							</header>
+						</Column>
+
+						<!-- ==== Status ==== -->
+						<Column id="SolStatus" width="1rem" hAlign="Right">
+							<header>
+								<Label text=""></Label>
+							</header>
+						</Column>
+
+						<!-- ==== Dispo Element ==== -->
+						<Column id="SolDetailListMrpE" width="40%">
+							<header>
+								<Label text="{Common_i18n>DETAIL_LIST_MRP_E}" tooltip="{Common_i18n>DETAIL_LIST_MRP_E_TOOLTIP}"></Label>
+							</header>
+						</Column>
+
+						<!-- ==== Quantity ==== -->
+						<Column id="SolDetailListQuan" width="15%" hAlign="Left">
+							<header>
+								<Label text="{Common_i18n>DETAIL_LIST_QUAN}" tooltip="{Common_i18n>DETAIL_LIST_QUAN_TOOLTIP}"></Label>
+							</header>
+						</Column>
+
+						<!-- ==== Available ==== -->
+						<Column id="SolDetailStock" width="20%" mergeDuplicates="true"
+							mergeFunctionName="data#getMergingKey" hAlign="Right">
+							<header>
+								<Label text="{Common_i18n>DETAIL_STOCK}" tooltip="{Common_i18n>DETAIL_STOCK_TOOLTIP}"></Label>
+							</header>
+						</Column>
+					</columns>
+				</Table>
+				<!-- </content> </Page> <Page id="pageChart" class="sapMRPSolutionsChartPage" 
+					showHeader="false"> <content> -->
+				<!-- ==|== Chart ========================================================== -->
+				<ScrollContainer id="solChartContainer" height="100%"
+					width="100%" horizontal="false" vertical="false" visible="false">
+					<mrp:Chart id="chart"></mrp:Chart>
+				</ScrollContainer>
+			</content>
+			<!-- </Page> </pages> </NavContainer> -->
+		</Panel>
+
+		</ScrollContainer>
+		
+		<mrp:SolutionCardContainer id="cards" />
+
+	</content>
+</Page>

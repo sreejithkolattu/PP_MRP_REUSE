@@ -1,0 +1,42 @@
+<!--
+
+    Copyright (C) 2009-2014 SAP SE or an SAP affiliate company. All rights reserved
+
+-->
+
+<!-- ==|== Time Horizon ========================================================== -->
+
+<l:VerticalLayout xmlns:core="sap.ui.core" xmlns="sap.m"
+	xmlns:l="sap.ui.layout" width="100%">
+	<Label text="{Common_i18n>timeHorizon}"></Label>
+	<Select id="TimeHorizonSelect" enabled="true" visible="true"
+		width="100%" tooltip="{parts:[{path: 'Common_i18n>xtolTimeHorizonSelectSoH'}, {path: 'Common_i18n>xtolTimeHorizonSelectModS'}], 
+									  	formatter:'i2d.pp.mrpcockpit.reuse.util.CommonFormatter.formatTextSoHVsSLog'}">
+		<items>
+			<core:Item key="1" text="{Common_i18n>MaterialReplenishmentLeadDuration}"
+				tooltip="{Common_i18n>MaterialReplenishmentLeadDuration}">
+			</core:Item>
+			<core:Item key="2" text="{Common_i18n>TotalReplenishmentLeadDuration}"
+				tooltip="{Common_i18n>TotalReplenishmentLeadDuration}">
+			</core:Item>
+			<core:Item key="3" text="{Common_i18n>ManualPlanningHorizon}"
+				tooltip="{Common_i18n>ManualPlanningHorizon}">
+			</core:Item>
+			<core:Item key="4" text="{Common_i18n>MRPSafetyDuration}" tooltip="{Common_i18n>MRPSafetyDuration}">
+			</core:Item>
+			<core:Item key="5" text="{Common_i18n>7Days}">
+			</core:Item>
+			<core:Item key="6" text="{Common_i18n>14Days}">
+			</core:Item>
+			<core:Item key="7" text="{Common_i18n>30Days}">
+			</core:Item>
+			<core:Item key="8" text="{Common_i18n>60Days}">
+			</core:Item>
+			<core:Item key="9" text="{Common_i18n>90Days}">
+			</core:Item>
+		</items>
+	</Select>
+	<l:layoutData>
+		<l:GridData span="L3 M6 S12" />
+	</l:layoutData>
+</l:VerticalLayout>
